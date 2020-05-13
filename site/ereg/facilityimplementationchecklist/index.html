@@ -184,7 +184,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../dhis2/intro/" class="md-tabs__link">
+        <a href="../u-intro/" class="md-tabs__link">
           eRegister
         </a>
       
@@ -371,8 +371,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dhis2/intro/" title="None" class="md-nav__link">
-      None
+    <a href="../../dhis2/intro/" title="Intro" class="md-nav__link">
+      Intro
     </a>
   </li>
 
@@ -397,6 +397,30 @@
   <li class="md-nav__item">
     <a href="../../dhis2/tb/" title="TB" class="md-nav__link">
       TB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dhis2/tb-indicators/" title="Tb indicators" class="md-nav__link">
+      Tb indicators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dhis2/tb-validation-rules/" title="Tb validation rules" class="md-nav__link">
+      Tb validation rules
     </a>
   </li>
 
@@ -523,8 +547,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dhis2/intro/" title="Intro" class="md-nav__link">
-      Intro
+    <a href="../u-intro/" title="U intro" class="md-nav__link">
+      U intro
     </a>
   </li>
 
@@ -567,8 +591,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../intro/" title="Intro" class="md-nav__link">
-      Intro
+    <a href="../intro/" title="eRegister Installation Manual" class="md-nav__link">
+      eRegister Installation Manual
     </a>
   </li>
 
@@ -684,7 +708,81 @@
                 
                 
                 <h1 id="facility-implementation-checklist">Facility Implementation Checklist</h1>
-<p>....info loading...</p>
+<p>Below is a checklist of things that should be done and how to do them during rollout:</p>
+<ol>
+<li>
+<p>Disable server laptop lid to hibernate/shutdown when lid is closed. This is done to protect the laptop's monitor and keyboard from dust and potential damage.</p>
+<ul>
+<li>edit the file <code>/etc/systemd/logind.conf</code> and change the line <code>#HandleLidSwitch=hibernate</code> to <code>HandleLidSwitch=ignore</code>. Don't forget to uncomment the line by removing <code>#</code></li>
+</ul>
+</li>
+<li>
+<p>Configure automated reporting to DHIS2 (Training Instance)</p>
+<ul>
+<li>...CONTENT LOADING....</li>
+</ul>
+</li>
+<li>
+<p>Configure Services to Start When the Server Boots</p>
+<ul>
+<li>...CONTENT LOADING....</li>
+</ul>
+</li>
+<li>
+<p>Configure static IP address</p>
+<ul>
+<li>...CONTENT LOADING....</li>
+</ul>
+</li>
+<li>
+<p>Changing the login name of eRegister</p>
+<p>ssh in to the server with <code>ssh openmrs@IPADDRESS</code> and then get into the running container with <code>sudo docker exec -it openmrseregister bash</code> then <code>vi /var/www/bahmniapps/i18n/home/locale_en.json</code> and then look for <code>LOGIN_PAGE_HEADER_TEXT</code> variable and change it accordingly.</p>
+</li>
+<li>
+<p>Create usernames for all health facility staff</p>
+<ul>
+<li>browse to IPADDRESS/openmrs and login</li>
+<li>when logged in, go to Administration -&gt; Manage Users -&gt; Add User. Don't forget to search for the user's account before adding a new user account</li>
+<li>check on appropriate roles</li>
+</ul>
+</li>
+<li>
+<p>Enabled appropriate "locations" for login into the system</p>
+<ul>
+<li>ssh in to the server with <code>ssh openmrs@IPADDRESS</code> and then get into the running container with <code>sudo docker exec -it openmrseregister bash</code> then <code>vi /var/www/bahmniapps/i18n/home/locale_en.json</code> and then <code>mysql -u root -p</code> enter password when prompted, then <code>use openmrs</code> and then run this query to see all location for your site. For example if you're in Lithipeng Health Center you can run <code>select location_id, name, description, retired from location where description like '%lithipeng%'</code>  and then you'll something like this:</li>
+</ul>
+<p>+---------------+-----------------+--------------+------------+<br />
+|   location_id | name            | description  |    retired |<br />
++---------------+-----------------+--------------+------------+<br />
+|           554 | Lithipeng HC    | Lithipeng HC |          1 |<br />
+|           555 | ART/TB Clinic   | Lithipeng HC |          1 |<br />
+|           556 | MCH Clinic      | Lithipeng HC |          1 |<br />
+|           557 | HTS General OPD | Lithipeng HC |          1 |<br />
++---------------+-----------------+--------------+------------+  </p>
+<p>4 rows in set (0.00 sec)</p>
+<p>Then update retired to be 0 with <code>update set location retired=0 where location_id=554 AND location_id=555 AND location_id=556 AND location_id=557;</code></p>
+<p>NB: Creation of locations is managed centrally and your role is just to enable/disable locations so that we mantain identical schemas of the database across all health facilities in the country. This will help in making Health Information Exchange easy. </p>
+</li>
+<li>
+<p>Automated Backups</p>
+<ul>
+<li>...CONTENT LOADING....</li>
+</ul>
+</li>
+<li>
+<p>Blocking The Following Social Media Sites on the Wi-Fi router:</p>
+<ul>
+<li>whatsapp.com</li>
+<li>facebook.com</li>
+<li>youtube.com</li>
+<li>instagram.com</li>
+<li>tiktok.com</li>
+<li>twitter.com
+Browse to http://192.168.8.1 and login, then go to Settings -&gt; Security -&gt; Domain Name Filter, make sure the Blacklist radio button is selected, then Add the domains. Don't forget to change status to "on". </li>
+</ul>
+<p>NB: Make sure "Enable Domain Name Filter" is enabled in here Settings -&gt; Firewall Switch</p>
+</li>
+</ol>
                 
               
               
