@@ -1,5 +1,5 @@
 # Project information
-site_name: My Docs
+site_name: SI Documentation
 site_description: "Technical documentation for Lesotho's SI Health Systems"
 site_author: "Ministry of Health"
 site_url: ""
@@ -29,3 +29,16 @@ nav:
     - 'dhis2/intro.md'
   - eRegister:
     - 'ereg/intro.md'
+
+markdown_extensions:
+- admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      toc_depth : "1-1"
+  - footnotes
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/eRegister
