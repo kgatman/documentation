@@ -1,5 +1,5 @@
 # Project information
-site_name: SI Documentation
+site_name: Lesotho Health SI Documentation
 site_description: "Technical documentation for Lesotho's SI Health Systems"
 site_author: "Ministry of Health"
 site_url: ""
@@ -25,20 +25,24 @@ theme:
 nav:
   - Overview:
     - 'index.md'
+    - 'contacts.md'
   - DHIS2:
-    - 'dhis2/intro.md'
+    - 'User Manual': 
+      - 'dhis2/usermanual.md'
+    - 'DataSets': 
+      - 'dhis2/intro.md'
+      - 'dhis2/hts.md'
+      - 'dhis2/tb.md'
+      - 'dhis2/hiv-care-n-tx.md'
+    - 'Technical Manual': 
+      - 'dhis2/installation.md'
   - eRegister:
-    - 'ereg/intro.md'
-
-markdown_extensions:
-- admonition
-  - codehilite:
-      guess_lang: false
-  - toc:
-      toc_depth : "1-1"
-  - footnotes
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/eRegister
+    - 'User Manual': 
+      - 'dhis2/intro.md'
+    - 'Technical Manual': 
+      - 'ereg/intro.md'
+      - 'ereg/workwithdockerlocally.md'
+      - 'ereg/FAQs.md'
+      - 'ereg/clienregistry.md'
+      - 'ereg/facilityimplementationchecklist.md'
+      - 'ereg/automateddeployment.md'
