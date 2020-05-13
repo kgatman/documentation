@@ -33,6 +33,8 @@ nav:
       - 'dhis2/intro.md'
       - 'dhis2/hts.md'
       - 'dhis2/tb.md'
+      - 'dhis2/tb-indicators.md'
+      - 'dhis2/tb-validation-rules.md'
       - 'dhis2/hiv-care-n-tx.md'
     - 'Technical Manual': 
       - 'dhis2/installation.md'
