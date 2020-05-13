@@ -19,3 +19,13 @@ theme:
     font:
       text: "Roboto"
       code: "Roboto Mono"
+
+
+# Nagivation
+nav:
+  - Overview:
+    - 'index.md'
+  - DHIS2:
+    - 'dhis2/intro.md'
+  - eRegister:
+    - 'ereg/intro.md'
