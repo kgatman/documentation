@@ -38,7 +38,7 @@ nav:
       - 'dhis2/installation.md'
   - eRegister:
     - 'User Manual': 
-      - 'dhis2/intro.md'
+      - 'ereg/u-intro.md'
     - 'Technical Manual': 
       - 'ereg/intro.md'
       - 'ereg/workwithdockerlocally.md'
