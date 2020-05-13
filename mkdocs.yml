@@ -1,0 +1,21 @@
+# Project information
+site_name: My Docs
+site_description: "Technical documentation for Lesotho's SI Health Systems"
+site_author: "Ministry of Health"
+site_url: ""
+
+# Copyright
+copyright: "Copyright &copy; 2020 Ministry of Health - Lesotho"
+
+# Theme
+theme:
+    name: "material"
+    palette:
+      primary: "#2d3479"
+      accent: "indigo"
+    language: "en"
+    features:
+      - tabs
+    font:
+      text: "Roboto"
+      code: "Roboto Mono"
