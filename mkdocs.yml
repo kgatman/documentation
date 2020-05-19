@@ -2,7 +2,7 @@
 site_name: Lesotho Health SI Systems Documentation
 site_description: "Technical documentation for Lesotho's Health Systems"
 site_author: "Ministry of Health"
-site_url: ""
+site_url: "https://github.com/eRegister"
 
 # Copyright
 copyright: "Copyright &copy; 2020 Ministry of Health - Lesotho"
@@ -25,7 +25,6 @@ theme:
 nav:
   - Overview:
     - 'index.md'
-    - 'contacts.md'
   - DHIS2:
     - 'User Manual': 
       - 'dhis2/usermanual.md'
@@ -48,3 +47,28 @@ nav:
       - 'ereg/clienregistry.md'
       - 'ereg/facilityimplementationchecklist.md'
       - 'ereg/automateddeployment.md'
+  - Contact Us:
+    - 'contacts.md'
+
+
+# EXTENSIONS NOT WORKING - i don't know why. will figure it out
+
+# markdown_extensions:
+#   - admonition
+#   - codehilite:
+#       guess_lang: false
+#   - toc:
+#       toc_depth : "1-1"
+#   - footnotes
+
+# plugins:
+#   - search
+#   - git-revision-date-localized
+#   - mknotebooks
+#   - pdf-export:
+#       combined: true
+
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/intrahealth/client-registry

@@ -1,3 +1,3 @@
-# Contacts
-
-For any questions, please don't hesitate to contact Mr Monaheng Maoeng at monaheng.maoeng@gov.ls or Tel: +266 22317707
+## Contact Us
+                              
+This is where all of our documentation will be hosted. Everything from DHIS2 to eRegister.
