@@ -18,7 +18,7 @@
         * `visit_types.sql`
 
         !!! note
-            all of the scrips mentioned abover are in [here](https://github.com/eRegister/docs/tree/master/docs/ereg)
+            all of the scrips mentioned abover are in [here](https://github.com/eRegister/docs/tree/master/docs/scripts)
 
 
     * After successfully copying these files to the server, ssh into the server with `ssh openmrs@IP_ADDRESS_SERVER`
