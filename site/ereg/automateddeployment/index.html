@@ -894,6 +894,7 @@
 <ul>
 <li>configure the cronjob to trigger the service Monday 9 am<ul>
 <li>to edit the cronjob do: <code>sudo crontab -e</code> if it's first time running the this command it'll probably ask you to choose the default text editor, please be kind enough to choose Nano as it's the easiest editor formost administrators.</li>
+<li>configure the script to run within 2 mins just to make sure everything is running OK: <code>*/2 * * * * systemctl restart gitpull.service &gt;&gt; /var/log/gitpull.log2&gt;&amp;1</code></li>
 <li>inside the crontab editor write: <code>* 7 * * mon systemctl restart gitpull.service &gt;&gt; /var/log/gitpull.log2&gt;&amp;1</code></li>
 <li>to check logs of the service above you can go <code>sudo tail -f /var/log/gitpull.log</code></li>
 </ul>

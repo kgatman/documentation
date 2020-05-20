@@ -60,7 +60,7 @@
 4. **Configuring `cronjob` & Restoring database**
     * configure the cronjob to trigger the service Monday 9 am
         * to edit the cronjob do: `sudo crontab -e` if it's first time running the this command it'll probably ask you to choose the default text editor, please be kind enough to choose Nano as it's the easiest editor formost administrators.
-        * configure the script to run within 2 mins just to make sure everything is running OK:`*/2 * * * * systemctl restart gitpull.service >> /var/log/gitpull.log2>&1`
+        * configure the script to run within 2 mins just to make sure everything is running OK: `*/2 * * * * systemctl restart gitpull.service >> /var/log/gitpull.log2>&1`
         * inside the crontab editor write: `* 7 * * mon systemctl restart gitpull.service >> /var/log/gitpull.log2>&1`
         * to check logs of the service above you can go `sudo tail -f /var/log/gitpull.log`
     * Now it's time to create a new container from the image we created earlier with: `docker run -e container_name=openmrseregister -it -d --restart always -p 443:443 -p 80:80 -p 8069:8069 -p 8000:8000 --privileged --name openmrseregister -v /development/bahmni_config_release:/development/bahmni_config_release -v openmrseregister:/openmrseregister omrsregrepo/bahmni_base:19052020 /bin/bash`
