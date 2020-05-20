@@ -65,9 +65,8 @@
     * Now it's time to create a new container from the image we created earlier with: `docker run -e container_name=openmrseregister -it -d --restart always -p 443:443 -p 80:80 -p 8069:8069 -p 8000:8000 --privileged --name openmrseregister -v /development/bahmni_config_release:/development/bahmni_config_release -v openmrseregister:/openmrseregister omrsregrepo/bahmni_base:19052020 /bin/bash`
     * after the command above you should see a container called `openmrseregister` running. To get into the container do: `docker exec -it openmrseregister bash`
     * create the following symbolic links: 
-        * `ln -s /var/www/bahmni_config /development/bahmni_config_release`
-        * `ln -s /opt/openmrs/bahmni_config /development/bahmni_config_release` OR
-        * Copy symbolic_creation.sh to /opt/openmrs/ and run it to create symbolic links
+        * start by manually creating this symlink: `ln -s /var/www/bahmni_config  /development/bahmni_config_release/`
+        * because of the many symlinks that need to be created, you're advised to just run [this](https://github.com/eRegister/docs/blob/master/docs/scripts/symbolic_creation.sh) script.
     * The last step is to restore db and the facility specific configs
         * Copy and  restore all .sql file and restart services
 5. Browse to `http://IP_of_eRegister/bahmni/home` and check if the changes have been effected.
