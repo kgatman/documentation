@@ -202,7 +202,7 @@
     <li class="md-tabs__item">
       
         <a href="../../contacts.md" class="md-tabs__link">
-          Contact Us
+          Contacts
         </a>
       
     </li>
@@ -722,17 +722,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Contact Us
+      Contacts
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Contact Us" data-md-level="1">
+    <nav class="md-nav" aria-label="Contacts" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Contact Us
+        Contacts
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -901,9 +901,8 @@
 <li>Now it's time to create a new container from the image we created earlier with: <code>docker run -e container_name=openmrseregister -it -d --restart always -p 443:443 -p 80:80 -p 8069:8069 -p 8000:8000 --privileged --name openmrseregister -v /development/bahmni_config_release:/development/bahmni_config_release -v openmrseregister:/openmrseregister omrsregrepo/bahmni_base:19052020 /bin/bash</code></li>
 <li>after the command above you should see a container called <code>openmrseregister</code> running. To get into the container do: <code>docker exec -it openmrseregister bash</code></li>
 <li>create the following symbolic links: <ul>
-<li><code>ln -s /var/www/bahmni_config /development/bahmni_config_release</code></li>
-<li><code>ln -s /opt/openmrs/bahmni_config /development/bahmni_config_release</code> OR</li>
-<li>Copy symbolic_creation.sh to /opt/openmrs/ and run it to create symbolic links</li>
+<li>start by manually creating this symlink: <code>ln -s /var/www/bahmni_config  /development/bahmni_config_release/</code></li>
+<li>because of the many symlinks that need to be created, you're advised to just run <a href="https://github.com/eRegister/docs/blob/master/docs/scripts/symbolic_creation.sh">this</a> script.</li>
 </ul>
 </li>
 <li>The last step is to restore db and the facility specific configs<ul>
