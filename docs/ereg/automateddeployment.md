@@ -22,9 +22,8 @@
 
 
     * Backup facility specific configurations and configurations: 
-        * copy those config files from the running container into the hosting server with: `docker cp openmrseregister:/var/wwww/bahmni_config/openmrs/apps/home/whiteLabel.json .` **<- don't forget that dot**
         *  if you haven't already, backup your database with invoking the script that does that, that is already in your server: `docker exec -i openmrseregister /usr/bin/mysqldump -u root --password=password -A > $HOME/latestback.sql` _the -A tag is going to backup everything_
-        * do `ls -lh` to see the size of `latestback.sq` it should be 200MB or more, not less.
+        * do `ls -lh` to see the size of `latestback.sql` it should be 200MB or more, not less.
 
 !!! caution
     **PLEASE ENSURE THAT YOU HAVE BACKED UP BOTH  THE DB AND CONFIG FILES BEFORE EXECUTING THE STEPS BELOW!!!**
@@ -80,3 +79,6 @@
         * make sure you're in `/` directory and `run bash ./symbolic_creation.sh`
 5. Browse to `http://IP_of_eRegister/bahmni/home` and check if the changes have been effected.
 
+##### The video below is an attempt to demonstrate the steps above:
+
+[![asciicast](https://asciinema.org/a/334423.svg)](https://asciinema.org/a/334423)
