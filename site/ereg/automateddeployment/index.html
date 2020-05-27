@@ -693,6 +693,19 @@
     Our automated deployment comprises 5 steps:
   </a>
   
+    <nav class="md-nav" aria-label="Our automated deployment comprises 5 steps:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-video-below-is-an-attempt-to-demonstrate-the-steps-above" class="md-nav__link">
+    The video below is an attempt to demonstrate the steps above:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -784,6 +797,19 @@
     Our automated deployment comprises 5 steps:
   </a>
   
+    <nav class="md-nav" aria-label="Our automated deployment comprises 5 steps:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-video-below-is-an-attempt-to-demonstrate-the-steps-above" class="md-nav__link">
+    The video below is an attempt to demonstrate the steps above:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -828,9 +854,8 @@
 <li>
 <p>Backup facility specific configurations and configurations: </p>
 <ul>
-<li>copy those config files from the running container into the hosting server with: <code>docker cp openmrseregister:/var/wwww/bahmni_config/openmrs/apps/home/whiteLabel.json .</code> <strong>&lt;- don't forget that dot</strong></li>
 <li>if you haven't already, backup your database with invoking the script that does that, that is already in your server: <code>docker exec -i openmrseregister /usr/bin/mysqldump -u root --password=password -A &gt; $HOME/latestback.sql</code> <em>the -A tag is going to backup everything</em></li>
-<li>do <code>ls -lh</code> to see the size of <code>latestback.sq</code> it should be 200MB or more, not less.</li>
+<li>do <code>ls -lh</code> to see the size of <code>latestback.sql</code> it should be 200MB or more, not less.</li>
 </ul>
 </li>
 </ul>
@@ -913,6 +938,8 @@
 </li>
 <li>Browse to <code>http://IP_of_eRegister/bahmni/home</code> and check if the changes have been effected.</li>
 </ol>
+<h5 id="the-video-below-is-an-attempt-to-demonstrate-the-steps-above">The video below is an attempt to demonstrate the steps above:</h5>
+<p><a href="https://asciinema.org/a/334423"><img alt="asciicast" src="https://asciinema.org/a/334423.svg" /></a></p>
                 
               
               
