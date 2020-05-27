@@ -811,38 +811,31 @@
 </ul>
 </div>
 <h3 id="our-automated-deployment-comprises-5-steps">Our automated deployment comprises 5 steps:</h3>
-<ol>
+<ul>
 <li>
 <p><strong>Preparatory Steps</strong></p>
 <ul>
-<li>First check to see if your sever has internet connectivity with <code>ping github.com</code></li>
-<li>Then transfer all of the script files to the server using with <code>scp</code>, <code>pscp</code> or FileZilla <em>(whatever works for you)</em></li>
+<li>First check to see if your server has internet connectivity with <code>ping github.com</code></li>
+<li>SSH into the server with <code>ssh openmrs@_SERVER_IP_ADDRESS</code> </li>
+<li>Then download all of the files need with <code>git clone https://github.com/eRegister/docs.git</code></li>
 <li>
-<p>Files that need to be transfered are:</p>
-<ul>
-<li><code>gitpull.service</code></li>
-<li><code>gitpull.sh</code>,<code>openmrs_global_properties</code></li>
-<li><code>serialized objects</code></li>
-<li><code>symbolic_creation.sh</code></li>
-<li><code>visit_types.sql</code></li>
-</ul>
+<p>The command above will create a folder called <code>docs</code> in <code>/home/openmrs</code> if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>all of the scrips mentioned abover are in <a href="https://github.com/eRegister/docs/tree/master/docs/scripts">here</a></p>
+<p>we started by ssh'ng into the server so the files are already in the server</p>
 </div>
 </li>
 <li>
-<p>After successfully copying these files to the server, ssh into the server with <code>ssh openmrs@IP_ADDRESS_SERVER</code></p>
-</li>
-<li>Backup facility specific configurations: <ul>
+<p>Backup facility specific configurations and configurations: </p>
+<ul>
 <li>copy those config files from the running container into the hosting server with: <code>docker cp openmrseregister:/var/wwww/bahmni_config/openmrs/apps/home/whiteLabel.json .</code> <strong>&lt;- don't forget that dot</strong></li>
-<li>if you haven't already, backup your database with invoking the script that does that, that is already in your server.</li>
+<li>if you haven't already, backup your database with invoking the script that does that, that is already in your server: <code>docker exec -i openmrseregister /usr/bin/mysqldump -u root --password=password -A &gt; $HOME/latestback.sql</code> <em>the -A tag is going to backup everything</em></li>
+<li>do <code>ls -lh</code> to see the size of <code>latestback.sq</code> it should be 200MB or more, not less.</li>
 </ul>
 </li>
-<li>Create backup and copy backup from container to host</li>
 </ul>
 </li>
-</ol>
+</ul>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p><strong>PLEASE ENSURE THAT YOU HAVE BACKED UP BOTH  THE DB AND CONFIG FILES BEFORE EXECUTING THE STEPS BELOW!!!</strong></p>
@@ -853,12 +846,12 @@
 <ul>
 <li>check the running container: <code>docker ps</code></li>
 <li>Stop the container: <code>docker stop openmrseregister</code></li>
-<li>Check that the container has stopped: <code>docker ps</code> and <code>docker ps -a</code></li>
-<li>Create a new Image from the stopped container: <code>docker commit openmrseregister omrsregrepo/bahmni_base:19052020</code> [<em>tag should be date at time of creating image</em>]<ul>
+<li>Check that the container has stopped run <code>docker ps</code> and you should see an empty table</li>
+<li>Create a new image from the stopped container: <code>docker commit openmrseregister omrsregrepo/bahmni_base:19052020</code> [<em>tag should be date at time of creating image</em>]<ul>
 <li><em>you can check the newly created image with</em> <code>docker images</code> </li>
 </ul>
 </li>
-<li>Remove the container</li>
+<li>Remove the container: <code>docker container rm openmrseregister</code></li>
 </ul>
 </li>
 <li>
@@ -875,13 +868,14 @@
 </div>
 <ul>
 <li>initialise new local git repo: <code>git init</code></li>
+<li>if you do <code>ls -a</code> you'll see a hidden <code>.git</code> to show that indeed the folder has been intialized</li>
 <li>connect local repository with remote: <code>git remote add origin https://github.com/eRegister/bahmni_config_release.git</code></li>
 <li>download the latest commits to the repo: <code>git fetch --all</code> <em>you should see a log of all the latest commits downloading</em><ul>
-<li>now go to the home directory: <code>cd ~</code></li>
-<li>move <code>gitpull.service</code> file: <code>sudo mv gitpull.service /etc/systemd/system/</code></li>
+<li>now go to the home directory: <code>cd ~</code> OR <code>cd $HOME</code></li>
+<li>copy <code>gitpull.service</code> file: <code>sudo cp gitpull.service /etc/systemd/system/</code></li>
 <li>move <code>gitpull.sh</code> file: <code>sudo mv gitpull.sh /development/bahmni_config_release</code></li>
 <li>change directory <code>cd /development/bahmni_config_release/</code> make the script executable <code>sudo chmod +x gitpull.sh</code> and <code>sudo chown openmrs:openmrs gitpull.sh</code></li>
-<li>check the contents of the script with  <code>cat gitpull.sh</code> to make sure that it does <code>git fetch all</code> and <code>git pull origin master</code> </li>
+<li>check the contents of the script with  <code>cat gitpull.sh</code> to make sure that it does <code>git fetch --all</code> and <code>git pull origin master</code> </li>
 <li>also check that the service is running with <code>systemctl status gitpull.service</code></li>
 </ul>
 </li>
@@ -894,20 +888,25 @@
 <ul>
 <li>configure the cronjob to trigger the service Monday 9 am<ul>
 <li>to edit the cronjob do: <code>sudo crontab -e</code> if it's first time running the this command it'll probably ask you to choose the default text editor, please be kind enough to choose Nano as it's the easiest editor formost administrators.</li>
-<li>configure the script to run within 2 mins just to make sure everything is running OK: <code>*/2 * * * * systemctl restart gitpull.service &gt;&gt; /var/log/gitpull.log2&gt;&amp;1</code></li>
+<li>configure the script to run within 2 mins just to make sure everything is running OK: 
+<code>bash
+*/2 * * * * systemctl restart gitpull.service &gt;&gt; /var/log/gitpull.log2&gt;&amp;1</code></li>
 <li>inside the crontab editor write: <code>* 7 * * mon systemctl restart gitpull.service &gt;&gt; /var/log/gitpull.log2&gt;&amp;1</code></li>
+<li>do <code>systemctl status cron.service</code> to check that the service that will run the cronjob is running</li>
 <li>to check logs of the service above you can go <code>sudo tail -f /var/log/gitpull.log</code></li>
 </ul>
 </li>
 <li>Now it's time to create a new container from the image we created earlier with: <code>docker run -e container_name=openmrseregister -it -d --restart always -p 443:443 -p 80:80 -p 8069:8069 -p 8000:8000 --privileged --name openmrseregister -v /development/bahmni_config_release:/development/bahmni_config_release -v openmrseregister:/openmrseregister omrsregrepo/bahmni_base:19052020 /bin/bash</code></li>
-<li>after the command above you should see a container called <code>openmrseregister</code> running. To get into the container do: <code>docker exec -it openmrseregister bash</code></li>
+<li>after the command above you should see a container called <code>openmrseregister</code> running. </li>
+<li>copy the backup into the new running container <code>docker cp latestbackup.sql openmrseregister:/</code></li>
+<li>copy the script to create all symbolic links <code>docker cp docs/docs/scripts/symbolic_creation.sh openmrseregister:/</code></li>
+<li>To get into the container do: <code>docker exec -it openmrseregister bash</code></li>
+<li>start MySQL service: <code>service mysqld start</code></li>
+<li>get into MySQL client: <code>mysql -u root -p</code></li>
+<li>restore the backup: <code>source latestbackup.sql</code></li>
 <li>create the following symbolic links: <ul>
 <li>start by manually creating this symlink: <code>ln -s /var/www/bahmni_config  /development/bahmni_config_release/</code></li>
-<li>because of the many symlinks that need to be created, you're advised to just run <a href="https://github.com/eRegister/docs/blob/master/docs/scripts/symbolic_creation.sh">this</a> script.</li>
-</ul>
-</li>
-<li>The last step is to restore db and the facility specific configs<ul>
-<li>Copy and  restore all .sql file and restart services</li>
+<li>make sure you're in <code>/</code> directory and <code>run bash ./symbolic_creation.sh</code></li>
 </ul>
 </li>
 </ul>
