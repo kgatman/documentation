@@ -83,7 +83,7 @@
 * inside the crontab editor write: `* 7 * * mon systemctl restart gitpull.service >> /var/log/gitpull.log2>&1`
 * Go to /development/bahmni_config_release/ and check the status of cron service to see when it has executed gitpull. service, once done check the file by typing ll or ls. For some reason you may find that the service has not pulled the files from our remote repository, first thing to do is to check the status of the service if it has successfully started. If not check the status code of the service to guide you what might went wrong. The following table shows possible exit codes of the systemd service. Another possible reason it could be that you forgot to change the ownership of the development bahmni config release, check it.
 
-     | Exit Code        | Symbolic Name           | Description  |
+     | **EXIT CODE**        | **SYMBOLIC NAME**           | **DESCRIPTION**  |
      | ------------- |:-------------:| -----:|
      | 0      | EXIT_SUCCESS | Generic success code |
      | 1      | EXIT_FAILURE      |   Generic failure or unspecified error(try to start the development/bahmni_config_release afresh directory ) |
