@@ -9,9 +9,10 @@
 
 ##### 0. Preparatory Steps
 
-* First check to see if your server has internet connectivity with `ping github.com`
-
 * SSH into the server with `ssh openmrs@_SERVER_IP_ADDRESS` 
+* First check to see if your server has internet connectivity with `ping github.com`
+* If not try to check contents of resolv.conf in /etc/ by running the following command: cat /etc/resolv.conf.Normally you should see google.com nameserver pointing to its ip 8.8.8.8.Edit the file if name server is not configured in the file.
+* Nameserver(all in lowercase) 8.8.8.8.Ping 8.8.8.8 or google.com.After you may ping github.com just to make sure you are able to get packets from github.com
 
 * Then download all of the files need with `git clone https://github.com/eRegister/docs.git `
 
@@ -62,6 +63,13 @@
 * change directory `cd /development/bahmni_config_release/` make the script executable `sudo chmod +x gitpull.sh` and `sudo chown openmrs:openmrs gitpull.sh`
 * check the contents of the script with  `cat gitpull.sh` to make sure that it does `git fetch --all` and `git pull origin master` 
 * also check that the service is running with `systemctl status gitpull.service`
+* Nagivate into /etc/system/system/ and type the following commands to register gitpull service in system
+   * `sudo chmod 664 gitpull.service`
+   * `sudo systemctl daemon-reload`
+   * `sudo systemctl enable gitpull.service` 
+   
+   ** Note:when the service has been registered successfully you should see created sym link in ** `/etc/systemd/system/default.target.wants/.`
+
 
 ##### 3. Configuring **cronjob** & Restoring database
 * configure the cronjob to trigger the service Monday 9 am
@@ -73,31 +81,35 @@
 
 
 * inside the crontab editor write: `* 7 * * mon systemctl restart gitpull.service >> /var/log/gitpull.log2>&1`
+* Go to /development/bahmni_config_release/ and check the status of cron service to see when it has executed gitpull. service, once done check the file by typing ll or ls. For some reason you may find that the service has not pulled the files from our remote repository, first thing to do is to check the status of the service if it has successfully started. If not check the status code of the service to guide you what might went wrong. The following table shows possible exit codes of the systemd service. Another possible reason it could be that you forgot to change the ownership of the development bahmni config release, check it.
+
+     | Exit Code        | Symbolic Name           | Description  |
+     | ------------- |:-------------:| -----:|
+     | 0      | EXIT_SUCCESS | Generic success code |
+     | 1      | EXIT_FAILURE      |   Generic failure or unspecified error(try to start the development/bahmni_config_release afresh directory ) |
+     | 200 | EXIT_CHDIR      |    Changing to the requested working directory failed |
+     | 208 | EXIT_STDIN      |    Failed to setup standard input |
+     | 209 | EXIT_STDOUT      |    Failed to set up standard out |
+     | 203 | EXIT_EXEC      |    The actual process execution failed. Most likely this is caused by a missing or non-accessible executable file |
 
 * do `systemctl status cron.service` to check that the service that will run the cronjob is running
         * to check logs of the service above you can go `sudo tail -f /var/log/gitpull.log`
 
+* If gitpull service has pulled the bahmni config file then make a permanent 
 * Now it's time to create a new container from the image we created earlier with: `docker run -e container_name=openmrseregister -it -d --restart always -p 443:443 -p 80:80 -p 8069:8069 -p 8000:8000 --privileged --name openmrseregister -v /development/bahmni_config_release:/development/bahmni_config_release -v openmrseregister:/openmrseregister omrsregrepo/bahmni_base:19052020 /bin/bash`
 
 * after the command above you should see a container called `openmrseregister` running. 
 
-* copy the backup into the new running container `docker cp latestbackup.sql openmrseregister:/`
-
-* copy the script to create all symbolic links `docker cp docs/docs/scripts/symbolic_creation.sh openmrseregister:/`
+* If the container has started successfully there is no need to restore database just copy all .sql files to container root `./` and `symbolic_creation.sh` to `/opt/openmrs` into the new running container `docker cp latestbackup.sql openmrseregister:/`
 
 * To get into the container do: `docker exec -it openmrseregister bash`
-
+* Change directory to `/development/bahmni_config` to check if the volume was created when starting a new container. You should see the bahmni config release files.
+* Go to `/var/www/` and run: `sudo rm bahmni_config` or `unlink bahmni_config`
+* Type sudo `ln –s /development/bahmni_config_release/ bahmni_config`
+* Go to `/opt/openmrs/` and make symbolic_creation executable and run it
 * start MySQL service: `service mysqld start`
-
-* get into MySQL client: `mysql -u root -p`
-
-* restore the backup: `source latestbackup.sql`
-
-* create the following symbolic links: 
-
-* start by manually creating this symlink: `ln -s /var/www/bahmni_config  /development/bahmni_config_release/`
-
-* make sure you're in `/` directory and `run bash ./symbolic_creation.sh`
+* Restore all sql copied sql files `visit_type.sql`, `patient_identifier.sql`,`openmrs_global_property.sql` and `serial object.sql`
+* Start other services `openmrs`,`httpd` and `bahmni-reports`
 
 *  Browse to `http://IP_of_eRegister/bahmni/home` and check if the changes have been effected.
 
