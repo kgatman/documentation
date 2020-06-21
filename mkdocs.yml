@@ -37,6 +37,9 @@ nav:
       - 'dhis2/hiv-care-n-tx.md'
     - 'Technical Manual': 
       - 'dhis2/installation.md'
+  - Informed Push:
+    - 'informedpush/informedpush.md'
+    - 'informedpush/informedpusharv.md'
   - eRegister:
     - 'User Manual': 
       - 'ereg/u-intro.md'
