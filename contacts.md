@@ -1,6 +1,0 @@
-# Contacts
-
-------
-Note
-asdfasdf
-------
