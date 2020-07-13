@@ -38,7 +38,7 @@ nav:
       - "Technical Manual":
           - "dhis2/installation.md"
   - Informed Push:
-      - "informedpush/informedpush.md"
+      - -"informedpush/informedpush.md"
       - "informedpush/informedpusharv.md"
   - eRegister:
       - "User Manual":
@@ -50,6 +50,14 @@ nav:
           - "ereg/clientregistry.md"
           - "ereg/facilityimplementationchecklist.md"
           - "ereg/automateddeployment.md"
+  - COVID-19:
+      - "Overview":
+          - "covid/Overview.md"
+      - "Data Consumption Guidelines":
+          - "covid/Indicators.md"
+      - "Data Entry Guidelines":
+          - "covid/using-web.md"
+          - "covid/using-mobile.md"
 
 markdown_extensions:
   - admonition
