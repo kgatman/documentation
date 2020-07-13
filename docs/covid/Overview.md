@@ -14,5 +14,5 @@ In addition to that, we have developed guidelines specific to our context and us
         ├── Indicators
 └── Data Entry Guidelines
         ├── Using Web
-        └──  Using Mobile
+        └── Using Mobile
 ```
