@@ -1,91 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://github.com/eRegister/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/contacts/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/dhis2/usermanual/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/dhis2/intro/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/dhis2/hts/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/dhis2/tb/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/dhis2/tb-indicators/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/dhis2/tb-validation-rules/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/dhis2/hiv-care-n-tx/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/dhis2/installation/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/informedpush/informedpusharv/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/ereg/u-intro/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/ereg/intro/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/ereg/workingwithdockerlocally/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/ereg/FAQs/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/ereg/clientregistry/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/ereg/facilityimplementationchecklist/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/ereg/automateddeployment/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/covid/Overview/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/eRegister/covid/Using-Web-Tracker/</loc>
+     <lastmod>2020-07-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/eRegister/covid/Using-Web-Aggregate/</loc>
+     <lastmod>2020-07-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/eRegister/covid/Using-Mobile/</loc>
+     <lastmod>2020-07-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/eRegister/covid/Alerts_Dataset/</loc>
+     <lastmod>2020-07-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/eRegister/covid/Program_Indicators/</loc>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/eRegister/covid/Indicators/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/covid/using-web/</loc>
-     <lastmod>2020-07-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/eRegister/covid/using-mobile/</loc>
-     <lastmod>2020-07-13</lastmod>
+     <loc>https://github.com/eRegister/covid/Program_Rules/</loc>
+     <lastmod>2020-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
