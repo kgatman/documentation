@@ -9,61 +9,62 @@ copyright: "Copyright &copy; 2020 Ministry of Health - Lesotho"
 
 # Theme
 theme:
-    name: "material"
-    palette:
-        primary: "#2d3479"
-        accent: "indigo"
-    language: "en"
-    features:
-        - tabs
-    font:
-        text: "Roboto"
-        code: "Roboto Mono"
+      name: "material"
+      palette:
+            primary: "#2d3479"
+            accent: "indigo"
+      language: "en"
+      features:
+            - tabs
+      font:
+            text: "Roboto"
+            code: "Roboto Mono"
 
 # Nagivation
 nav:
-    - Overview:
-          - "index.md"
-          - "contacts.md"
-    - DHIS2:
-          - "User Manual":
-                - "dhis2/usermanual.md"
-          - "DataSets":
-                - "dhis2/intro.md"
-                - "dhis2/hts.md"
-                - "dhis2/tb.md"
-                - "dhis2/tb-indicators.md"
-                - "dhis2/tb-validation-rules.md"
-                - "dhis2/hiv-care-n-tx.md"
-          - "Technical Manual":
-                - "dhis2/installation.md"
-    - Informed Push:
-          - -"informedpush/informedpush.md"
-          - "informedpush/informedpusharv.md"
-    - eRegister:
-          - "User Manual":
-                - "ereg/u-intro.md"
-          - "Technical Manual":
-                - "ereg/intro.md"
-                - "ereg/workingwithdockerlocally.md"
-                - "ereg/FAQs.md"
-                - "ereg/clientregistry.md"
-                - "ereg/facilityimplementationchecklist.md"
-                - "ereg/automateddeployment.md"
-    - COVID-19:
-          - "covid/Overview.md"
-          - "Data Entry Guidelines":
-                - "covid/Using-Web-Tracker.md"
-                - "covid/Using-Web-Aggregate.md"
-                - "covid/Using-Mobile.md"
-          - "Technical":
-                - "covid/Alerts_Dataset.md"
-                - "covid/Program_Indicators.md"
-                - "covid/Indicators.md"
-                - "covid/Program_Rules.md"
+      - Overview:
+              - "index.md"
+              - "contacts.md"
+      - DHIS2:
+              - "User Manual":
+                      - "dhis2/usermanual.md"
+              - "DataSets":
+                      - "dhis2/intro.md"
+                      - "dhis2/hts.md"
+                      - "dhis2/tb.md"
+                      - "dhis2/tb-indicators.md"
+                      - "dhis2/tb-validation-rules.md"
+                      - "dhis2/hiv-care-n-tx.md"
+              - "Technical Manual":
+                      - "dhis2/installation.md"
+      - Informed Push:
+              - -"informedpush/informedpush.md"
+              - "informedpush/informedpusharv.md"
+      - eRegister:
+              - "User Manual":
+                      - "ereg/u-intro.md"
+              - "Technical Manual":
+                      - "ereg/intro.md"
+                      - "ereg/workingwithdockerlocally.md"
+                      - "ereg/FAQs.md"
+                      - "ereg/clientregistry.md"
+                      - "ereg/facilityimplementationchecklist.md"
+                      - "ereg/automateddeployment.md"
+      - COVID-19:
+              - "covid/Overview.md"
+              - "Data Entry Guidelines":
+                      - "covid/Using-Web-Tracker.md"
+                      - "covid/Using-Web-Aggregate.md"
+                      - "covid/Using-Mobile.md"
+              - "Technical":
+                      - "covid/Alerts_Dataset.md"
+                      - "covid/Program_Indicators.md"
+                      - "covid/Indicators.md"
+                      - "covid/Program_Rules.md"
+                      - "covid/How-Prepare-Docker-Training-Instance.md"
 
 markdown_extensions:
-    - admonition
+      - admonition
 # EXTENSIONS NOT WORKING - i don't know why. will figure it out
 
 # markdown_extensions:
