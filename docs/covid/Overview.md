@@ -21,7 +21,8 @@ COVID-19
       ├── Alerts Dataset
       ├── Program Indicators
       ├── Indicators
-      └── Program Rules
+      ├── Program Rules
+      └── How to Prepare Docker Training Instance
 ```
 
 ------------------------------------------------------------------------------------------------------------
