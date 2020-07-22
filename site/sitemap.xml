@@ -1,110 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>https://github.com/eRegister/</loc>
+     <loc>https://github.com/eRegister/docs/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/contacts/</loc>
+     <loc>https://github.com/eRegister/docs/contacts/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/dhis2/usermanual/</loc>
+     <loc>https://github.com/eRegister/docs/dhis2/usermanual/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/dhis2/intro/</loc>
+     <loc>https://github.com/eRegister/docs/dhis2/intro/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/dhis2/hts/</loc>
+     <loc>https://github.com/eRegister/docs/dhis2/hts/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/dhis2/tb/</loc>
+     <loc>https://github.com/eRegister/docs/dhis2/tb/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/dhis2/tb-indicators/</loc>
+     <loc>https://github.com/eRegister/docs/dhis2/tb-indicators/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/dhis2/tb-validation-rules/</loc>
+     <loc>https://github.com/eRegister/docs/dhis2/tb-validation-rules/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/dhis2/hiv-care-n-tx/</loc>
+     <loc>https://github.com/eRegister/docs/dhis2/hiv-care-n-tx/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/dhis2/installation/</loc>
+     <loc>https://github.com/eRegister/docs/dhis2/installation/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/informedpush/informedpusharv/</loc>
+     <loc>https://github.com/eRegister/docs/informedpush/informedpush/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/ereg/u-intro/</loc>
+     <loc>https://github.com/eRegister/docs/informedpush/informedpusharv/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/ereg/intro/</loc>
+     <loc>https://github.com/eRegister/docs/ereg/u-intro/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/ereg/workingwithdockerlocally/</loc>
+     <loc>https://github.com/eRegister/docs/ereg/intro/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/ereg/FAQs/</loc>
+     <loc>https://github.com/eRegister/docs/ereg/workingwithdockerlocally/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/ereg/clientregistry/</loc>
+     <loc>https://github.com/eRegister/docs/ereg/FAQs/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/ereg/facilityimplementationchecklist/</loc>
+     <loc>https://github.com/eRegister/docs/ereg/clientregistry/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/ereg/automateddeployment/</loc>
+     <loc>https://github.com/eRegister/docs/ereg/facilityimplementationchecklist/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/covid/Overview/</loc>
+     <loc>https://github.com/eRegister/docs/ereg/automateddeployment/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/covid/Using-Web-Tracker/</loc>
+     <loc>https://github.com/eRegister/docs/covid/Overview/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/covid/Using-Web-Aggregate/</loc>
+     <loc>https://github.com/eRegister/docs/covid/Using-Web-Tracker/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/covid/Using-Mobile/</loc>
+     <loc>https://github.com/eRegister/docs/covid/Using-Web-Aggregate/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/covid/Alerts_Dataset/</loc>
+     <loc>https://github.com/eRegister/docs/covid/Using-Mobile/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/covid/Program_Indicators/</loc>
+     <loc>https://github.com/eRegister/docs/covid/Alerts_Dataset/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/covid/Indicators/</loc>
+     <loc>https://github.com/eRegister/docs/covid/Program_Indicators/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/covid/Program_Rules/</loc>
+     <loc>https://github.com/eRegister/docs/covid/Indicators/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/covid/How-Prepare-Docker-Training-Instance/</loc>
+     <loc>https://github.com/eRegister/docs/covid/Program_Rules/</loc>
+     <lastmod>2020-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/eRegister/docs/covid/How-Prepare-Docker-Training-Instance/</loc>
      <lastmod>2020-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
