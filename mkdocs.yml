@@ -2,6 +2,7 @@
 site_name: Lesotho Health SI Systems Documentation
 site_description: "Technical documentation for Lesotho's Health Systems"
 site_author: "Ministry of Health"
+# Repo
 repo_name: eRegister/Documentation
 site_url: https://github.com/eRegister/docs
 
@@ -54,15 +55,17 @@ nav:
         - COVID-19:
                   - "covid/Overview.md"
                   - "Data Entry Guidelines":
-                            - "covid/Using-Web-Tracker.md"
-                            - "covid/Using-Web-Aggregate.md"
-                            - "covid/Using-Mobile.md"
+                            - "covid/Registering-a-Case-or-Suspect.md"
+                            - "covid/Capturing-Weekly-Aggregate-Data.md"
+                            - "covid/Using-Mobile-Devices.md"
                   - "Technical":
-                            - "covid/Alerts_Dataset.md"
-                            - "covid/Program_Indicators.md"
+                            - "covid/Alerts.md"
+                            - "covid/Weekly-Report.md"
+                            - "covid/Validation-Rules.md"
                             - "covid/Indicators.md"
+                            - "covid/Program-Indicators.md"
                             - "covid/Program_Rules.md"
-                            - "covid/How-Prepare-Docker-Training-Instance.md"
+                            - "covid/How-To-Prepare-Docker-Training-Instance.md"
 
 markdown_extensions:
         - admonition
@@ -72,7 +75,6 @@ markdown_extensions:
                   toc_depth: "1-1"
 plugins:
         - search
-        - mknotebooks
         - git-revision-date-localized
 
 extra:

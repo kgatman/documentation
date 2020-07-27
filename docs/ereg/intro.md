@@ -8,7 +8,9 @@ Before we follow the steps on how to prepare the server, we first have to instal
 
 [![asciicast](https://asciinema.org/a/CZiacOPBRcmlOtjaVXcFUFohr.svg)](https://asciinema.org/a/CZiacOPBRcmlOtjaVXcFUFohr)
 
-* To install Docker, please follow the instructions detailed in https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04. _these instructions were written for Ubuntu 16 but work perfectly for Ubuntu 18_
+* To install Docker, please follow the instructions detailed in [https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04) 
+
+_these instructions above were written for Ubuntu 16 but work perfectly for Ubuntu 18_
 
 ## Pulling the docker image and running it as a container
 * In situations of poor internet connectivity where we're committing and sharing images using sneakernet, please follow the guide in [here](Working-with-Docker-Images-Locally)
@@ -25,10 +27,11 @@ Before we follow the steps on how to prepare the server, we first have to instal
 
 ## Starting Services
 Often times, we're going to encounter situations where a container is running but the services inside the container are not, to start your services running the following commands in this order:
-1. `service httpd start`
-2. `service mysqld start`
-3. `service openmrs start`
-4. `service bahmni-reports start`
+    
+* `service httpd start`
+* `service mysqld start`
+* `service openmrs start`
+* `service bahmni-reports start`
 
 Now you should be able to see eRegister when you browse to http://server_IP/bahmni/home. *you'll use the IP address of your server*  
 

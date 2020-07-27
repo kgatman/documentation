@@ -14,9 +14,9 @@ In addition to that, we have developed guidelines specific to our context and us
 COVID-19
 └── Overview
 └── Data Entry Guidelines
-      ├── Using Web (Tracker)
-      ├── Using Web (Aggregate)
-      └── Using Mobile
+      ├── Registering a Case or Suspect
+      ├── Capturing Weekly Aggregate Data
+      └── Using Mobile Devices
 └── Technical
       ├── Alerts Dataset
       ├── Program Indicators

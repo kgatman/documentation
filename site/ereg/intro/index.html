@@ -45,12 +45,6 @@
     
     
     
-      <link rel="stylesheet" href="../../css/ansi-colours.css">
-    
-      <link rel="stylesheet" href="../../css/jupyter-cells.css">
-    
-      <link rel="stylesheet" href="../../css/pandas-dataframe.css">
-    
     
       
     
@@ -834,8 +828,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../covid/Using-Web-Tracker/" title="Using Web Tracker" class="md-nav__link">
-      Using Web Tracker
+    <a href="../../covid/Registering-a-Case-or-Suspect/" title="Registering a Case or Suspect" class="md-nav__link">
+      Registering a Case or Suspect
     </a>
   </li>
 
@@ -846,8 +840,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../covid/Using-Web-Aggregate/" title="Using Web Aggregate" class="md-nav__link">
-      Using Web Aggregate
+    <a href="../../covid/Capturing-Weekly-Aggregate-Data/" title="Capturing Weekly Aggregate Data" class="md-nav__link">
+      Capturing Weekly Aggregate Data
     </a>
   </li>
 
@@ -858,8 +852,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../covid/Using-Mobile/" title="Using Mobile" class="md-nav__link">
-      Using Mobile
+    <a href="../../covid/Using-Mobile-Devices/" title="Using Mobile Devices" class="md-nav__link">
+      Using Mobile Devices
     </a>
   </li>
 
@@ -900,8 +894,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../covid/Alerts_Dataset/" title="Alerts Dataset" class="md-nav__link">
-      Alerts Dataset
+    <a href="../../covid/Alerts/" title="Alerts" class="md-nav__link">
+      Alerts
     </a>
   </li>
 
@@ -912,8 +906,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../covid/Program_Indicators/" title="Program Indicators" class="md-nav__link">
-      Program Indicators
+    <a href="../../covid/Weekly-Report/" title="Weekly Report" class="md-nav__link">
+      Weekly Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../covid/Validation-Rules/" title="Validation Rules" class="md-nav__link">
+      Validation Rules
     </a>
   </li>
 
@@ -936,6 +942,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../covid/Program-Indicators/" title="Program Indicators" class="md-nav__link">
+      Program Indicators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../covid/Program_Rules/" title="Program Rules" class="md-nav__link">
       Program Rules
     </a>
@@ -948,8 +966,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../covid/How-Prepare-Docker-Training-Instance/" title="How Prepare Docker Training Instance" class="md-nav__link">
-      How Prepare Docker Training Instance
+    <a href="../../covid/How-To-Prepare-Docker-Training-Instance/" title="How To Prepare Docker Training Instance" class="md-nav__link">
+      How To Prepare Docker Training Instance
     </a>
   </li>
 
@@ -1001,8 +1019,9 @@
 <h2>Installing Docker</h2>
 <p><a href="https://asciinema.org/a/CZiacOPBRcmlOtjaVXcFUFohr"><img alt="asciicast" src="https://asciinema.org/a/CZiacOPBRcmlOtjaVXcFUFohr.svg" /></a></p>
 <ul>
-<li>To install Docker, please follow the instructions detailed in https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04. <em>these instructions were written for Ubuntu 16 but work perfectly for Ubuntu 18</em></li>
+<li>To install Docker, please follow the instructions detailed in <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04">https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04</a> </li>
 </ul>
+<p><em>these instructions above were written for Ubuntu 16 but work perfectly for Ubuntu 18</em></p>
 <h2>Pulling the docker image and running it as a container</h2>
 <ul>
 <li>In situations of poor internet connectivity where we're committing and sharing images using sneakernet, please follow the guide in <a href="Working-with-Docker-Images-Locally">here</a></li>
@@ -1017,11 +1036,13 @@
 <li>After running the command above, do <code>use openmrs</code> and then do <code>source OpenMRS_Start_up_Schema_V1.sql</code></li>
 </ul>
 <h2>Starting Services</h2>
-<p>Often times, we're going to encounter situations where a container is running but the services inside the container are not, to start your services running the following commands in this order:
-1. <code>service httpd start</code>
-2. <code>service mysqld start</code>
-3. <code>service openmrs start</code>
-4. <code>service bahmni-reports start</code></p>
+<p>Often times, we're going to encounter situations where a container is running but the services inside the container are not, to start your services running the following commands in this order:</p>
+<ul>
+<li><code>service httpd start</code></li>
+<li><code>service mysqld start</code></li>
+<li><code>service openmrs start</code></li>
+<li><code>service bahmni-reports start</code></li>
+</ul>
 <p>Now you should be able to see eRegister when you browse to http://server_IP/bahmni/home. <em>you'll use the IP address of your server</em>  </p>
 <h2>Enabling/Disabling Locations</h2>
 <p>Depending on the health facility where the server will be deployed, we'll have to either enable or disable locations in the database.
