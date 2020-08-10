@@ -52,6 +52,7 @@ nav:
                             - "ereg/clientregistry.md"
                             - "ereg/facilityimplementationchecklist.md"
                             - "ereg/automateddeployment.md"
+                            - "ereg/DeployingMappings.md"
         - COVID-19:
                   - "covid/Overview.md"
                   - "Data Entry Guidelines":
