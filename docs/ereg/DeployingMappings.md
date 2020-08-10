@@ -1,8 +1,11 @@
-# Mappings and Serialized Object Deployment
+# Mappings and Serialized Object auto Deployment
 
 !!! warning
-    * Please make sure that **no one** is using the system when doing Step  1 and 2 **Removing and Creating New Container**.
-    * Backup your database before doing any of these steps.
+    * First start with your local instance before attempting to update the live server.
+    * When configuring the live server, please make sure that **no one** is using the system when doing Step  **1** and **2** **Removing and Creating New Container**.
+    * **Backup live server database before doing any of these steps**.
+    * It has been noticed that some of the backup services have some technical issues and therefore you are advised to double check the file size after restarting the backup service before removing and stopping the container. The other option you can manually backup facility database by yourself.
+
 
 
 ### Our automated deployment for mappings and serialized object comprises 5 steps:
@@ -16,15 +19,21 @@
 
 * Then download all of the files need with `git clone https://github.com/eRegister/docs.git `
 
-* The command above will create a folder called `docs` in `/home/openmrs` if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts:
-        * `concept_restore.sh`
-        * `gitpull_bahmniapps.sh`,`gitpull_concepts.sh`,`gitpull_mappings`,
-        * `gitpull_serial.sh`,`serializedobject_restore.sh`
-        * `gitpullbahmniapps.service`,`gitpullconcepts.service`,`gitpullmappings.service`,`gitpullserializedobject.service`
-* Go to `/development/` and create the following directories `openmrs_reporting_release` and `openmrs_concepts_release` and grant openmrs user permissions to own the files.
+* The command above will create a folder called `docs` in `/home/openmrs` if you didn't change to another directory. All of files that need to be transferred to the server are in **`docs/scripts/MappingsScript`**. Mapping folder contains the following files: <br/>
+         `concept_restore.sh`<br/>
+         `gitpull_bahmniapps.sh`<br/>
+         `gitpull_concepts.sh`<br/>
+         `gitpull_mappings.sh` <br/>
+         `gitpull_serial.sh`<br/>
+         `serializedobject_restore.sh`<br/>
+         `gitpullbahmniapps.service` <br/>
+         `gitpullconcepts.service` <br/>
+         `gitpullmappings.service`<br/>
+         `gitpullserializedobject.service`<br/>
+* Go to `/development/` and create the following directories `openmrs_reporting_release` and `openmrs_concepts_release` and grant openmrs user permissions to own the files `sudo chown -R openmrs:openmrs directory_name`.
 * Move the following files to  `/usr/local/bin/` and make them executable:
 `concept_restore.sh`,`serializedobject_restore`.
-* Move `gitpull_concepts.sh` to `/development/openmrs_concepts_release` and `gitpull_serial.sh` to `/development/openmrs_reporting_release/`
+* Move `gitpull_concepts.sh` to `/development/openmrs_concepts_release` and `gitpull_serial.sh` to `/development/openmrs_reporting_release/`, make them executable.
 
 
 !!! note
@@ -39,7 +48,7 @@
 * Stop the container: `docker stop openmrseregister`
 * Check that the container has stopped run `docker ps` and you should see an empty table
 * Create a new image from the stopped container: `docker commit openmrseregister omrsregrepo/bahmni_base:09082020` [*tag should be date at time of creating image*]
-* you can check the newly created image with* `docker images`
+* you can check the newly created image with `docker images`
 * Remove the container: `docker container rm openmrseregister`
 
 ##### 2. Creating a Volumes and enabling services
@@ -53,22 +62,24 @@
 * move all services `gitpullmappings.service`,`gitpullconcepts.serivce`,
 `gitpullbahmniapps.service` and `gitpullserializedobject.service`.
 * Nagivate into /etc/system/system/ and type the following commands to enable `gitpull_mappings.service`, `gitpullconcepts.service`, `gitpullbahmniapps.service`,`gitpullserializedobject.service`
-   * `sudo chmod 664 service_name`
-   * `sudo systemctl daemon-reload`
-   * `sudo systemctl enable service_name`
+
+    `sudo chmod 664 service_name`   <br/>
+    `sudo systemctl daemon-reload` <br />
+    `sudo systemctl enable service_name`
 
    ** Note:when the service has been registered successfully you should see created sym link in ** `/etc/systemd/system/default.target.wants/.`
 
 ##### 3. Configuring **cronjob**
-* configure the cronjob to trigger the services everyday 9 am.
-* to edit the cronjob do: `sudo crontab -e` if it's first time running the this command it'll probably ask you to choose the default text editor, please be kind enough to choose Nano as it's the easiest editor formost administrators.
-* configure the script as as shown below
-`*/3 * * * * systemctl restart gitpullmappings.service >> /var/log/gitpull_mappings.log`
-`*/4 * * * * systemctl restart gitpullserializedobject.service >> /var/log/gitpull_serial.log`
-`*/5 * * * * systemctl restart gitpullconcepts.service >> /var/log/gitpull_concepts.log`
-`*/6 * * * * sudo bash /usr/local/bin/concepts_restore.sh >> /var/log/concept_restore.log`
+* configure the cronjob to trigger the services everyday 7 am if our servers universal time is at UTC.
+* to edit the cronjob do: `sudo crontab -e` if it's first time running the this command it'll probably ask you to choose the default text editor, please be kind enough to choose Nano as it's the easiest editor for most administrators.
+* configure the script as shown below and then when the updates have been pulled successfully change the script to trigger services at **7:05**,**7:10**,**7:15**,**7:25** respectively.
+**Do not change the command that trigger serialized object script** <br/>
+`*/3 * * * * systemctl restart gitpullmappings.service >> /var/log gitpull_mappings.log` <br/>
+`*/4 * * * * systemctl restart gitpullserializedobject.service >> /var/log/gitpull_serial.log` <br/>
+`*/5 * * * * systemctl restart gitpullconcepts.service >> /var/log/gitpull_concepts.log` <br/>
+`*/6 * * * * sudo bash /usr/local/bin/concepts_restore.sh >> /var/log/concept_restore.log` <br/>
 `20 7 * * * sudo bash /usr/local/bin/serializedobject_restore.sh >> /var/log/serial_restore.log`
-* Wait for a while for cron job to execute the commands and check  directories in development have updates from github.For failed services reffer to `automated deployment page` to troubleshoot.
+* Wait for a while for cron job to execute the commands and check  directories in development have updates from GitHub. For failed services refer to [Automated Deployment](https://eregister.github.io/docs/ereg/automateddeployment/) **Exit Codes** to troubleshoot.
 
 
 
@@ -80,7 +91,8 @@
 * Wait a moment for databases to be created and once the script is done quit or exit the database server and restart mysql.
 * Restore facility database using the command `mysql -uroot -ppassword openmrs;`
 * Go to `/opt/openmrs/dhisconnector`
-* Unlink remove mappings folder and create soft link to `/development/dhisconnector_mappings/dhisconnector_mappings/mappings` command: `sudo ln -s /development/dhisconnector_mappings/dhisconnector_mappings/mappings/ mappings`
-* Go to `/usr/local/bin` and run `serializedobject_restore.sh`
+* Remove mappings folder and create soft link to `/development/dhisconnector_mappings/dhisconnector_mappings/mappings` <br/>
+ **command:** <br/> `sudo ln -s /development/dhisconnector_mappings/dhisconnector_mappings/mappings/ mappings` <br/>
+* Exit the container and go to `/usr/local/bin` and run `serializedobject_restore.sh`
 * Restart other services and openmrs the broswer to access openmrs admin page.
-* Go to reporting  you should see total of 36 openmrs period indicator reports.
+* Go to reporting  you should see total of 36 openmrs period indicator reports. Refer to staging server to see example [eRegister Staging server](https://3.21.105.229/openmrs/)

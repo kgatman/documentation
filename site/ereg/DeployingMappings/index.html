@@ -21,7 +21,7 @@
     
     
       
-        <title>Mappings and Serialized Object Deployment - Lesotho Health SI Systems Documentation</title>
+        <title>Mappings and Serialized Object auto Deployment - Lesotho Health SI Systems Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mappings-and-serialized-object-deployment" class="md-skip">
+        <a href="#mappings-and-serialized-object-auto-deployment" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Mappings and Serialized Object Deployment
+              Mappings and Serialized Object auto Deployment
             
           </span>
         </div>
@@ -755,8 +755,8 @@
       
     
     
-    <a href="./" title="Mappings and Serialized Object Deployment" class="md-nav__link md-nav__link--active">
-      Mappings and Serialized Object Deployment
+    <a href="./" title="Mappings and Serialized Object auto Deployment" class="md-nav__link md-nav__link--active">
+      Mappings and Serialized Object auto Deployment
     </a>
     
   </li>
@@ -1025,12 +1025,14 @@
                   
                 
                 
-                <h1 id="mappings-and-serialized-object-deployment">Mappings and Serialized Object Deployment</h1>
+                <h1 id="mappings-and-serialized-object-auto-deployment">Mappings and Serialized Object auto Deployment</h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <ul>
-<li>Please make sure that <strong>no one</strong> is using the system when doing Step  1 and 2 <strong>Removing and Creating New Container</strong>.</li>
-<li>Backup your database before doing any of these steps.</li>
+<li>First start with your local instance before attempting to update the live server.</li>
+<li>When configuring the live server, please make sure that <strong>no one</strong> is using the system when doing Step  <strong>1</strong> and <strong>2</strong> <strong>Removing and Creating New Container</strong>.</li>
+<li><strong>Backup live server database before doing any of these steps</strong>.</li>
+<li>It has been noticed that some of the backup services have some technical issues and therefore you are advised to double check the file size after restarting the backup service before removing and stopping the container. The other option you can manually backup facility database by yourself.</li>
 </ul>
 </div>
 <h3>Our automated deployment for mappings and serialized object comprises 5 steps:</h3>
@@ -1046,16 +1048,22 @@
 <p>Then download all of the files need with <code>git clone https://github.com/eRegister/docs.git</code></p>
 </li>
 <li>
-<p>The command above will create a folder called <code>docs</code> in <code>/home/openmrs</code> if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts:
-        * <code>concept_restore.sh</code>
-        * <code>gitpull_bahmniapps.sh</code>,<code>gitpull_concepts.sh</code>,<code>gitpull_mappings</code>,
-        * <code>gitpull_serial.sh</code>,<code>serializedobject_restore.sh</code>
-        * <code>gitpullbahmniapps.service</code>,<code>gitpullconcepts.service</code>,<code>gitpullmappings.service</code>,<code>gitpullserializedobject.service</code></p>
+<p>The command above will create a folder called <code>docs</code> in <code>/home/openmrs</code> if you didn't change to another directory. All of files that need to be transferred to the server are in <strong><code>docs/scripts/MappingsScript</code></strong>. Mapping folder contains the following files: <br/>
+         <code>concept_restore.sh</code><br/>
+         <code>gitpull_bahmniapps.sh</code><br/>
+         <code>gitpull_concepts.sh</code><br/>
+         <code>gitpull_mappings.sh</code> <br/>
+         <code>gitpull_serial.sh</code><br/>
+         <code>serializedobject_restore.sh</code><br/>
+         <code>gitpullbahmniapps.service</code> <br/>
+         <code>gitpullconcepts.service</code> <br/>
+         <code>gitpullmappings.service</code><br/>
+         <code>gitpullserializedobject.service</code><br/></p>
 </li>
-<li>Go to <code>/development/</code> and create the following directories <code>openmrs_reporting_release</code> and <code>openmrs_concepts_release</code> and grant openmrs user permissions to own the files.</li>
+<li>Go to <code>/development/</code> and create the following directories <code>openmrs_reporting_release</code> and <code>openmrs_concepts_release</code> and grant openmrs user permissions to own the files <code>sudo chown -R openmrs:openmrs directory_name</code>.</li>
 <li>Move the following files to  <code>/usr/local/bin/</code> and make them executable:
 <code>concept_restore.sh</code>,<code>serializedobject_restore</code>.</li>
-<li>Move <code>gitpull_concepts.sh</code> to <code>/development/openmrs_concepts_release</code> and <code>gitpull_serial.sh</code> to <code>/development/openmrs_reporting_release/</code></li>
+<li>Move <code>gitpull_concepts.sh</code> to <code>/development/openmrs_concepts_release</code> and <code>gitpull_serial.sh</code> to <code>/development/openmrs_reporting_release/</code>, make them executable.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1071,7 +1079,7 @@
 <li>Stop the container: <code>docker stop openmrseregister</code></li>
 <li>Check that the container has stopped run <code>docker ps</code> and you should see an empty table</li>
 <li>Create a new image from the stopped container: <code>docker commit openmrseregister omrsregrepo/bahmni_base:09082020</code> [<em>tag should be date at time of creating image</em>]</li>
-<li>you can check the newly created image with* <code>docker images</code></li>
+<li>you can check the newly created image with <code>docker images</code></li>
 <li>Remove the container: <code>docker container rm openmrseregister</code></li>
 </ul>
 <h5>2. Creating a Volumes and enabling services</h5>
@@ -1083,23 +1091,26 @@
 <li>test that you are able to fetch files from remote repo's by <code>git fetch --all</code></li>
 <li>move all services <code>gitpullmappings.service</code>,<code>gitpullconcepts.serivce</code>,
 <code>gitpullbahmniapps.service</code> and <code>gitpullserializedobject.service</code>.</li>
-<li>Nagivate into /etc/system/system/ and type the following commands to enable <code>gitpull_mappings.service</code>, <code>gitpullconcepts.service</code>, <code>gitpullbahmniapps.service</code>,<code>gitpullserializedobject.service</code></li>
-<li><code>sudo chmod 664 service_name</code></li>
-<li><code>sudo systemctl daemon-reload</code></li>
-<li><code>sudo systemctl enable service_name</code></li>
+<li>
+<p>Nagivate into /etc/system/system/ and type the following commands to enable <code>gitpull_mappings.service</code>, <code>gitpullconcepts.service</code>, <code>gitpullbahmniapps.service</code>,<code>gitpullserializedobject.service</code></p>
+<p><code>sudo chmod 664 service_name</code>   <br/>
+<code>sudo systemctl daemon-reload</code> <br />
+<code>sudo systemctl enable service_name</code></p>
+</li>
 </ul>
 <p><strong> Note:when the service has been registered successfully you should see created sym link in </strong> <code>/etc/systemd/system/default.target.wants/.</code></p>
 <h5>3. Configuring <strong>cronjob</strong></h5>
 <ul>
-<li>configure the cronjob to trigger the services everyday 9 am.</li>
-<li>to edit the cronjob do: <code>sudo crontab -e</code> if it's first time running the this command it'll probably ask you to choose the default text editor, please be kind enough to choose Nano as it's the easiest editor formost administrators.</li>
-<li>configure the script as as shown below
-<code>*/3 * * * * systemctl restart gitpullmappings.service &gt;&gt; /var/log/gitpull_mappings.log</code>
-<code>*/4 * * * * systemctl restart gitpullserializedobject.service &gt;&gt; /var/log/gitpull_serial.log</code>
-<code>*/5 * * * * systemctl restart gitpullconcepts.service &gt;&gt; /var/log/gitpull_concepts.log</code>
-<code>*/6 * * * * sudo bash /usr/local/bin/concepts_restore.sh &gt;&gt; /var/log/concept_restore.log</code>
+<li>configure the cronjob to trigger the services everyday 7 am if our servers universal time is at UTC.</li>
+<li>to edit the cronjob do: <code>sudo crontab -e</code> if it's first time running the this command it'll probably ask you to choose the default text editor, please be kind enough to choose Nano as it's the easiest editor for most administrators.</li>
+<li>configure the script as shown below and then when the updates have been pulled successfully change the script to trigger services at <strong>7:05</strong>,<strong>7:10</strong>,<strong>7:15</strong>,<strong>7:25</strong> respectively.
+<strong>Do not change the command that trigger serialized object script</strong> <br/>
+<code>*/3 * * * * systemctl restart gitpullmappings.service &gt;&gt; /var/log gitpull_mappings.log</code> <br/>
+<code>*/4 * * * * systemctl restart gitpullserializedobject.service &gt;&gt; /var/log/gitpull_serial.log</code> <br/>
+<code>*/5 * * * * systemctl restart gitpullconcepts.service &gt;&gt; /var/log/gitpull_concepts.log</code> <br/>
+<code>*/6 * * * * sudo bash /usr/local/bin/concepts_restore.sh &gt;&gt; /var/log/concept_restore.log</code> <br/>
 <code>20 7 * * * sudo bash /usr/local/bin/serializedobject_restore.sh &gt;&gt; /var/log/serial_restore.log</code></li>
-<li>Wait for a while for cron job to execute the commands and check  directories in development have updates from github.For failed services reffer to <code>automated deployment page</code> to troubleshoot.</li>
+<li>Wait for a while for cron job to execute the commands and check  directories in development have updates from GitHub. For failed services refer to <a href="https://eregister.github.io/docs/ereg/automateddeployment/">Automated Deployment</a> <strong>Exit Codes</strong> to troubleshoot.</li>
 </ul>
 <h5>4. Restore database and create soft links</h5>
 <ul>
@@ -1109,10 +1120,11 @@
 <li>Wait a moment for databases to be created and once the script is done quit or exit the database server and restart mysql.</li>
 <li>Restore facility database using the command <code>mysql -uroot -ppassword openmrs;</code></li>
 <li>Go to <code>/opt/openmrs/dhisconnector</code></li>
-<li>Unlink remove mappings folder and create soft link to <code>/development/dhisconnector_mappings/dhisconnector_mappings/mappings</code> command: <code>sudo ln -s /development/dhisconnector_mappings/dhisconnector_mappings/mappings/ mappings</code></li>
-<li>Go to <code>/usr/local/bin</code> and run <code>serializedobject_restore.sh</code></li>
+<li>Remove mappings folder and create soft link to <code>/development/dhisconnector_mappings/dhisconnector_mappings/mappings</code> <br/>
+ <strong>command:</strong> <br/> <code>sudo ln -s /development/dhisconnector_mappings/dhisconnector_mappings/mappings/ mappings</code> <br/></li>
+<li>Exit the container and go to <code>/usr/local/bin</code> and run <code>serializedobject_restore.sh</code></li>
 <li>Restart other services and openmrs the broswer to access openmrs admin page.</li>
-<li>Go to reporting  you should see total of 36 openmrs period indicator reports.</li>
+<li>Go to reporting  you should see total of 36 openmrs period indicator reports. Refer to staging server to see example <a href="https://3.21.105.229/openmrs/">eRegister Staging server</a></li>
 </ul>
                 
                   
