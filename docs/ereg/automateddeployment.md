@@ -21,7 +21,7 @@
 
 * Then download all of the files need with `git clone https://github.com/eRegister/docs.git `
 
-* The command above will create a folder called `docs` in `/home/openmrs` if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts:
+* The command above will create a folder called `docs` in `/home/openmrs` if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts/:
         
 * `gitpull.service`
 * `gitpull.sh`

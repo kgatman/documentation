@@ -17,7 +17,7 @@
         <meta name="author" content="Ministry of Health">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.0">
+      <meta name="generator" content="mkdocs-1.1.1, mkdocs-material-5.1.6">
     
     
       
@@ -25,9 +25,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.b5d04df8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b9ffd7b.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9ab2c1f8.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.b79bcd20.min.css">
       
       
         
@@ -54,10 +54,8 @@
   
     
     
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="#2d3479" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-primary="#2d3479" data-md-color-accent="indigo">
   
-    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -1038,21 +1036,32 @@
 <ul>
 <li>SSH into the server with <code>ssh openmrs@_SERVER_IP_ADDRESS</code> </li>
 <li>First check to see if your server has internet connectivity with <code>ping github.com</code></li>
-<li>If not try to check contents of resolv.conf in /etc/ by running the following command: cat /etc/resolv.conf.Normally you should see google.com nameserver pointing to its ip 8.8.8.8.Edit the file if name server is not configured in the file.</li>
 <li>
-<p>Nameserver(all in lowercase) 8.8.8.8.Ping 8.8.8.8 or google.com.After you may ping github.com just to make sure you are able to get packets from github.com</p>
+<p>If not try to check contents of <code>resolv.conf</code> in <code>/etc/</code> by running the following command: <code>cat /etc/resolv.conf</code></p>
+</li>
+<li>
+<p>Normally you should see google.com nameserver pointing to its ip <code>8.8.8.8</code>. Edit the file if name server is not configured in the file.</p>
+<div class="codehilite"><pre><span></span><code>* `nameserver 8.8.8.8`
+
+`Ping 8.8.8.8` or `google.com`.After you may ping github.com just to make sure you are able to get packets from github.com
+</code></pre></div>
+
+
 </li>
 <li>
 <p>Then download all of the files need with <code>git clone https://github.com/eRegister/docs.git</code></p>
 </li>
 <li>
-<p>The command above will create a folder called <code>docs</code> in <code>/home/openmrs</code> if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts:
-        * <code>gitpull.service</code>
-        * <code>gitpull.sh</code>,<code>openmrs_global_properties</code>
-        * <code>serialized objects</code>
-        * <code>symbolic_creation.sh</code>
-        * <code>visit_types.sql</code></p>
+<p>The command above will create a folder called <code>docs</code> in <code>/home/openmrs</code> if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts/:</p>
 </li>
+<li>
+<p><code>gitpull.service</code></p>
+</li>
+<li><code>gitpull.sh</code></li>
+<li><code>openmrs_global_properties</code></li>
+<li><code>serialized objects</code></li>
+<li><code>symbolic_creation.sh</code></li>
+<li><code>visit_types.sql</code></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1096,9 +1105,8 @@
 <li>copy <code>gitpull.service</code> file: <code>sudo cp gitpull.service /etc/systemd/system/</code></li>
 <li>move <code>gitpull.sh</code> file: <code>sudo mv gitpull.sh /development/bahmni_config_release</code></li>
 <li>change directory <code>cd /development/bahmni_config_release/</code> make the script executable <code>sudo chmod +x gitpull.sh</code> and <code>sudo chown openmrs:openmrs gitpull.sh</code></li>
-<li>check the contents of the script with  <code>cat gitpull.sh</code> to make sure that it does <code>git fetch --all</code> and <code>git pull origin master</code> </li>
-<li>also check that the service is running with <code>systemctl status gitpull.service</code></li>
-<li>Nagivate into /etc/system/system/ and type the following commands to register gitpull service in system</li>
+<li>check the contents of the script with  <code>cat gitpull.sh</code> to make sure that it does <code>git fetch --all</code> and <code>git pull origin master</code></li>
+<li>Nagivate into <code>/etc/systemd/system/</code> and type the following commands to register gitpull service in system</li>
 <li><code>sudo chmod 664 gitpull.service</code></li>
 <li><code>sudo systemctl daemon-reload</code></li>
 <li><code>sudo systemctl enable gitpull.service</code> </li>
@@ -1163,36 +1171,24 @@
 </table>
 </li>
 <li>
-<p>do <code>systemctl status cron.service</code> to check that the service that will run the cronjob is running
-        * to check logs of the service above you can go <code>sudo tail -f /var/log/gitpull.log</code></p>
+<p>Another possible reason could be that the service in unable to fetch from remote repository which is not related to systemd service,  check the logs of the service by typing <code>sudo tail -f /var/log/gitpull.log</code></p>
 </li>
 <li>
-<p>If gitpull service has pulled the bahmni config file then make a permanent </p>
+<p>If gitpull service has pulled the bahmni config file then make a permanent configuration in cronjob to trigger the service <em>every Monday 9am</em>.</p>
 </li>
-<li>
-<p>Now it's time to create a new container from the image we created earlier with: <code>docker run -e container_name=openmrseregister -it -d --restart always -p 443:443 -p 80:80 -p 8069:8069 -p 8000:8000 --privileged --name openmrseregister -v /development/bahmni_config_release:/development/bahmni_config_release -v openmrseregister:/openmrseregister omrsregrepo/bahmni_base:19052020 /bin/bash</code></p>
-</li>
-<li>
-<p>after the command above you should see a container called <code>openmrseregister</code> running. </p>
-</li>
-<li>
-<p>If the container has started successfully there is no need to restore database just copy all .sql files to container root <code>./</code> and <code>symbolic_creation.sh</code> to <code>/opt/openmrs</code> into the new running container <code>docker cp latestbackup.sql openmrseregister:/</code></p>
-</li>
-<li>
-<p>To get into the container do: <code>docker exec -it openmrseregister bash</code></p>
-</li>
+<li>inside the crontab editor write: <code>* 7 * * mon systemctl restart gitpull.service &gt;&gt; /var/log/gitpull.log2&gt;&amp;1</code></li>
+<li>Now it's time to create a new container from the image we created earlier with: <code>docker run -e container_name=openmrseregister -it -d --restart always -p 443:443 -p 80:80 -p 8069:8069 -p 8000:8000 --privileged --name openmrseregister -v /development/bahmni_config_release:/development/bahmni_config_release -v openmrseregister:/openmrseregister omrsregrepo/bahmni_base:19052020 /bin/bash</code></li>
+<li>After the command above you should see a container called openmrseregister running</li>
+<li>If the container has started successfully there is no need to restore database just copy all .sql files to container root <code>./</code> and <code>symbolic_creation.sh</code> to <code>/opt/openmrs</code> into the new running container docker cp latestbackup.sql openmrseregister:/</li>
+<li>To get into the container do: <code>docker exec -it openmrseregister bash</code></li>
 <li>Change directory to <code>/development/bahmni_config</code> to check if the volume was created when starting a new container. You should see the bahmni config release files.</li>
 <li>Go to <code>/var/www/</code> and run: <code>sudo rm bahmni_config</code> or <code>unlink bahmni_config</code></li>
-<li>Type sudo <code>ln –s /development/bahmni_config_release/ bahmni_config</code></li>
+<li>Type <code>sudo ln –s /development/bahmni_config_release/ bahmni_config</code></li>
 <li>Go to <code>/opt/openmrs/</code> and make symbolic_creation executable and run it</li>
-<li>start MySQL service: <code>service mysqld start</code></li>
-<li>Restore all sql copied sql files <code>visit_type.sql</code>, <code>patient_identifier.sql</code>,<code>openmrs_global_property.sql</code> and <code>serial object.sql</code></li>
-<li>
-<p>Start other services <code>openmrs</code>,<code>httpd</code> and <code>bahmni-reports</code></p>
-</li>
-<li>
-<p>Browse to <code>http://IP_of_eRegister/bahmni/home</code> and check if the changes have been effected.</p>
-</li>
+<li>Start MySQL service: <code>service mysqld start</code></li>
+<li>Restore all sql copied sql files <code>visit_type.sql</code>,<code>patient_identifier.sql</code>,<code>openmrs_global_property.sql</code> and <code>serial object.sql</code></li>
+<li>Start other services <code>openmrs</code>,<code>httpd</code> and <code>bahmni-reports</code></li>
+<li>Browse to <code>http://IP_of_eRegister/bahmni/home</code> and check if the changes have been effected.</li>
 </ul>
 <h5>The video below is an attempt to demonstrate the steps above:</h5>
 <p><a href="https://asciinema.org/a/334423"><img alt="asciicast" src="https://asciinema.org/a/334423.svg" /></a></p>
@@ -1204,7 +1200,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 2, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 10, 2020</span>
     
   </small>
 </div>
@@ -1292,15 +1288,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.92ffa368.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

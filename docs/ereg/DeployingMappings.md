@@ -16,11 +16,17 @@
 
 * Then download all of the files need with `git clone https://github.com/eRegister/docs.git `
 
-* The command above will create a folder called `docs` in `/home/openmrs` if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts:
-        * `concept_restore.sh`
-        * `gitpull_bahmniapps.sh`,`gitpull_concepts.sh`,`gitpull_mappings`,
-        * `gitpull_serial.sh`,`serializedobject_restore.sh`
-        * `gitpullbahmniapps.service`,`gitpullconcepts.service`,`gitpullmappings.service`,`gitpullserializedobject.service`
+* The command above will create a folder called `docs` in `/home/openmrs` if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts/MappingsScripts:
+    * `concepts_restore.sh`
+    * `gitpull_bahmniapps.sh`
+    * `gitpull_concepts.sh`
+    * `gitpull_mappings.sh`
+    * `gitpull_serial.sh`
+    * `gitpullbahmniapps.service`
+    * `gitpullconcepts.service`
+    * `gitpullmappings.service`
+    * `gitpullserializedobject.service`
+    * `serializedboject_restore.sh`
 * Go to `/development/` and create the following directories `openmrs_reporting_release` and `openmrs_concepts_release` and grant openmrs user permissions to own the files.
 * Move the following files to  `/usr/local/bin/` and make them executable:
 `concept_restore.sh`,`serializedobject_restore`.
