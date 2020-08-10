@@ -1047,53 +1047,28 @@
 <li>
 <p>Then download all of the files need with <code>git clone https://github.com/eRegister/docs.git</code></p>
 </li>
-</ul>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-* The command above will create a folder called <code>docs</code> in <code>/home/openmrs</code> if you didn't change to another directory. All of files that need to be transfered to the server are in <a href="https://github.com/eRegister/docs/tree/master/scripts/MappingsScripts">docs/scripts/mappingsscripts</a>:</p>
-<div class="codehilite"><pre><span></span><code>* `concepts_restore.sh`
-* `gitpull_bahmniapps.sh`
-* `gitpull_concepts.sh`
-* `gitpull_mappings.sh`
-* `gitpull_serial.sh`
-* `gitpullbahmniapps.service`
-* `gitpullconcepts.service`
-* `gitpullmappings.service`
-* `gitpullserializedobject.service`
-* `serializedboject_restore.sh`
-</code></pre></div>
-
-
-<h1 id="go-to-development-and-create-the-following-directories-openmrs_reporting_release-and-openmrs_concepts_release-and-grant-openmrs-user-permissions-to-own-the-files">* Go to <code>/development/</code> and create the following directories <code>openmrs_reporting_release</code> and <code>openmrs_concepts_release</code> and grant openmrs user permissions to own the files.</h1>
+<li>
+<p>The command above will create a folder called <code>docs</code> in <code>/home/openmrs</code> if you didn't change to another directory. All of files that need to be transfered to the server are in <a href="https://github.com/eRegister/docs/tree/master/scripts/MappingsScripts">docs/scripts/mappingsscripts</a>:</p>
 <ul>
-<li>The command above will create a folder called <code>docs</code> in <code>/home/openmrs</code> if you didn't change to another directory. All of files that need to be transferred to the server are in <strong><code>docs/scripts/MappingsScript</code></strong>. Mapping folder contains the following files: <br/>
-         <code>concept_restore.sh</code><br/>
-         <code>gitpull_bahmniapps.sh</code><br/>
-         <code>gitpull_concepts.sh</code><br/>
-         <code>gitpull_mappings.sh</code> <br/>
-         <code>gitpull_serial.sh</code><br/>
-         <code>serializedobject_restore.sh</code><br/>
-         <code>gitpullbahmniapps.service</code> <br/>
-         <code>gitpullconcepts.service</code> <br/>
-         <code>gitpullmappings.service</code><br/>
-         <code>gitpullserializedobject.service</code><br/></li>
-<li>Go to <code>/development/</code> and create the following directories <code>openmrs_reporting_release</code> and <code>openmrs_concepts_release</code> and grant openmrs user permissions to own the files <code>sudo chown -R openmrs:openmrs directory_name</code>.<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>ac859d5df5503ae438d79ac1d1bc7b67f22ef348</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<li><code>concepts_restore.sh</code></li>
+<li><code>gitpull_bahmniapps.sh</code></li>
+<li><code>gitpull_concepts.sh</code></li>
+<li><code>gitpull_mappings.sh</code></li>
+<li><code>gitpull_serial.sh</code></li>
+<li><code>gitpullbahmniapps.service</code></li>
+<li><code>gitpullconcepts.service</code></li>
+<li><code>gitpullmappings.service</code></li>
+<li><code>gitpullserializedobject.service</code></li>
+<li><code>serializedboject_restore.sh</code></li>
+</ul>
 </li>
-<li>Move the following files to  <code>/usr/local/bin/</code> and make them executable:
-<code>concept_restore.sh</code>,<code>serializedobject_restore</code>.</li>
+<li>
+<p>Go to <code>/development/</code> and create the following directories <code>openmrs_reporting_release</code> and <code>openmrs_concepts_release</code> and grant openmrs user permissions to own the files.</p>
+</li>
+<li>
+<p>Move the following files to  <code>/usr/local/bin/</code> and make them executable:
+<code>concept_restore.sh</code>,<code>serializedobject_restore</code>.</p>
+</li>
 <li>Move <code>gitpull_concepts.sh</code> to <code>/development/openmrs_concepts_release</code> and <code>gitpull_serial.sh</code> to <code>/development/openmrs_reporting_release/</code>, make them executable.</li>
 </ul>
 <div class="admonition note">
@@ -1136,8 +1111,10 @@
 <code>sudo systemctl enable service_name</code></p>
 </li>
 </ul>
-<p>!!! note
-       when the service has been registered successfully you should see created sym link in <code>/etc/systemd/system/default.target.wants/.</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>when the service has been registered successfully you should see created sym link in <code>/etc/systemd/system/default.target.wants/.</code></p>
+</div>
 <h5>3. Configuring <strong>cronjob</strong></h5>
 <ul>
 <li>configure the cronjob to trigger the services everyday 7 am if our servers universal time is at UTC.</li>

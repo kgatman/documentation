@@ -19,7 +19,6 @@
 
 * Then download all of the files need with `git clone https://github.com/eRegister/docs.git `
 
-<<<<<<< HEAD
 * The command above will create a folder called `docs` in `/home/openmrs` if you didn't change to another directory. All of files that need to be transfered to the server are in [docs/scripts/mappingsscripts](https://github.com/eRegister/docs/tree/master/scripts/MappingsScripts):
 
     * `concepts_restore.sh`
@@ -34,20 +33,7 @@
     * `serializedboject_restore.sh`
 
 * Go to `/development/` and create the following directories `openmrs_reporting_release` and `openmrs_concepts_release` and grant openmrs user permissions to own the files.
-=======
-* The command above will create a folder called `docs` in `/home/openmrs` if you didn't change to another directory. All of files that need to be transferred to the server are in **`docs/scripts/MappingsScript`**. Mapping folder contains the following files: <br/>
-         `concept_restore.sh`<br/>
-         `gitpull_bahmniapps.sh`<br/>
-         `gitpull_concepts.sh`<br/>
-         `gitpull_mappings.sh` <br/>
-         `gitpull_serial.sh`<br/>
-         `serializedobject_restore.sh`<br/>
-         `gitpullbahmniapps.service` <br/>
-         `gitpullconcepts.service` <br/>
-         `gitpullmappings.service`<br/>
-         `gitpullserializedobject.service`<br/>
-* Go to `/development/` and create the following directories `openmrs_reporting_release` and `openmrs_concepts_release` and grant openmrs user permissions to own the files `sudo chown -R openmrs:openmrs directory_name`.
->>>>>>> ac859d5df5503ae438d79ac1d1bc7b67f22ef348
+
 * Move the following files to  `/usr/local/bin/` and make them executable:
 `concept_restore.sh`,`serializedobject_restore`.
 * Move `gitpull_concepts.sh` to `/development/openmrs_concepts_release` and `gitpull_serial.sh` to `/development/openmrs_reporting_release/`, make them executable.
@@ -88,8 +74,8 @@
     `sudo systemctl daemon-reload` <br />
     `sudo systemctl enable service_name`
 
-   !!! note
-       when the service has been registered successfully you should see created sym link in `/etc/systemd/system/default.target.wants/.`
+!!! note
+    when the service has been registered successfully you should see created sym link in `/etc/systemd/system/default.target.wants/.`
 
 ##### 3. Configuring **cronjob**
 * configure the cronjob to trigger the services everyday 7 am if our servers universal time is at UTC.
