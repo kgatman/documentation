@@ -1044,7 +1044,7 @@
 <p>Then download all of the files need with <code>git clone https://github.com/eRegister/docs.git</code></p>
 </li>
 <li>
-<p>The command above will create a folder called <code>docs</code> in <code>/home/openmrs</code> if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts/MappingsScripts:</p>
+<p>The command above will create a folder called <code>docs</code> in <code>/home/openmrs</code> if you didn't change to another directory. All of files that need to be transfered to the server are in <a href="https://github.com/eRegister/docs/tree/master/scripts/MappingsScripts">docs/scripts/mappingsscripts</a>:</p>
 <ul>
 <li><code>concepts_restore.sh</code></li>
 <li><code>gitpull_bahmniapps.sh</code></li>
@@ -1058,7 +1058,9 @@
 <li><code>serializedboject_restore.sh</code></li>
 </ul>
 </li>
-<li>Go to <code>/development/</code> and create the following directories <code>openmrs_reporting_release</code> and <code>openmrs_concepts_release</code> and grant openmrs user permissions to own the files.</li>
+<li>
+<p>Go to <code>/development/</code> and create the following directories <code>openmrs_reporting_release</code> and <code>openmrs_concepts_release</code> and grant openmrs user permissions to own the files.</p>
+</li>
 <li>Move the following files to  <code>/usr/local/bin/</code> and make them executable:
 <code>concept_restore.sh</code>,<code>serializedobject_restore</code>.</li>
 <li>Move <code>gitpull_concepts.sh</code> to <code>/development/openmrs_concepts_release</code> and <code>gitpull_serial.sh</code> to <code>/development/openmrs_reporting_release/</code></li>
@@ -1085,8 +1087,15 @@
 <li>Now it's time to create a new container from the image we created earlier with: <code>docker run -e container_name=openmrseregister -it -d --restart always -p 443:443 -p 80:80 -p 8069:8069 -p 8000:8000 --privileged --name openmrseregister -v /development/bahmni_config_release:/development/bahmni_config_release -v /development/dhisconnector_mappings:/development/dhisconnector_mappings -v /development/bahmniapps_release:/development/bahmniapps_release omrsregrepo/bahmni_base:06082020 /bin/bash</code></li>
 <li>Go to <code>/development/</code> and grant openmrs user permissions to files in <code>/development/dhisconnector_mappings</code> and <code>/development/bahmniapps_release</code></li>
 <li>Move <code>gitpull_bahmniapps.sh</code> to <code>/development/bahmniapps_release</code> and <code>gitpull_mappings.sh</code> to <code>/development/dhisconnector_mappings</code>, make them executable.</li>
-<li>Create local repo's in all directories in <code>/development</code> except <code>/development/bahmni_config_release</code>, commands <code>git init</code> , <code>git remote add origin https://github.com:/eRegister/repo_name</code></li>
-<li>test that you are able to fetch files from remote repo's by <code>git fetch --all</code></li>
+<li>
+<p>Create local repo's in all directories in <code>/development</code> except <code>/development/bahmni_config_release</code>, with the following commands:
+     <code>git init</code> , 
+     <code>git remote</code> add 
+     <code>git origin https://github.com:/eRegister/repo_name</code></p>
+</li>
+<li>
+<p>test that you are able to fetch files from remote repo's by <code>git fetch --all</code></p>
+</li>
 <li>move all services <code>gitpullmappings.service</code>,<code>gitpullconcepts.serivce</code>,
 <code>gitpullbahmniapps.service</code> and <code>gitpullserializedobject.service</code>.</li>
 <li>Nagivate into /etc/system/system/ and type the following commands to enable <code>gitpull_mappings.service</code>, <code>gitpullconcepts.service</code>, <code>gitpullbahmniapps.service</code>,<code>gitpullserializedobject.service</code></li>
@@ -1094,7 +1103,8 @@
 <li><code>sudo systemctl daemon-reload</code></li>
 <li><code>sudo systemctl enable service_name</code></li>
 </ul>
-<p><strong> Note:when the service has been registered successfully you should see created sym link in </strong> <code>/etc/systemd/system/default.target.wants/.</code></p>
+<p>!!! note
+       when the service has been registered successfully you should see created sym link in <code>/etc/systemd/system/default.target.wants/.</code></p>
 <h5>3. Configuring <strong>cronjob</strong></h5>
 <ul>
 <li>configure the cronjob to trigger the services everyday 9 am.</li>
