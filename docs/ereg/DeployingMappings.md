@@ -16,7 +16,8 @@
 
 * Then download all of the files need with `git clone https://github.com/eRegister/docs.git `
 
-* The command above will create a folder called `docs` in `/home/openmrs` if you didn't change to another directory. All of files that need to be transfered to the server are in docs/scripts/MappingsScripts:
+* The command above will create a folder called `docs` in `/home/openmrs` if you didn't change to another directory. All of files that need to be transfered to the server are in [docs/scripts/mappingsscripts](https://github.com/eRegister/docs/tree/master/scripts/MappingsScripts):
+
     * `concepts_restore.sh`
     * `gitpull_bahmniapps.sh`
     * `gitpull_concepts.sh`
@@ -27,6 +28,7 @@
     * `gitpullmappings.service`
     * `gitpullserializedobject.service`
     * `serializedboject_restore.sh`
+
 * Go to `/development/` and create the following directories `openmrs_reporting_release` and `openmrs_concepts_release` and grant openmrs user permissions to own the files.
 * Move the following files to  `/usr/local/bin/` and make them executable:
 `concept_restore.sh`,`serializedobject_restore`.
@@ -54,7 +56,11 @@
 `
 * Go to `/development/` and grant openmrs user permissions to files in `/development/dhisconnector_mappings` and `/development/bahmniapps_release`
 * Move `gitpull_bahmniapps.sh` to `/development/bahmniapps_release` and `gitpull_mappings.sh` to `/development/dhisconnector_mappings`, make them executable.
-* Create local repo's in all directories in `/development` except `/development/bahmni_config_release`, commands `git init` , `git remote add origin https://github.com:/eRegister/repo_name`
+* Create local repo's in all directories in `/development` except `/development/bahmni_config_release`, with the following commands:
+     `git init` , 
+     `git remote` add 
+     `git origin https://github.com:/eRegister/repo_name`
+
 * test that you are able to fetch files from remote repo's by `git fetch --all`
 * move all services `gitpullmappings.service`,`gitpullconcepts.serivce`,
 `gitpullbahmniapps.service` and `gitpullserializedobject.service`.
@@ -63,7 +69,8 @@
    * `sudo systemctl daemon-reload`
    * `sudo systemctl enable service_name`
 
-   ** Note:when the service has been registered successfully you should see created sym link in ** `/etc/systemd/system/default.target.wants/.`
+   !!! note
+       when the service has been registered successfully you should see created sym link in `/etc/systemd/system/default.target.wants/.`
 
 ##### 3. Configuring **cronjob**
 * configure the cronjob to trigger the services everyday 9 am.
