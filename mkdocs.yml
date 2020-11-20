@@ -68,7 +68,7 @@ nav:
                             - "covid/Program_Rules.md"
                             - "covid/How-To-Prepare-Docker-Training-Instance.md"
         - About Us:
-                  - "covid/About.md"
+                  - "covid/About-Us.md"
                   
 markdown_extensions:
         - admonition
