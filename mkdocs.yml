@@ -69,9 +69,9 @@ nav:
                             - "covid/How-To-Prepare-Docker-Training-Instance.md"
         - About Us:
                   - "covid/About-Us.md"
-                  
+
 markdown_extensions:
-        - admonition
+        - admonition:
         - codehilite:
                   guess_lang: false
         - toc:
