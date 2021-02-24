@@ -43,6 +43,7 @@ nav:
                   - "informedpush/informedpush.md"
                   - "informedpush/informedpusharv.md"
         - eRegister:
+                  - "ereg/release-log.md"
                   - "User Manual":
                             - "ereg/u-intro.md"
                   - "Technical Manual":
