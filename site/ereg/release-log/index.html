@@ -13,14 +13,14 @@
         <meta name="author" content="Ministry of Health">
       
       
-        <link rel="canonical" href="https://github.com/eRegister/docs/ereg/workingwithdockerlocally/">
+        <link rel="canonical" href="https://github.com/eRegister/docs/ereg/release-log/">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
-        <title>Working with Docker Images Locally - Lesotho Health SI Systems Documentation</title>
+        <title>eRegister Release Notes - Lesotho Health SI Systems Documentation</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-docker-images-locally" class="md-skip">
+        <a href="#eregister-release-notes" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Working with Docker Images Locally
+              eRegister Release Notes
             
           </span>
         </div>
@@ -523,11 +523,20 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../release-log/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         eRegister Release Notes
       </a>
+      
     </li>
   
 
@@ -575,14 +584,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
       
       <label class="md-nav__link" for="nav-4-3">
         Technical Manual
@@ -611,20 +618,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../workingwithdockerlocally/" class="md-nav__link">
         Working with Docker Images Locally
       </a>
-      
     </li>
   
 
@@ -992,14 +990,34 @@
               
                 
                 
-                <h1 id="working-with-docker-images-locally">Working with Docker Images Locally</h1>
-<h2>Committing a Container locally</h2>
-<p>Alternatively, we can package all of the changes done on a running container locally by like so:
-* First verify the name of your running container with <code>docker ps</code> and then,
-* Commit all of the changes in a running container with <code>docker commit d76b19479a2f omrsregrepo/bahmni_base:24102019</code> <em>we normally use the date of committing a container as a tag</em>
-* <code>docker save bahmni_base:24102019 | gzip &gt; bahmni_base_24102019.tar.gz</code>
-* The newly created tarball can be shared via USB stick and loaded with <code>docker load &lt; bahmni_base_24102019.tar.gz</code>
-* You should now see your newly loaded image when do <code>docker images</code></p>
+                <h1 id="eregister-release-notes">eRegister Release Notes</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>this beta version is going to be deployed at selected pilot facilities</li>
+</ul>
+</div>
+<h5>Version 0.92-Release: Beta 1</h5>
+<ul>
+<li>
+<h6>EMR</h6>
+<ul>
+<li><em>all frontend changes done related to Bahmni EMR</em></li>
+</ul>
+</li>
+<li>
+<h6>ERP</h6>
+<ul>
+<li><em>all frontend changes done related to Bahmni ERP</em></li>
+</ul>
+</li>
+<li>
+<h6>Databases</h6>
+<ul>
+<li><em>all changes related to backup scripts</em></li>
+</ul>
+</li>
+</ul>
                 
                   
                     
@@ -1008,7 +1026,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 13, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 24, 2021</span>
     
   </small>
 </div>
@@ -1031,7 +1049,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../intro/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../informedpush/informedpusharv/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1040,19 +1058,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                eRegister Installation Manual
+                Informed Push ARV
               </div>
             </div>
           </a>
         
         
-          <a href="../FAQs/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../u-intro/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                FAQ's
+                U intro
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
