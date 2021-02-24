@@ -1,9 +1,9 @@
-# eRegister Release Notes
+### eRegister Release Notes
 
 !!! warning
     * this beta version is going to be deployed at selected pilot facilities
 
-##### Version 0.92-Release: Beta 1
+##### [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) - Release Beta 1
 
 * ###### EMR
     * _all frontend changes done related to Bahmni EMR_
