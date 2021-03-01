@@ -1,4 +1,4 @@
-# Bahmni Addons Pipeline
+# Core Addons & Bahmni Addons Pipeline
 
 !!! warning
     * Content coming soon...

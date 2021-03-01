@@ -1,4 +1,4 @@
-# Mappings and Serialized Object auto Deployment
+# Mappings and Serialized Object Pipeline
 
 !!! warning
     * First start with your local instance before attempting to update the live server.
