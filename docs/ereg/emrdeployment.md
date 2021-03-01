@@ -1,4 +1,4 @@
-# Automated Deployment
+# EMR Automated Deployment
 
 !!! warning
     * Please make sure that **no one** is using the system 
