@@ -55,6 +55,7 @@ nav:
                             - "Automated Deployment":
                                       - "ereg/emrdeployment.md"
                                       - "ereg/erpdeployment.md"
+                                      - "ereg/reports.md"
                             - "ereg/DeployingMappings.md"
         - COVID-19:
                   - "covid/Overview.md"
