@@ -1,4 +1,4 @@
-# Reports Automated Deployment
+# Bahmni Addons Pipeline
 
 !!! warning
     * Content coming soon...

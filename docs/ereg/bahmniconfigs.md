@@ -1,4 +1,4 @@
-# EMR Automated Deployment
+# Bahmni Configs Pipeline
 
 !!! warning
     * Please make sure that **no one** is using the system 

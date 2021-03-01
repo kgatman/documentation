@@ -76,15 +76,23 @@
      <lastmod>2021-03-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/docs/ereg/emrdeployment/</loc>
+     <loc>https://github.com/eRegister/docs/ereg/bahmniconfigs/</loc>
      <lastmod>2021-03-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/docs/ereg/erpdeployment/</loc>
+     <loc>https://github.com/eRegister/docs/ereg/bahmniapps/</loc>
      <lastmod>2021-03-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/eRegister/docs/ereg/reports/</loc>
+     <loc>https://github.com/eRegister/docs/ereg/bahmniaddons/</loc>
+     <lastmod>2021-03-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/eRegister/docs/ereg/bahmnireports/</loc>
+     <lastmod>2021-03-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/eRegister/docs/ereg/odooreports/</loc>
      <lastmod>2021-03-01</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
