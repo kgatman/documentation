@@ -1086,6 +1086,20 @@
 <p>Install git
 <code>$sudo yum update # update system packages</code>
 <code>$sudo yum install git</code></p>
+<p>Install maven 
+<code>$sudo yum install maven</code></p>
+<p>Install rpm-build
+<code>$sudo yum install rpm-build</code></p>
+<p>Clone the source code from the repository
+<code>$sudo git clone &lt;repository url link&gt;</code></p>
+<p>Build the plugin
+<code>$sudo mvn -Dmaven.test.skip=true install</code></p>
+<p>Install the plugin
+<code>$sudo yum install dhis-integration-1.0-1.noarch.rpm</code></p>
+<p>Configure the plugin - set application properties</p>
+<p>Navigate to the application’s properties configuration file:
+<code>cd /etc/dhis-integration/dhis-integration.yml</code></p>
+<p>Configure the application as follows:</p>
 <h2>Testing</h2>
 <h2>Uninstallation</h2>
                 
