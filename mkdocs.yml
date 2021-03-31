@@ -58,6 +58,7 @@ nav:
                                       - "ereg/bahmniaddons.md"
                                       - "ereg/odooreports.md"
                                       - "ereg/DeployingMappings.md"
+                            - "ereg/Integration-DHIS2.md"
 
         - COVID-19:
                   - "covid/Overview.md"
