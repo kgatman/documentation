@@ -29,10 +29,6 @@ Configure the application as follows:
 
 
 
-
-
-
-
 ## Testing
 
 ## Uninstallation
