@@ -30,6 +30,7 @@ Configure the application as follows:
 
 ## Testing
 Configure reports - create a concatenated report (in reports.json) for the program and associated query file e.g product_list.sql
+`$sudo yum autoremove dhis-integration`
 
 
 ## Uninstallation

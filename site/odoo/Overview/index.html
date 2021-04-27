@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://github.com/eRegister/docs/informedpush/informedpush/">
+        <link rel="canonical" href="https://github.com/eRegister/docs/odoo/Overview/">
       
       
         <meta name="author" content="Ministry of Health">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Informed Push - Lesotho Health SI Systems Documentation</title>
+        <title>Overview - Lesotho Health SI Systems Documentation</title>
       
     
     
@@ -66,11 +66,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#informed-push" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +92,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Informed Push
+              Overview
             
           </span>
         </div>
@@ -188,9 +183,7 @@
     <li class="md-tabs__item">
       
       
-        
-      
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../informedpush/informedpush/" class="md-tabs__link">
         Informed Push
       </a>
     </li>
@@ -229,7 +222,9 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../odoo/Overview/" class="md-tabs__link">
+        
+      
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Odoo-Pharmacy
       </a>
     </li>
@@ -525,12 +520,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     <label class="md-nav__link" for="nav-3">
       Informed Push
       <span class="md-nav__icon md-icon"></span>
@@ -547,20 +540,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../informedpush/informedpush/" class="md-nav__link">
       Informed Push
     </a>
-    
   </li>
 
         
@@ -570,7 +554,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../informedpusharv/" class="md-nav__link">
+    <a href="../../informedpush/informedpusharv/" class="md-nav__link">
       Informed Push ARV
     </a>
   </li>
@@ -1048,10 +1032,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     <label class="md-nav__link" for="nav-6">
       Odoo-Pharmacy
       <span class="md-nav__icon md-icon"></span>
@@ -1068,11 +1054,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../odoo/Overview/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Overview
     </a>
+    
   </li>
 
         
@@ -1102,7 +1095,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../odoo/Dispensary/" class="md-nav__link">
+    <a href="../Dispensary/" class="md-nav__link">
       Dispensary
     </a>
   </li>
@@ -1114,7 +1107,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../odoo/Accounting/" class="md-nav__link">
+    <a href="../Accounting/" class="md-nav__link">
       Accounting
     </a>
   </li>
@@ -1151,7 +1144,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../odoo/Menu-Setup.md" class="md-nav__link">
+    <a href="../Menu-Setup.md" class="md-nav__link">
       None
     </a>
   </li>
@@ -1211,29 +1204,22 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <h1 id="informed-push">Informed Push</h1>
-<p>....Information for Informed Push Dataset</p>
+                  <h1>Overview</h1>
+                
+                <p>Modules with notable updates: Sales, Purchases 
+Modules without notable updates: Point Of Sale, Inventory, Accounting</p>
+<ul>
+<li>Odoo UI changes are stored on the two sub-repositories on eRegister repository namely: bahmni_addons and odoo_addons.</li>
+<li>Bahmni_addons simlink creation must point to the directory: opt/bahmni-erp/bahmni-addons</li>
+<li>Odoo_addons simlink creation must point to the directory: opt/bahmni-erp/odoo/addons</li>
+<li>After creation of Sim links: “systemctl restart odoo.service” command updates the UI accordingly.</li>
+</ul>
                 
                   
                     
@@ -1242,7 +1228,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 21, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 27, 2021</span>
     
   </small>
 </div>
@@ -1265,7 +1251,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../dhis2/installation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../covid/How-To-Prepare-Docker-Training-Instance/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1274,19 +1260,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                DHIS2 Installation
+                How To Prepare Docker Training Instance
               </div>
             </div>
           </a>
         
         
-          <a href="../informedpusharv/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Dispensary/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Informed Push ARV
+                Dispensary
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

@@ -73,6 +73,13 @@ nav:
                             - "covid/Program-Indicators.md"
                             - "covid/Program_Rules.md"
                             - "covid/How-To-Prepare-Docker-Training-Instance.md"
+        - Odoo-Pharmacy:
+                  - "odoo/Overview.md"
+                  - "Pharmacy Module Guideline":
+                            - "odoo/Dispensary.md"
+                            - "odoo/Accounting.md"
+                  - "Technical":
+                            - "odoo/Menu-Setup.md"
         - About Us:
                   - "covid/About-Us.md"
 
