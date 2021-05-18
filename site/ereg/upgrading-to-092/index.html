@@ -13,14 +13,14 @@
         <meta name="author" content="Ministry of Health">
       
       
-        <link rel="canonical" href="https://github.com/eRegister/docs/ereg/intro/">
+        <link rel="canonical" href="https://github.com/eRegister/docs/ereg/upgrading-to-092/">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
-        <title>eRegister Installation Manual - Lesotho Health SI Systems Documentation</title>
+        <title>Upgrading to Bahmni eRegister 0.92 - Lesotho Health SI Systems Documentation</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eregister-installation-manual" class="md-skip">
+        <a href="#upgrading-to-bahmni-eregister-092" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              eRegister Installation Manual
+              Upgrading to Bahmni eRegister 0.92
             
           </span>
         </div>
@@ -208,15 +208,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../eRegister-092-Release-Notes/" class="md-tabs__link md-tabs__link--active">
+      <a href="../eRegister-092-Release-Notes/" class="md-tabs__link">
         eRegister
       </a>
     </li>
@@ -631,14 +629,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
       
       <label class="md-nav__link" for="nav-4">
         eRegister
@@ -707,14 +703,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
       
       <label class="md-nav__link" for="nav-4-3">
         Technical Manual
@@ -731,20 +725,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
         eRegister Installation Manual
       </a>
-      
     </li>
   
 
@@ -1335,68 +1320,146 @@
               
                 
                 
-                <h1 id="eregister-installation-manual">eRegister Installation Manual</h1>
+                <h1 id="upgrading-to-bahmni-eregister-092">Upgrading to Bahmni eRegister 0.92</h1>
+<h4><strong>Preparing Bahmni 0.90 Backup</strong></h4>
+<hr />
+<ul>
+<li>First we have to take a proper backup of the system so that should the upgrade process be problematic, we have can resume facility activities with ease. 
+We can start by taking a backup of the database with <code>docker exec -it openmrseregister mysqldump -uroot -p openmrs &gt; openmrs.sql</code>. This command will create the backup inside the container but put the sql file outside the container.</li>
+<li>Then we can commit the running container to take a snapshot of it as is with <code>docker commit openmrseregister omrsregrepo/bahmni_092:18052021</code> <em>you can use whatever date when doing this for your tag</em> </li>
+<li>Before moving forward with the steps below, please make sure you have both the sql file and the docker image with <code>ls -lh</code>. The file openmrs.sql should be more than 100M, if in doubt, you can do <code>cat openmrs.sql</code> to see the file has content. Also do <code>docker images</code> and make sure you can see the image you just created.</li>
+<li>To prevent conflicting ports, we have to finally stop and kill the container with <code>docker stop openmrseregister</code> and remove it completely with <code>docker rm openmrseregister</code></li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <ul>
-<li>this guide is for Bahmni eRegister 0.90. For version 0.92, please refer to guide <a href="../upgrading-to-092/">here</a></li>
+<li>Please don't skip this step. It's very important to do the backup before upgrading!!!</li>
 </ul>
 </div>
-<p>This document attempts to standardize how we prepare our servers to be ready for deployment at health facilities.</p>
-<p>Before we follow the steps on how to prepare the server, we first have to install Ubuntu Server 18.04 LTS from <a href="https://ubuntu.com/#download">Ubuntu Site</a></p>
-<h2>Installing Docker</h2>
-<p><a href="https://asciinema.org/a/CZiacOPBRcmlOtjaVXcFUFohr"><img alt="asciicast" src="https://asciinema.org/a/CZiacOPBRcmlOtjaVXcFUFohr.svg" /></a></p>
+<hr />
+<h4>Installing Docker</h4>
+<p>The hosting should already have docker installed, but if for some reason it's not installed, please refer to this <a href="../intro/">guide</a></p>
+<p><em>Please go as far as installing docker only and then come back to this guide.</em></p>
+<h4>Installing Docker Compose</h4>
+<p>To upgrade to version 0.92, we're going to use Docker Compose we're using more than one container. To install Docker Compose, copy and run the following:</p>
+<div class="codehilite"><pre><span></span><code>sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose
+</code></pre></div>
+
+<p>Then make the binary file you just downloaded executable with the command below (copy and paste)</p>
+<div class="codehilite"><pre><span></span><code>sudo chmod +x /usr/local/bin/docker-compose
+</code></pre></div>
+
+<p>Check that everything is running well by running <code>docker-compose version</code> and you'll see something like this: </p>
+<div class="codehilite"><pre><span></span><code>docker-compose version 1.28.2, build 67630359
+docker-py version: 4.4.1
+CPython version: 3.7.9
+OpenSSL version: OpenSSL 1.1.0l  10 Sep 2019
+</code></pre></div>
+
+<p>If you don't see anything, you might want to do <code>su $USER</code> to reload enviroment variables then do <code>docker-compose version</code> again.</p>
+<h4>Installing Git</h4>
+<p>Do <code>git version</code> to check if Git is already installed. If it's not, run <code>sudo apt install git</code></p>
+<h4>Setting up containers</h4>
+<p><img alt="docker-compose diagram" src="../../pics/eregister_diagram.png" /></p>
+<p><sub>Fig 1 - eRegister Bahmni 0.92 Diagram</sub></p>
+<h6>Preparing containers</h6>
 <ul>
-<li>To install Docker, please follow the instructions detailed in <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04">https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04</a> </li>
+<li>Go to home directory with <code>cd ~</code></li>
+<li>Download the repo with docker-compose file: <code>git clone  https://github.com/eRegister/bahmni_docker.git</code></li>
+<li>Change directory into <strong>docker_docker</strong> folder with <code>cd docker_docker</code></li>
+<li>Start the containers with <code>docker-compose up -d</code><ul>
+<li><em>make sure you have internet connectivity because docker-compose is going to try do download the images to your serve</em></li>
 </ul>
-<p><em>these instructions above were written for Ubuntu 16 but work perfectly for Ubuntu 18</em></p>
-<h2>Pulling the docker image and running it as a container</h2>
+</li>
+<li>After running the command abover, While still in <strong>$HOME/docker_docker</strong>, run <code>docker-compose ps</code> to check if the containers without any errors. You should see something like:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>           Name                          Command               State                                                              Ports                                                           
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+bahmni_docker_emr-service_1   /usr/sbin/init /usr/sbin/i ...   Up      0.0.0.0:33062-&gt;3306/tcp, 0.0.0.0:443-&gt;443/tcp, 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:8000-&gt;8000/tcp, 0.0.0.0:8050-&gt;8050/tcp, 8053/tcp
+bahmni_docker_erp-service_1   /usr/sbin/init /usr/sbin/i ...   Up      0.0.0.0:8069-&gt;8069/tcp 
+</code></pre></div>
+
 <ul>
-<li>In situations of poor internet connectivity where we're committing and sharing images using sneakernet, please follow the guide in <a href="Working-with-Docker-Images-Locally">here</a></li>
-<li>To pull the docker, it's not necessary to login from the terminal, just run the following:
-<code>docker pull omrsregrepo/bahmni_base:25012020_release</code></li>
-<li>After the image has been pulled you should be able to see it when you do <code>docker images</code></li>
-<li>A container is a running instance of an image. The last step is to run our image to make container with <code>docker run -e container_name=openmrseregister -it -d --restart always -p 443:443 -p 80:80 -p 8069:8069 -p 8000:8000 --privileged --name openmrseregister -v openmrseregister:/openmrseregister omrsregrepo/bahmni_base:25012020_release /bin/bash</code></li>
-<li>To check that indeed we have a container running, you can do <code>docker ps</code>. </li>
-<li>Navigate into the container using the command,<code>docker exec -it openmrseregister bash</code></li>
-<li>Once you have landed into the container, make sure that you're in the / directory and then start mysqld service with <code>services mysqld start</code>, login to a database without a password and then run the command below:</li>
-<li><code>source openmrs.sql</code></li>
-<li>After running the command above, do <code>use openmrs</code> and then do <code>source OpenMRS_Start_up_Schema_V1.sql</code></li>
+<li>The above output is also important as it shows names of the two containers created. Now we need to restore out backup into the new instance we just created by:<ul>
+<li>copying <code>openmrs.sql</code> into the <code>bahmni_docker_emr-service_1</code> with <code>docker cp $HOME/openmrs.sql bahmni_docker_emr-service_1:/</code></li>
+<li>get into the <code>bahmni_docker_emr-service_1</code> container with <code>docker exec -it bahmni_docker_emr-service_1 bash</code></li>
+<li>run <code>ls</code> and you should see <code>openmrs.sql</code></li>
+<li>get into the MySQL database with <code>mysql -u root -p</code> then enter password</li>
+<li>run <code>show databases</code> and you should see a list all databases which include a database called <code>openmrs</code>.</li>
+<li>delete the <code>openmrs</code> database with <code>drop database openmrs</code></li>
+<li>recreate the database again with <code>create database openmrs</code></li>
+<li>get into the database with <code>use openmrs</code>. Before running the command below, make sure you're in the (blank) openmrs database by running <code>select database()</code> and you will see a small table that confirms that indeed you're in the openmrs database.</li>
+<li>restore the backup with <code>source openmrs.sql</code></li>
 </ul>
-<h2>Starting Services</h2>
-<p>Often times, we're going to encounter situations where a container is running but the services inside the container are not, to start your services running the following commands in this order:</p>
+</li>
+<li>Then run <code>bahmni -ilocal start</code> to start services and daemons that Bahmni depend on.</li>
+<li>Go to <code>/var/www/</code> and run: <ul>
+<li>sudo <code>rm bahmniapps</code> or <code>unlink bahmniapps</code></li>
+<li>do <code>sudo ln –s /development/bahmni_apps_release/ bahmniapps</code></li>
+<li>do <code>sudo ln –s /development/bahmni_config092/ bahmni_config_</code>
+Browse to http://IP_of_eRegister/bahmni/home and check if the changes have been effected.</li>
+</ul>
+</li>
+<li>Check that the system is running by browsing to http://SERVER_IP and you should see the new Bhamni 092 system as shown below:</li>
+<li></li>
+</ul>
+<p><img alt="Bahmni 092 after upgrade" src="../../pics/bahmni092.png" />
+<sub>Fig 2 - eRegister Bahmni 0.92 After Upgrade</sub></p>
+<hr />
+<h5><strong>Configuring Automated Deployment</strong></h5>
+<h6>0. PREPARATORY STEPS</h6>
 <ul>
-<li><code>service httpd start</code></li>
-<li><code>service mysqld start</code></li>
-<li><code>service openmrs start</code></li>
-<li><code>service bahmni-reports start</code></li>
+<li>SSH into the server with ssh <code>openmrs@_SERVER_IP_ADDRESS</code>
+First check to see if your server has internet connectivity with ping github.com
+Then download all of the files need with <code>git clone https://github.com/eRegister/docs.git</code>
+The command above will create a folder called docs in /home/openmrs if you didn't change to another directory. All of files that need to be transferred to the server are in docs/scripts/:<ul>
+<li><code>gitpull_bahmniapps.service</code></li>
+<li><code>gitpull_bahmniapps.sh</code></li>
+<li><code>openmrs_global_properties</code></li>
+<li><code>serialized objects</code></li>
+<li><code>symbolic_creation.sh</code></li>
+<li><code>Visit_types.sql</code></li>
+<li>etc.</li>
 </ul>
-<p>Now you should be able to see eRegister when you browse to http://server_IP/bahmni/home. <em>you'll use the IP address of your server</em>  </p>
-<h2>Enabling/Disabling Locations</h2>
-<p>Depending on the health facility where the server will be deployed, we'll have to either enable or disable locations in the database.
-To do all of these, it is highly recommended that we run all of our sql queries through phpMyAdmin and shy away from using CLI. Browse to http://192.168.8.10/mydb and use the following credentials. <em>remember to use your IP address</em></p>
+</li>
+</ul>
+<h6>1. CREATING A VOLUME</h6>
 <ul>
-<li>username: </li>
-<li>password: </li>
+<li>create development_emr directory <code>sudo mkdir -p /development_emr/bahmni_apps_release</code></li>
+<li>change ownership of the new folder from root to openmrs with <code>sudo chown -R openmrs:openmrs /development_emr</code> because the service is managed by <code>openmrs</code> user
+get into the directory with <code>cd /development_emr/bahmni_apps_release</code></li>
 </ul>
-<p>On the left pane, you'll see a list of databases, click on <code>openmrs</code>. All of the locations are managed by a <code>location</code> table. If for example you're in Motebang Hospital, to see all of the locations for Motebang Hospital, run the following query: </p>
-<p><code>SELECT location_id, name, retired
-FROM location
-WHERE name LIKE '%mote%'</code></p>
-<p><code>1</code> is for when retired is <code>TRUE</code> and <code>0</code> is when retired is <code>FALSE</code>. To enable locations we have to set retired to <code>0</code>. 
- * So it will be done with the following <code>UPDATE</code> query:
-<code>UPDATE location
-SET retired = 0, 
-WHERE location_id=121;</code>
-to enable <code>Motebang Hospital</code>
- * So it will be done with the following <code>UPDATE</code> query:
-<code>UPDATE location
-SET retired = 0, 
-WHERE location_id=122;</code>
-to enable <code>ART Corner Motebang Hospital</code>
-* ...and so on and so fourth...</p>
-<p>## Configuring Backup
-CONTENT LOADING....</p>
+<h6>2. CONFIGURE BAHMNIAPPS SERVICES</h6>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>when the service has been registered successfully you should see created sym link in <code>/etc/systemd/system/defacat ult.target.wants/.</code></p>
+<h6>3. CONFIGURING CRONJOB</h6>
+<ul>
+<li>configure the cronjob to trigger the service Monday 9 am</li>
+<li>to edit the cronjob do: <code>sudo crontab -e</code> <ul>
+<li><strong>if it's the first time running this command it'll probably ask you to choose the default text editor, please be kind enough to choose Nano as it's the easiest editor for most administrators.</strong></li>
+</ul>
+</li>
+<li>configure the script to run within 2 mins just to make sure everything is running OK:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>*/2 * * * * systemctl restart gitpull_bahmniapps.service &gt;&gt; /var/log/gitpull_bahmniapps.log2&gt;&amp;
+</code></pre></div>
+
+<ul>
+<li>inside the crontab editor write:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>* 7 * * mon systemctl restart gitpull_bahmniapps.service &gt;&gt; /var/log/gitpull_bahmniapps.log2&gt;&amp;1
+</code></pre></div>
+
+<ul>
+<li>Go to <code>/development_emr/bahmni_apps_release/</code> and check the status of <strong>cron</strong> service to see when it has executed <strong>gitpull_bahmniapps</strong> service, once done check the file by typing ll or ls. For some reason you may find that the service has not pulled the files from our remote repository, first thing to do is to check the status of the service if it has successfully started. If not, check the status code of the service to guide you what might gone wrong. The following table shows possible exit codes of the systemd service. Another possible reason it could be that you forgot to change the ownership of the development bahmni config release, check it.</li>
+<li>Another possible reason could be that the service in unable to fetch from remote repository which is not related to systemd service, check the logs of the service by typing <code>sudo tail -f /var/log/gitpull_bahmniapps.log</code></li>
+<li>If gitpull service has pulled the bahmni config file then make a permanent configuration in cronjob to trigger the service every Monday 9am.</li>
+<li>inside the crontab editor write:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>* 7 * * mon systemctl restart gitpull.service &gt;&gt; /var/log/gitpull.log2&gt;&amp;1
+</code></pre></div>
                 
                   
                     
@@ -1405,7 +1468,7 @@ CONTENT LOADING....</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 27, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 18, 2021</span>
     
   </small>
 </div>
@@ -1424,41 +1487,6 @@ CONTENT LOADING....</p>
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../u-intro/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                U intro
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../workingwithdockerlocally/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Working with Docker Images Locally
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

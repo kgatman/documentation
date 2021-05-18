@@ -1,5 +1,8 @@
 # eRegister Installation Manual
 
+!!! warning
+    * this guide is for Bahmni eRegister 0.90. For version 0.92, please refer to guide [here](upgrading-to-092.md)
+
 This document attempts to standardize how we prepare our servers to be ready for deployment at health facilities.
 
 Before we follow the steps on how to prepare the server, we first have to install Ubuntu Server 18.04 LTS from [Ubuntu Site](https://ubuntu.com/#download)
