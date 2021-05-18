@@ -1,4 +1,4 @@
-# Upgrading to Bahmni eRegister 0.92
+# Upgrading to Bahmni 0.92
 
 #### **Preparing Bahmni 0.90 Backup**
 

@@ -53,6 +53,7 @@ nav:
                             - "ereg/clientregistry.md"
                             - "ereg/facilityimplementationchecklist.md"
                             - "ereg/Integration-DHIS2.md"
+                            - "ereg/upgrading-to-092.md"
                             - "Automated Deployment":
                                       - "ereg/bahmniconfigs.md"
                                       - "ereg/bahmniapps.md"
