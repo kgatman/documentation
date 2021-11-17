@@ -60,6 +60,7 @@ nav:
                                       - "ereg/bahmniaddons.md"
                                       - "ereg/odooreports.md"
                                       - "ereg/DeployingMappings.md"
+                                      - "ereg/clinicalsearch.md"
         - COVID-19:
                   - "covid/Overview.md"
                   - "Data Entry Guidelines":
