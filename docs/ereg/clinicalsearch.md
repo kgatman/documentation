@@ -23,9 +23,6 @@ Deployment verification
 
 Search `xdssender.exportObsEndpoint` and verify the property  is set to `http://devbukanals.org/xdsrepositoryrest/openmrs/ws/rest/v1/obs`
 
-*DHIS connector you should see the following snapshot*
-
-
 **Bahmni apps** 
 
 *You should see the following snapshot*
