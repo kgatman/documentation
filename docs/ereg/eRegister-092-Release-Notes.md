@@ -1,10 +1,16 @@
 ### eRegister Release Notes
 
 !!! warning
-    * this beta version is going to be deployed at selected pilot facilities. 
-    * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
+    * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues) or [email](mailto:mm5093@cumc.columbia.edu)
+## **[0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes)** - **Release Notes July 2022**
+* ##### Clinical Module
+    * content content
+* ##### Reports Module
+    * content content
+* ##### Pharmacy Module
+    * content content
 
-## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) - Release Candidate (RC) #1
+## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) - **Release Candidate (RC) #1**
 
 * ##### Pharmacy Module
     * Customized core odoo addons and Bamni addons to fit Lesotho context
