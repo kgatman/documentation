@@ -7,6 +7,7 @@
 ## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) - Release Candidate (RC) #1
 
 * ##### Pharmacy Module
+    * Preparing for July 
     * Customized core odoo addons and Bamni addons to fit Lesotho context
     * Changed workflow to suite Lesotho context
 * ##### Reports
