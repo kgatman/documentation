@@ -4,6 +4,18 @@
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
 
+## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) - Release Notes July 2022
+
+* ##### Pharmacy Module
+    * Content Test 
+* ##### Reports
+    * Content Content
+* ##### Registration Module
+    * Content Content 
+* ##### Clinical Module
+    * Content Content 
+
+  
 ## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) - Release Candidate (RC) #1
 
 * ##### Pharmacy Module
