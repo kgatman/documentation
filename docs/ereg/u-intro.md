@@ -1,3 +1,0 @@
-## eRegiser User Manual
-
-....user manual loading.....
