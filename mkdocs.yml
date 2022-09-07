@@ -1,48 +1,115 @@
 # Project information
-site_name: Lesotho Health Documentation
+site_name: Lesotho Health SI Systems Documentation
 site_description: "Technical documentation for Lesotho's Health Systems"
 site_author: "Ministry of Health"
-site_url: ""
+# Repo
+repo_name: eRegister/Documentation
+site_url: https://github.com/eRegister/docs
 
 # Copyright
 copyright: "Copyright &copy; 2020 Ministry of Health - Lesotho"
 
 # Theme
 theme:
-    name: "material"
-    palette:
-      primary: "#2d3479"
-      accent: "indigo"
-    language: "en"
-    features:
-      - tabs
-    font:
-      text: "Roboto"
-      code: "Roboto Mono"
-
+        name: "material"
+        palette:
+                primary: "#2d3479"
+                accent: "indigo"
+        language: "en"
+        features:
+                - navigation.tabs
+        font:
+                text: "Roboto"
+                code: "Roboto Mono"
 
 # Nagivation
 nav:
-  - Overview:
-    - 'index.md'
-    - 'contacts.md'
-  - DHIS2:
-    - 'User Manual': 
-      - 'dhis2/usermanual.md'
-    - 'DataSets': 
-      - 'dhis2/intro.md'
-      - 'dhis2/hts.md'
-      - 'dhis2/tb.md'
-      - 'dhis2/hiv-care-n-tx.md'
-    - 'Technical Manual': 
-      - 'dhis2/installation.md'
-  - eRegister:
-    - 'User Manual': 
-      - 'dhis2/intro.md'
-    - 'Technical Manual': 
-      - 'ereg/intro.md'
-      - 'ereg/workwithdockerlocally.md'
-      - 'ereg/FAQs.md'
-      - 'ereg/clienregistry.md'
-      - 'ereg/facilityimplementationchecklist.md'
-      - 'ereg/automateddeployment.md'
+        - Overview:
+                  - "index.md"
+                  - "contacts.md"
+        - DHIS2:
+                  - "User Manual":
+                            - "dhis2/usermanual.md"
+                  - "DataSets":
+                            - "dhis2/intro.md"
+                            - "dhis2/hts.md"
+                            - "dhis2/tb.md"
+                            - "dhis2/tb-indicators.md"
+                            - "dhis2/tb-validation-rules.md"
+                            - "dhis2/hiv-care-n-tx.md"
+                  - "Technical Manual":
+                            - "dhis2/installation.md"
+        - Informed Push:
+                  - "informedpush/informedpush.md"
+                  - "informedpush/informedpusharv.md"
+        - eRegister:
+                  - "ereg/eRegister-092-Release-Notes.md"
+                  - "User Manual":
+                            - "ereg/TB_Program.md"
+                  - "Technical Manual":
+                            - "ereg/intro.md"
+                            - "ereg/workingwithdockerlocally.md"
+                            - "ereg/FAQs.md"
+                            - "ereg/clientregistry.md"
+                            - "ereg/facilityimplementationchecklist.md"
+                            - "ereg/Integration-DHIS2.md"
+                            - "ereg/upgrading-to-092.md"
+                            - "Automated Deployment":
+                                      - "ereg/bahmniconfigs.md"
+                                      - "ereg/bahmniapps.md"
+                                      - "ereg/bahmniaddons.md"
+                                      - "ereg/odooreports.md"
+                                      - "ereg/DeployingMappings.md"
+                                      - "ereg/clinicalsearch.md"
+        - COVID-19:
+                  - "covid/Overview.md"
+                  - "Data Entry Guidelines":
+                            - "covid/Registering-a-Case-or-Suspect.md"
+                            - "covid/Capturing-Weekly-Aggregate-Data.md"
+                            - "covid/Using-Mobile-Devices.md"
+                  - "Technical":
+                            - "covid/Alerts.md"
+                            - "covid/Weekly-Report.md"
+                            - "covid/Validation-Rules.md"
+                            - "covid/Indicators.md"
+                            - "covid/Program-Indicators.md"
+                            - "covid/Program_Rules.md"
+                            - "covid/How-To-Prepare-Docker-Training-Instance.md"
+        - Odoo-Pharmacy:
+                  - "odoo/Overview.md"
+                  - "Pharmacy Module Guideline":
+                            - "odoo/Dispensary.md"
+                            - "odoo/Accounting.md"
+                  - "Technical":
+                            - "odoo/Menu-Setup.md"
+        - About Us:
+                  - "covid/About-Us.md"
+
+markdown_extensions:
+        - admonition:
+        - codehilite:
+                  guess_lang: false
+        - toc:
+                  toc_depth: "1-1"
+plugins:
+        - search
+        - git-revision-date-localized
+
+extra:
+        social:
+                - icon: fontawesome/brands/github
+                  link: https://github.com/eRegister/docs
+####
+
+# EXTENSIONS NOT WORKING - i don't know why. I'll figure it out
+
+# markdown_extensions:
+#   - codehilite:
+#       guess_lang: false
+#   - toc:
+#       toc_depth : "1-1"
+#   - footnotes
+
+# plugins:
+#   - pdf-export:
+#       combined: true

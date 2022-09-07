@@ -1,3 +1,3 @@
 # User Manual
 
-....loading
+This manual is inteded for non technical end users
