@@ -14,6 +14,7 @@
 
 !!! note
     * most of these reports are informed by PEPFAR MER Indicators and have been named to align with them
+    * you can explore these reports here: [hiels.gov.ls/bahmni/reports/](https://hiels.gov.ls/bahmni/reports)
 
 * **TB-001 | TB Outcomes (List)**	
 * **TB-002 | TB Case Detection**	
