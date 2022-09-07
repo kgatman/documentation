@@ -5,10 +5,10 @@
 
 ##### 1. DHIS2 Datasets to report to
 
-|DHIS2 Dataset  | TB Notification 2020 | TB Treatment Outcomes 2020 | Presumptive TB Cases Report | D.R TB Report Surveillance 2020 | D.R TB TB (Hospital) |
-| --- | --- | --- | --- | --- | --- |
-| **Source Documents** | TB Register | TB Register | Tally Sheet, TB Presumptive Register |TB Register |TB Register |
-| **Corresponding eRegister Tools** | TB Intake, TB Followup | TB Intake, TB Followup | TB Intake, TB Followup | TB Intake, TB Followup | TB Intake, TB Followup |
+|DHIS2 Dataset  | TB Notification 2020 | TB Treatment Outcomes 2020 | Presumptive TB Cases Report | D.R TB Report Surveillance 2020 | D.R TB TB (Hospital) | TB Case Detection |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Source Documents** | TB Register | TB Register | Tally Sheet, TB Presumptive Register |TB Register |TB Register |Tally Sheet, TB Presumptive Register, Contact Tracing and Screening Register, TPT (Under 15), TB Register |
+| **Corresponding eRegister Tools** | TB Intake, TB Followup | TB Intake, TB Followup | Registration Module screening tool | TB Intake, TB Followup | TB Intake, TB Followup | Registration Module screening tool, TPT form, TB Intake, TB Followup |
 
 ##### 2. eRegister Facility Level Patient Reports
 
