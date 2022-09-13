@@ -5,6 +5,24 @@
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
 
 ## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) 
+## - *Release Notes September 2022*
+* ##### Reports
+    * ###### Bahmni 
+          - *TB_Intake report(list)* - correction to pull correction patients
+          - *ART-077 | PEADS Aging Out Analysis (Client Outcomes)* - changed to track the latest cohort which is Q2 2021
+          - *ART-078 | PEADS Aging Out Analysis (Client Appointments)* - changed to track the latest cohort which is Q2 2021
+          - *ART-059 | TX_RTT (List)* - Disaggregations changed from IIT> 3months to IIT3-5months and IIT6+months
+          - *ART-060 | TX_RTT (Pivot)* - Disaggregations changed from IIT> 3months to IIT3-5months and IIT6+months
+          - *ART-061 | TX_ML (List)* - Disaggregations changed from IIT> 3months to IIT3-5months and IIT6+months
+          - *ART-062 | TX_ML (Pivot)* - Disaggregations changed from IIT> 3months to IIT3-5months and IIT6+months
+          - *PIR-17 Tx_CURR TXML* - Modified to use new disaggregation IIT3-5months, IIT6+months instead of IIT>3months
+          - *PIR-17 Tx_CURR Retention Report* - Modified to use new disaggregation IIT3-5months, IIT6+months instead of IIT>3months
+          - *TB-010 | New and Relapse Enrolled on TB (List)* - Added TB history, Key populations, HIV Status, Active and Defaulted Clients
+          - *TB-011 | DSD TB_ART* - Added TB history, Key populations, HIV Status, Active and Defaulted Clients
+          - *ART-003 | Missed Appointments Status Report (List)* - Arranged clients with appointment missed
+* ##### Clinical Module
+    * New Prep Follow-Up Form
+    * New Prep Intake Form
 ## - *Release Notes August 2022*
 * ##### Reports
     * ###### Bahmni 
