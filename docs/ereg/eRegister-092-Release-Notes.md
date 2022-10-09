@@ -9,6 +9,10 @@
 * ##### Reports
     * ###### Bahmni 
           - *TB_Intake report(list)* - correction to pull correction patients
+          - *ART-001 | Current on ART Detailed (List)* - the report to report clients seen and missed by the end of the reporting period as missed
+          - *ART-002 | Current on ART Detailed (Pivot)* - the report to report clients seen and missed by the end of the reporting period as missed
+          - *ART-053 | TX_CURR (Pivot)* - the report to report clients seen and missed by the end of the reporting period as missed
+          - *ART-054 | TX_CURR (List)* - the report to report clients seen and missed by the end of the reporting period as missed
           - *ART-077 | PEADS Aging Out Analysis (Client Outcomes)* - changed to track the latest cohort which is Q2 2021
           - *ART-078 | PEADS Aging Out Analysis (Client Appointments)* - changed to track the latest cohort which is Q2 2021
           - *ART-059 | TX_RTT (List)* - Disaggregations changed from IIT> 3months to IIT3-5months and IIT6+months
@@ -20,9 +24,38 @@
           - *TB-010 | New and Relapse Enrolled on TB (List)* - Added TB history, Key populations, HIV Status, Active and Defaulted Clients
           - *TB-011 | DSD TB_ART* - Added TB history, Key populations, HIV Status, Active and Defaulted Clients
           - *ART-003 | Missed Appointments Status Report (List)* - Arranged clients with appointment missed
+          - *TB-022 | TB Drug Resistant (list)* - New Report
+          - *TB-003 | TB Notification (List)* - New Report 
+    * ###### Openmrs
+          - *PIR-17 Tx_CURR Retention Report Mapping 2022* - Maps part of PIR-17 Tx_CURR Retention Report to Txcurr Retention and Attrition Report in DHIS2(TxRTT Section)
+          - *PIR-17 Tx_CURR TXML_2022* - Maps PIR-17 Tx_CURR TXML Report to Txcurr Retention and Attrition Report in DHIS2(TxML Section)
+          - *2020_ADULT ARV REGIMEN Mapping* - now maps to Adult Regimen 1f (a)TDF 3TC /EFV (400mg) other months which was previously blank
+
+
+
 * ##### Clinical Module
     * New Prep Follow-Up Form
     * New Prep Intake Form
+    * Made Under 5 Base Doses Multi-select
+    * Added a Reports name filter in Bahmni-Reports 
+    * Added 'Weeks of current gestation by LMP method' to Obstetric History on ANC Program Form.
+    * Auto Calculate Gestational Age from LNMP on The ANC Program Form
+    * Visits for other services e.g., FP, Cervical Cancer Screening, Enhanced Adherence Counseling and Under5
+___
+**Note**
+
+**Do the following to deploy the new visits on your server:**
+
+- Pull or Clone the new bahmni_docker
+- Restore the following files in to the database (emr):
+
+       /bahmni_docker/misc/vist_types.sql
+
+       /bahmni_docker/misc/new_vists_global_properties.sql
+
+- Pull the new bahmni_configs
+- Rebuild the search index
+___  
 ## - *Release Notes August 2022*
 * ##### Reports
     * ###### Bahmni 
