@@ -1528,7 +1528,154 @@
 <li>Please report issues here: <a href="https://github.com/eRegister/bahmni_docker/issues">https://github.com/eRegister/bahmni_docker/issues</a></li>
 </ul>
 </div>
-<h2 id="092-release-candidate-rc-1"><a href="https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes">0.92</a> - Release Candidate (RC) #1</h2>
+<h2 id="092"><a href="https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes">0.92</a></h2>
+<h2 id="-release-notes-september-2022">- <em>Release Notes September 2022</em></h2>
+<ul>
+<li>
+<h5 id="reports">Reports</h5>
+<ul>
+<li>
+<h6 id="bahmni">Bahmni</h6>
+<ul>
+<li><em>TB_Intake report(list)</em> - correction to pull correction patients</li>
+<li><em>ART-001 | Current on ART Detailed (List)</em> - the report to report clients seen and missed by the end of the reporting period as missed</li>
+<li><em>ART-002 | Current on ART Detailed (Pivot)</em> - the report to report clients seen and missed by the end of the reporting period as missed</li>
+<li><em>ART-053 | TX_CURR (Pivot)</em> - the report to report clients seen and missed by the end of the reporting period as missed</li>
+<li><em>ART-054 | TX_CURR (List)</em> - the report to report clients seen and missed by the end of the reporting period as missed</li>
+<li><em>ART-077 | PEADS Aging Out Analysis (Client Outcomes)</em> - changed to track the latest cohort which is Q2 2021</li>
+<li><em>ART-078 | PEADS Aging Out Analysis (Client Appointments)</em> - changed to track the latest cohort which is Q2 2021</li>
+<li><em>ART-059 | TX_RTT (List)</em> - Disaggregations changed from IIT&gt; 3months to IIT3-5months and IIT6+months</li>
+<li><em>ART-060 | TX_RTT (Pivot)</em> - Disaggregations changed from IIT&gt; 3months to IIT3-5months and IIT6+months</li>
+<li><em>ART-061 | TX_ML (List)</em> - Disaggregations changed from IIT&gt; 3months to IIT3-5months and IIT6+months</li>
+<li><em>ART-062 | TX_ML (Pivot)</em> - Disaggregations changed from IIT&gt; 3months to IIT3-5months and IIT6+months</li>
+<li><em>PIR-17 Tx_CURR TXML</em> - Modified to use new disaggregation IIT3-5months, IIT6+months instead of IIT&gt;3months</li>
+<li><em>PIR-17 Tx_CURR Retention Report</em> - Modified to use new disaggregation IIT3-5months, IIT6+months instead of IIT&gt;3months</li>
+<li><em>TB-010 | New and Relapse Enrolled on TB (List)</em> - Added TB history, Key populations, HIV Status, Active and Defaulted Clients</li>
+<li><em>TB-011 | DSD TB_ART</em> - Added TB history, Key populations, HIV Status, Active and Defaulted Clients</li>
+<li><em>ART-003 | Missed Appointments Status Report (List)</em> - Arranged clients with appointment missed</li>
+<li><em>TB-022 | TB Drug Resistant (list)</em> - New Report</li>
+<li><em>TB-003 | TB Notification (List)</em> - New Report </li>
+</ul>
+</li>
+<li>
+<h6 id="openmrs">Openmrs</h6>
+<ul>
+<li><em>PIR-17 Tx_CURR Retention Report Mapping 2022</em> - Maps part of PIR-17 Tx_CURR Retention Report to Txcurr Retention and Attrition Report in DHIS2(TxRTT Section)</li>
+<li><em>PIR-17 Tx_CURR TXML_2022</em> - Maps PIR-17 Tx_CURR TXML Report to Txcurr Retention and Attrition Report in DHIS2(TxML Section)</li>
+<li><em>2020_ADULT ARV REGIMEN Mapping</em> - now maps to Adult Regimen 1f (a)TDF 3TC /EFV (400mg) other months which was previously blank</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5 id="clinical-module">Clinical Module</h5>
+<ul>
+<li>New Prep Follow-Up Form</li>
+<li>New Prep Intake Form</li>
+<li>Made Under 5 Base Doses Multi-select</li>
+<li>Added a Reports name filter in Bahmni-Reports </li>
+<li>Added 'Weeks of current gestation by LMP method' to Obstetric History on ANC Program Form.</li>
+<li>Auto Calculate Gestational Age from LNMP on The ANC Program Form</li>
+<li>Visits for other services e.g., FP, Cervical Cancer Screening, Enhanced Adherence Counseling and Under5</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Note</strong></p>
+<p><strong>Do the following to deploy the new visits on your server:</strong></p>
+<ul>
+<li>Pull or Clone the new bahmni_docker</li>
+<li>
+<p>Restore the following files in to the database (emr):</p>
+<p>/bahmni_docker/misc/vist_types.sql</p>
+<p>/bahmni_docker/misc/new_vists_global_properties.sql</p>
+</li>
+<li>
+<p>Pull the new bahmni_configs</p>
+</li>
+<li>Rebuild the search index</li>
+</ul>
+<hr />
+<h2 id="-release-notes-august-2022">- <em>Release Notes August 2022</em></h2>
+<ul>
+<li>
+<h5 id="reports_1">Reports</h5>
+<ul>
+<li>
+<h6 id="bahmni_1">Bahmni</h6>
+<ul>
+<li><em>ART-022 | Data Quality Assessment tool</em> - was displaying a blank page</li>
+<li><em>ART-021 | ART Client Without Intakes (List)</em> - Added more columns(ArtNumber,age,gender,location)</li>
+<li><em>HTS-006 | Self Test Clients(List)</em> - Allow patient tested more than once in a month to appear more than once.</li>
+<li><em>TB-020  and  TB-021</em> - TB registration vs TB Consultation naming corrections</li>
+<li>TxCurr report - include clients who do not have patient identifiers and use ECID identifiers in the report</li>
+<li>Missed_defaulted_ltfu report - include service point in the report</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5 id="clinical-module_1">Clinical Module</h5>
+<ul>
+<li>WHO staging made to disappear when T-staging is selected</li>
+<li>Hid HIVST Results for primary when Secondary is Selected</li>
+<li>SD Bioline is not available in most health centres at the moment so it should not be compulsory for indeterminate results</li>
+</ul>
+</li>
+</ul>
+<h2 id="-release-notes-july-2022">- <em>Release Notes July 2022</em></h2>
+<ul>
+<li>
+<h5 id="reports_2">Reports</h5>
+<ul>
+<li>
+<h6 id="bahmni_2">Bahmni</h6>
+<ul>
+<li>Reporting age groups have been modified to include the new age groups being 50-54, 55-59,60-64,65+.</li>
+<li><em>ART-022 | Data Quality Assessment tool</em> -  DQA Report had a bug after modification to include defaulted and lost to follow-up clients [Bug Fixed].</li>
+<li><em>ART-001 | Current on ART Detailed (List)</em> - Modified to include clients who do not have patient identifiers and use ECID identifiers in the report.</li>
+<li><em>ART-003 | Missed Appointments Status Report (List)</em> -  Added service point column in the report</li>
+</ul>
+</li>
+<li>
+<h6 id="openmrs_1">Openmrs</h6>
+<ul>
+<li><em>Created new children regimen reports that categorize children by weight:</em><ul>
+<li>Children ARV Regimen_1stLine_2022</li>
+<li>Children ARV Regimen_2ndLine_2022</li>
+<li>Children ARV Regimen_3rdLine_2022</li>
+</ul>
+</li>
+<li><em>2020_TB_Screening</em> - TB Screening previous report did not include all clients seen during period</li>
+<li><em>2020_TB_Screening</em> - Only clients that were seen physically at the facility. PreART clients. Clients that were physically seen and screened</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5 id="registration-module">Registration Module</h5>
+<ul>
+<li>Patient name now appears above maiden name in The Registration Module</li>
+</ul>
+</li>
+<li>
+<h5 id="clinical-module_2">Clinical Module</h5>
+<ul>
+<li>Fixed EDD Auto-Calculation</li>
+<li>Hid PITC Results on CACX Form if The test has not been offered</li>
+<li>The LPA susceptibility result is no longer compulsory because the result is not always available</li>
+<li>Allow future Dates for Cervical Cancer Screening Follow up Date</li>
+<li>Place of Delivery is Not Mandatory on ANC Form (While it remains Mandatory on the PNC Form)</li>
+</ul>
+</li>
+<li>
+<h5 id="appointments-module">Appointments Module</h5>
+<ul>
+<li>Fixed Column Headings of The Appointment Module List View</li>
+</ul>
+</li>
+</ul>
+<h2 id="-release-candidate-rc-1">- Release Candidate (RC) #1</h2>
 <ul>
 <li>
 <h5 id="pharmacy-module">Pharmacy Module</h5>
@@ -1538,7 +1685,7 @@
 </ul>
 </li>
 <li>
-<h5 id="reports">Reports</h5>
+<h5 id="reports_3">Reports</h5>
 <ul>
 <li>Ported all Bahmni 0.90 reports to Bahmni 0.92</li>
 <li>Developed Informed Push Tool reports</li>
@@ -1551,7 +1698,7 @@
 </ul>
 </li>
 <li>
-<h5 id="registration-module">Registration Module</h5>
+<h5 id="registration-module_1">Registration Module</h5>
 <ul>
 <li>National Search ported from 0.90 and improved</li>
 <li>Rename gender to sex</li>
@@ -1561,7 +1708,7 @@
 </ul>
 </li>
 <li>
-<h5 id="clinical-module">Clinical Module</h5>
+<h5 id="clinical-module_3">Clinical Module</h5>
 <ul>
 <li>Refactoring Bahmni App to align with 0.90</li>
 <li>Improving the flow of order automation from observation to medication tab</li>
@@ -1583,7 +1730,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 9, 2022</span>
       
     
   </small>
