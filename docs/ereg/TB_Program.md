@@ -1,3 +1,6 @@
+!!! note
+    * **Please click on the title to browse to a bigger more readable picture**
+
 ## [**TB Patient Flow**](https://drive.google.com/file/d/1b-NrAuPi7WNHNqDrUSnKzMnpSa9JrMsm/view?usp=sharing)
 
 ![Bahmni 092 after upgrade](../pics/TB_Patient_Flow_3.png )
