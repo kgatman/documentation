@@ -1,6 +1,6 @@
 ## [**TB Patient Flow**](https://drive.google.com/file/d/1b-NrAuPi7WNHNqDrUSnKzMnpSa9JrMsm/view?usp=sharing)
 
-![Bahmni 092 after upgrade](../pics/TB_patient_flow_2.png )
+![Bahmni 092 after upgrade](../pics/TB_Patient_Flow_3.png )
 <sub>[**Fig 1 - TB Patient Flow**](https://drive.google.com/file/d/1b-NrAuPi7WNHNqDrUSnKzMnpSa9JrMsm/view?usp=sharing)</sub>
 
 ##### 1. DHIS2 Datasets to report to
