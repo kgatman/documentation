@@ -61,6 +61,13 @@ nav:
                                       - "ereg/odooreports.md"
                                       - "ereg/DeployingMappings.md"
                                       - "ereg/clinicalsearch.md"
+        - Laboratory Information System:
+                  - "lis/configuration.md"
+        - Odoo-Pharmacy:
+                  - "odoo/Overview.md"
+                  - "Pharmacy Module Guideline":
+                            - "odoo/Dispensary.md"
+                            - "odoo/Accounting.md"
         - COVID-19:
                   - "covid/Overview.md"
                   - "Data Entry Guidelines":
@@ -75,11 +82,6 @@ nav:
                             - "covid/Program-Indicators.md"
                             - "covid/Program_Rules.md"
                             - "covid/How-To-Prepare-Docker-Training-Instance.md"
-        - Odoo-Pharmacy:
-                  - "odoo/Overview.md"
-                  - "Pharmacy Module Guideline":
-                            - "odoo/Dispensary.md"
-                            - "odoo/Accounting.md"
                   - "Technical":
                             - "odoo/Menu-Setup.md"
         - About Us:
