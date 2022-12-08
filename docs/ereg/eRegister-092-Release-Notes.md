@@ -5,6 +5,49 @@
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
 
 ## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) 
+
+## - *Release Notes November 2022*
+* ##### Reports
+    * ###### Bahmni 
+          - *ART-001 | Current on ART Detailed (List)* - Newly added ECID Identifier results in Zeros under MMD - Solved
+          - *ART-001 | Current on ART Detailed (List)* - Clients who transferred out and came back under clients_missed_28days
+          - *MCH-005 | Ante Natal Care (ANC) (List)* - Added Iron, Folate, Blood_Group
+          - *TB-018 | TB Intakes (List)* - Corrected the report to pull patients correctly
+          - *HTS-001 | HTS Final HIV Status (List)* - Eliminated some duplicates for clients who came more than twice a month
+          - *HTS-002 | HTS Final HIV Status PITC (Pivot)* - Eliminated some duplicates for clients who came more than twice a month
+          - *TB-007 | New and Relapse Enrolled on TB* - Exclude clients that are not new or relapse
+          - *HTS-001 | HTS Final HIV Status (List)* - Added service points, and also considers start & endDates
+          - *HTS-009 | HTS Data Quality Assessment Tool* - Considers start and end dates
+          - *PHARM-003 | Dispensing Summary Report* -Provide labeling of medicines dispensed
+          - *ART-036 | CXCA_SCRN (List)* - Added a New Report for Cervical Cancer Screening
+          - *MCH-004 | Ante Natal Care (ANC) (Pivot)* - Added Muac and Suspected with TB Column
+          - *PHARM-002 | Dispensing Orders report* - Clients dispensed, Age, Sex, Regimen, Quantity Dispensed, Batch
+          - *PHARM-001 | Pharmacy ARV Regimen* - Displays details and status of Regimens
+          - *PHARM-004 | Registered Clients Prescribed and Dispensed (List)* - New report
+          - *PHARM-005 | Registered Clients Prescribed and Dispensed (Pivot)* - New report
+## - *Release Notes October 2022*
+* ##### Reports
+    * ###### Bahmni 
+          - *ART-026 | Ante Natal Care (ANC)* - The report now relies on the start and end dates picked by the user, instead it picked the month and year of the end Date
+          - *ART-026 | Ante Natal Care (ANC)* - The gap between 2nd and 3rd trimester (25 weeks) is now included
+          - *ART-026 | Ante Natal Care (ANC)* - Total ANC follow up visits 2nd, 3rd and 4th now picks subsequent visits
+          - Added a category for MCH Reports
+          - *TB-024 | TB Case Detection (list)* - Adjusted the report number from 23 to 24 because the report above is also 23
+          - *MCH-005 | Ante Natal Care (ANC) (List)* - New Report
+          - *TB-014 | TB Prevention Therapy (List)* - consider start and end dates not month(), year()
+          - *TB-015 | TB Prevention Therapy (Pivot)* - consider start and end dates not month(), year()
+          - *MCH-005 | Ante Natal Care (ANC) (List)* - Corrected the Syphilis_Screening_Results column to distinguish Reactive and Non Reactive results
+          - *MCH-005 | Ante Natal Care (ANC) (List)* - Added Haemoglobin, HIV_Status_Known_Before_Visit, Final_HIV_Status, Subsequent_HIV_Test_Results, MUAC, Tuberculosis
+          - *ART-087 | Weekly PPR (List)* - Shows missed clients,NLICs, defaulters and initiations within a specific week
+          - *ART-088 | Weekly PPR (Pivot)* - Shows missed clients,NLICs, defaulters and initiations within a specific week
+          - *ART-019 | Registered ART Clients with Intakes (List)* - picks ART clients, using either the follow-up form or the ART Number
+          - *ART-020 | Registered ART Clients with Intakes (Pivot)* - picks ART clients, using either the follow-up form or the ART Number
+          - *ART-021 | ART Client Without Intakes (List)* - Identifies all clients who have art follow up but no intakes, regardless of whether they have art number or not
+          - *ART-021 | ART Client Without Intakes (List)* - Identifies all clients who have ART number but no intakes, regardless of whether they have ART follow-up form or not.
+          - *ART-021 | ART Client Without Intakes (List)* - Addition of the column status; aimed at classifying as to whether the clients is 'active', 'missed', 'defaulted', 'LTFU' or does not have ART follow up form
+          - *ART-021 | ART Client Without Intakes (List)* - Arranged the report in order of their status, starting with the active clients and ending with those without ART follow up form
+
+
 ## - *Release Notes September 2022*
 * ##### Reports
     * ###### Bahmni 
