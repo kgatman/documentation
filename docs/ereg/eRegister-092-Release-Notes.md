@@ -6,6 +6,21 @@
 
 ## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) 
 
+## - *Release Notes December 2022*
+* ##### Reports
+    * ###### Bahmni 
+          - *TB-025 | TB Data Quality Assessment Tool* - new report 
+          - *PHARM-004 | Registered Clients Prescribed and Dispensed (List)* - New report
+          - *PHARM-005 | Registered Clients Prescribed and Dispensed (Pivot)* - New report
+          - *PHARM-001 | Pharmacy ARV Regimen* - Displays details and status of Regimens
+    * ###### Openmrs
+          - A new serialized object for the fix of pitc and citc reports in openmrs (They were not picking some clients and were duplicating others)
+
+
+
+
+
+
 ## - *Release Notes November 2022*
 * ##### Reports
     * ###### Bahmni 
