@@ -6,6 +6,36 @@
 
 ## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) 
 
+## - *Release Notes January 2022*
+
+#### Reports
+- Added TB-025 | TB Data Quality Assessment Tool to reports json file
+- MCH-014 | PNC SEEN (List) - New Report 
+- MCH-015 | FP SEEN ( List) - New Report 
+- MCH-016 | Under5 SEEN (List) - New Report
+- MCH-017 | HIV Exposed Infant SEEN (List) - New Report
+- Added the following patientAttributes :
+	- Occupation
+	- Marital Status
+	- Extra Address Information
+	- Treatment Supporter/Next of Kin
+- Added File Number as one of the extraPatientIdentifiers
+- TB-025 | TB Data Quality Assessment Tool - Correcting wrong concept_id used for TB treatment outcomes
+-  TB-025 | TB Data Quality Assessment Tool
+    - Remove the last column (labelled HIV)
+    - Include History of Previous Treatment, just after Site
+    - On the Clients_on_ART column, the tool should pull results as New on ART or Already on ART not active.
+    - For Site, results should be Pulmonary (with correct diagnosis) or Extra Pulmonary
+
+- ART-001 | Current on ART Detailed (List)
+- ART-002 | Current on ART Detailed (Pivot)
+- ART-043 | TX_CURR (List)
+- ART-042 | TX_CURR (Pivot)
+
+#### Clinical Module
+- Correct transferred out clients were picked under missed.
+
+
 ## - *Release Notes December 2022*
 * ##### Reports
     * ###### Bahmni 
