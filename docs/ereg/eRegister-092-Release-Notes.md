@@ -1,12 +1,14 @@
 ### eRegister Release Notes
 
+!!! info
+    * eRegister is based on => [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes)
+
 !!! warning
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
+ 
 
-## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) 
-
-## - *Release Notes February 2022*
+# Release Notes February 2022
 
 #### Reports
 
@@ -27,7 +29,9 @@
 - Fixed Prep Follow Up Form concept spelling
 - Swapped OIs and HIV Management on the TB Intake form
 
-## - *Release Notes January 2022*
+
+
+# Release Notes January 2023
 
 #### Reports
 - Added TB-025 | TB Data Quality Assessment Tool to reports json file
@@ -57,7 +61,9 @@
 - Correct transferred out clients were picked under missed.
 
 
-## - *Release Notes December 2022*
+# Release Notes December 2022
+
+
 * ##### Reports
     * ###### Bahmni 
           - *TB-025 | TB Data Quality Assessment Tool* - new report 
@@ -91,7 +97,9 @@
           - *PHARM-001 | Pharmacy ARV Regimen* - Displays details and status of Regimens
           - *PHARM-004 | Registered Clients Prescribed and Dispensed (List)* - New report
           - *PHARM-005 | Registered Clients Prescribed and Dispensed (Pivot)* - New report
-## - *Release Notes October 2022*
+
+
+# Release Notes October 2022
 * ##### Reports
     * ###### Bahmni 
           - *ART-026 | Ante Natal Care (ANC)* - The report now relies on the start and end dates picked by the user, instead it picked the month and year of the end Date
@@ -151,21 +159,22 @@
     * Auto Calculate Gestational Age from LNMP on The ANC Program Form
     * Visits for other services e.g., FP, Cervical Cancer Screening, Enhanced Adherence Counseling and Under5
 ___
-**Note**
-
+!!! info
 **Do the following to deploy the new visits on your server:**
 
 - Pull or Clone the new bahmni_docker
 - Restore the following files in to the database (emr):
 
-       /bahmni_docker/misc/vist_types.sql
+       `/bahmni_docker/misc/vist_types.sql`
 
-       /bahmni_docker/misc/new_vists_global_properties.sql
+       `/bahmni_docker/misc/new_vists_global_properties.sql`
 
 - Pull the new bahmni_configs
 - Rebuild the search index
 ___  
-## - *Release Notes August 2022*
+# Release Notes August 2022
+
+
 * ##### Reports
     * ###### Bahmni 
           - *ART-022 | Data Quality Assessment tool* - was displaying a blank page
@@ -180,7 +189,7 @@ ___
     * Hid HIVST Results for primary when Secondary is Selected
     * SD Bioline is not available in most health centres at the moment so it should not be compulsory for indeterminate results
 
-## - *Release Notes July 2022*
+# Release Notes July 2022
 
 * ##### Reports
     * ###### Bahmni 
