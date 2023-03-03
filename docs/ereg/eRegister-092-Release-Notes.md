@@ -6,6 +6,27 @@
 
 ## [0.92](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes) 
 
+## - *Release Notes February 2022*
+
+#### Reports
+
+- TB-025 | TB Data Quality Assessment Tool - Added prevention of IOs with the new concept
+- TB-026 | TB Outcome (List) - new report. The previous report was not a list but a pivot.
+- TB-001 | TB Outcomes (Pivot) - has been renamed to pivot not list
+- ART-031 | TX_NEW (List) : include died in the same period
+- ART-032 | TX_NEW (PIVOT) : include died in the same period
+- ART-078 | PrEP NEW (List) - new report
+
+
+#### Clinical Module
+
+- HIV Management Made Multi-Select On TB intake Form
+- Labour and Delivery register: allow add more and conditions
+- Txnew pivot modification and add prep new tb outcomes list to json file
+- Adding the Cancer Screening Report to the reports.json file
+- Fixed Prep Follow Up Form concept spelling
+- Swapped OIs and HIV Management on the TB Intake form
+
 ## - *Release Notes January 2022*
 
 #### Reports
