@@ -8,7 +8,41 @@
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
  
 
-# Release Notes February 2022
+### **Release Notes April 2022**
+
+
+#### Clinical Module
+
+---------------------------------------------------- **HIV Treatment and Care - Follow Up** -------------------------------------------
+
+- HIV Treatment and Care module
+    - new "visitor" field to easily identify visiting clients
+
+---------------------------------------------------- **[ANC Register](https://docs.google.com/document/d/1WLKphDTfFoqSMjhsRg9r1hUQGu2AIOG1/edit?usp=sharing&ouid=108376078359942224064&rtpof=true&sd=true)** ----------------------------------------------------
+
+![ANC Register - 1st visit](../pics/ANC_register_1st.png )
+
+![ANC Register - 2nd visit](../pics/ANC_register_2nd.png )
+
+- ANC Program revised to mimic the newly released ANC REgister
+    - Revised the whole ANC Register
+        - Calcium
+        - Nutritional Assesment
+        - Sign of GBV
+        - Covid19
+        - Rhesus Factor
+        - Tetanus Diththeria (TD) Doses
+    - Added new broader section "HIV Testing Servies"
+    - Clinical WHO Staging
+    - Referrals
+
+#### Reports
+
+* -
+
+--------------------------------------------------------------------------------------------------------
+
+### **Release Notes February 2022**
 
 #### Reports
 
@@ -30,8 +64,10 @@
 - Swapped OIs and HIV Management on the TB Intake form
 
 
+--------------------------------------------------------------------------------------------------------
 
-# Release Notes January 2023
+
+### **Release Notes January 2023**
 
 #### Reports
 - Added TB-025 | TB Data Quality Assessment Tool to reports json file
@@ -61,7 +97,9 @@
 - Correct transferred out clients were picked under missed.
 
 
-# Release Notes December 2022
+--------------------------------------------------------------------------------------------------------
+
+### **Release Notes December 2022**
 
 
 * ##### Reports
@@ -74,11 +112,10 @@
           - A new serialized object for the fix of pitc and citc reports in openmrs (They were not picking some clients and were duplicating others)
 
 
+--------------------------------------------------------------------------------------------------------
 
+### **Release Notes November 2022**
 
-
-
-## - *Release Notes November 2022*
 * ##### Reports
     * ###### Bahmni 
           - *ART-001 | Current on ART Detailed (List)* - Newly added ECID Identifier results in Zeros under MMD - Solved
@@ -99,7 +136,9 @@
           - *PHARM-005 | Registered Clients Prescribed and Dispensed (Pivot)* - New report
 
 
-# Release Notes October 2022
+--------------------------------------------------------------------------------------------------------
+
+### **Release Notes October 2022**
 * ##### Reports
     * ###### Bahmni 
           - *ART-026 | Ante Natal Care (ANC)* - The report now relies on the start and end dates picked by the user, instead it picked the month and year of the end Date
@@ -121,8 +160,10 @@
           - *ART-021 | ART Client Without Intakes (List)* - Addition of the column status; aimed at classifying as to whether the clients is 'active', 'missed', 'defaulted', 'LTFU' or does not have ART follow up form
           - *ART-021 | ART Client Without Intakes (List)* - Arranged the report in order of their status, starting with the active clients and ending with those without ART follow up form
 
+--------------------------------------------------------------------------------------------------------
 
-## - *Release Notes September 2022*
+### **Release Notes September 2022**
+
 * ##### Reports
     * ###### Bahmni 
           - *TB_Intake report(list)* - correction to pull correction patients
@@ -148,8 +189,6 @@
           - *PIR-17 Tx_CURR TXML_2022* - Maps PIR-17 Tx_CURR TXML Report to Txcurr Retention and Attrition Report in DHIS2(TxML Section)
           - *2020_ADULT ARV REGIMEN Mapping* - now maps to Adult Regimen 1f (a)TDF 3TC /EFV (400mg) other months which was previously blank
 
-
-
 * ##### Clinical Module
     * New Prep Follow-Up Form
     * New Prep Intake Form
@@ -171,8 +210,10 @@ ___
 
 - Pull the new bahmni_configs
 - Rebuild the search index
-___  
-# Release Notes August 2022
+
+--------------------------------------------------------------------------------------------------------
+
+### **Release Notes August 2022**
 
 
 * ##### Reports
@@ -189,7 +230,9 @@ ___
     * Hid HIVST Results for primary when Secondary is Selected
     * SD Bioline is not available in most health centres at the moment so it should not be compulsory for indeterminate results
 
-# Release Notes July 2022
+--------------------------------------------------------------------------------------------------------
+
+### **Release Notes July 2022**
 
 * ##### Reports
     * ###### Bahmni 
