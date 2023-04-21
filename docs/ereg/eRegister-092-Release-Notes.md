@@ -21,8 +21,10 @@
 
 #### Clinical Module
 
-- Self test distribution mode is now compulsory
-- Added version date on bahmni login page
+- Self test distribution mode is now compulsory  
+- Added version date on bahmni login page  
+
+
 
 # Release Notes February 2023
 
