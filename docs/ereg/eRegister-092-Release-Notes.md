@@ -19,7 +19,12 @@
 - ART-003 | Missed Appointments Status Report (List) - location re-added
 - ART-003 | Missed Appointments Status Report (List) - Order clients by their appointment status, appointment date
 
-# Release Notes February 2022
+#### Clinical Module
+
+- Self test distribution mode is now compulsory
+- Added version date on bahmni login page
+
+# Release Notes February 2023
 
 #### Reports
 
