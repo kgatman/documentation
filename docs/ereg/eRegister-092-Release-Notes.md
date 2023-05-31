@@ -8,7 +8,7 @@
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
  
 
-### **Release Notes April 2022**
+### **Release Notes April 2023**
 
 
 #### Clinical Module
@@ -24,7 +24,7 @@
 
 ![ANC Register - 2nd visit](../pics/ANC_register_2nd.png )
 
-- ANC Program revised to mimic the newly released ANC REgister
+- ANC Program revised to mimic the newly released ANC Register
     - Revised the whole ANC Register
         - Calcium
         - Nutritional Assesment
@@ -36,13 +36,28 @@
     - Clinical WHO Staging
     - Referrals
 
-#### Reports
-
-* -
-
 --------------------------------------------------------------------------------------------------------
 
-### **Release Notes February 2022**
+### **Release Notes March 2023**
+#### Reports
+##### Modified
+
+- ART-022 | Data Quality Assessment Tool - Viral load column to provide explicit values for VL >20
+- TB-018 | TB Intakes (List) - Changed the variable #enddate# to #endDate#
+- MCH-014 | PNC SEEN (List) - Added First_PNC_Attendance, Place_of_Delivery, FP_Counselling, FP_Method, Syphilis_Screening, Cancer_Screening, Cancer_Assessment_Method,HIV_Testing_Result, Breastfeeding, MUAC_less_than_23cm
+- MCH-017 | Child Health Attendance - Under5 (List) - Added Months, Base_Dose, 1st_Dose, 2nd_Dose, 3rd_Dose, Fully_Immunized, Measles_1st_Dose, Measles_2nd_Dose, Dt_1st_Dose
+- HTS-001 | HTS Final HIV Status (List) - solved duplication caused by editing the form.
+- ART-003 | Missed Appointments Status Report (List) - location re-added
+- ART-003 | Missed Appointments Status Report (List) - Order clients by their appointment status, appointment date
+
+#### Clinical Module
+
+- Self test distribution mode is now compulsory  
+- Added version date on bahmni login page  
+
+------------------------------------------------------------------------------------------------------------
+
+### **Release Notes February 2023**
 
 #### Reports
 
