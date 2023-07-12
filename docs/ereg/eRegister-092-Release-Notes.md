@@ -12,7 +12,7 @@
 #### HIVTC visitor config
 - Hides the "From(site)" if the client is not a visitor
 #### ANC Autocalculate EDD
-This code calculates EDD in alignment with the new ANC form
+- The system can calculate EDD in alignment with the new ANC form
 ####  TB
 - TB-HIV Activities: Multi-select on Prevention of OIs
 - Initial phase now has outcomes, they are no longer greyed out
@@ -101,17 +101,53 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 
 
 ### **Release Notes May 2023**
-- Under5 Growth Monitoring Multiselect
-#### TB contact Tracing
-- Add option to add more sections for TB contact info in TB follow up
-#### Autofill
-- Autofill ANC and Under5 number once filled.
+
+
+#### Clinical Module
+ 
+
+----------------------------------------------------------- **Tuberculosis - Intake** -----------------------------------------------------------
+
+###### The following were added:
+  - Linkage: Added country and facility: for out of the country Transfer In
+  - History of previous treatment: Added "Other" Option and "Specify"
+  - Social Behaviour Section
+  - Laboratory Tests: Added Culture and DST, added Test Lab no and date test was done on each Test type
+  - Medical History and Other Comorbidites
+  - Intensive care
+
+----------------------------------------------------------- **Tuberculosis - Followup** -----------------------------------------------------------
+###### The following were added:
+ - Laboratory Tests:
+    - Added Culture and DST
+	- Added Test Lab no. to Phenotypic tests
+	- Added date test was done on each Test type
+
+ - Contact Tracing
+ - The option to allow users to multiple contact info for traced TB contacts
+
+ ----------------------------------------------------------------------- **Under5** -----------------------------------------------------------------------
+ 
+ - Added feature to auto fill Under5 and ANC Number from first Under5 register consultation in subsequent visits
+
 #### Reports
 ##### Modified
-- ART-045 | TX_CURR MMD (List)
-- ART-046 | TX_CURR MMD (Pivot)
-- ART-080 | Visitors Report (List)
-- ART-081 | Visitors Report (Pivot)
+
+ - ART-003 | Missed Appointments Status Report (List)	Modified to only consider transfers out in the latest follow up form
+ - ART-045 | TX_CURR MMD (List) MMD missed removed
+ - ART-046 | TX_CURR MMD (Pivot) MMD missed removed
+ - TB-020 | TB Intakes (Pivot)- Aligned with the list version
+ - TB-019 | TB Intakes (List) - Corrected to include intakes captured within a year of the report start date only
+ - ART-001 | Current on ART Detailed (List) - Corrected to exclude dead patients from the initiated section of the report
+ - ART-002 | Current on ART Detailed (Pivot) - Aligned with the list version
+ - ART-043 | TX_CURR (Pivot) - Aligned with the list version
+ - ART-044 | TX_CURR (List) - Corrected to exclude dead patients from the initiated section of the report
+
+##### Newly added
+ - ART-080 | Visitors Report (List)
+ - ART-081 | Visitors Report (Pivot) 
+
+
 ### **Release Notes April 2023**
 
 
@@ -139,6 +175,74 @@ Male Partner Involvement: HIV Status hidden by default, visible when
     - Added new broader section "HIV Testing Servies"
     - Clinical WHO Staging
     - Referrals
+
+------------------------------------------------------------------------- **HIV Testing and Counseling** ----------------------------------------------------------------
+
+- The 'kit collected for' field is now compulsory when secondary distribution mode is selected
+
+
+--------------------------------------------------------------------------- **Family Planning Register** ------------------------------------------------------------------
+
+- Follow up date added
+- Multiselect on family counselling services provided enabled
+- Entering future dates on IUCD/Implant check-up date enabled
+
+
+#### Reports
+##### Modified
+- TB-026 | TB Data Quality Assessment Tool - modified to:
+ - Include TB regimen
+ - Treatment outcome regardless of the report
+ - Type of test performed
+ 
+
+- ART-077 | Weekly PPR (List) : corrected to show weekly defaulters and NCLIs that came after 91 days
+
+- ART-078 | Weekly PPR (Pivot): corrected to show weekly defaulters and NCLIs that came after 91 days
+
+- MCH-007 | Child Health (Under5) - List - Added all the multi selected immunization
+
+- ART-022 | Data Quality Assessment Tool - Viral load column to provide explicit values for VL >20
+
+- HTS Final Status Report - solved duplication caused by editing the form.
+
+- TB-022 | Registered TB Visits with TB Consultation (List) - Modified to be more accurate
+
+- TB-023 | Registered TB Visits with TB Consultation (Pivot) - Modified to be more accurate
+
+- HTS-002 | HTS Final HIV Status PITC (Pivot) : Revised to exclude clients with Tested in ANC Form
+
+- HTS-004 | HTS Final HIV Status CITC (Pivot) : Revised to exclude clients with Tested in ANC Form
+
+- TB-026 | TB Data Quality Assessment Tool - Select client initiated during period and date transferred in for SA clients
+ 
+- Revised Rapid HTS reports to eliminate duplication of Clients who had ANC Form consultaions (OpenMRS reports)
+
+##### Newly added
+- Tb_Notification reports( Block 1,Block 2,Block 3,Block 4) (OpenMRS reports)
+- TB Outcome reports (Block 1 and Block 2) (OpenMRS reports)
+
+- MCH-001 | HIV Exposed Infants (HEI) - List
+- MCH-002 | HIV Exposed Infants (HEI) - Pivot
+- MCH-003 | AnteNatal Care (ANC) - List
+- MCH-004 | AnteNatal Care (ANC) - Pivot
+- MCH-005 | Post Natal Care (PNC) - List
+- MCH-006 | Post Natal Care (PNC) - Pivot
+- MCH-007 | Child Health (Under5) - List
+- MCH-009 | Labour and Delivery - List
+- MCH-010 | Labour and Delivery - Pivot
+- MCH-011 | Family Planning - List
+- MCH-012 | Family Planning - Pivot
+- MCH-013 | Nutrition - List
+- MCH-014 | Nutrition - Pivot
+- MCH-015 | PMTCT STAT DINOMINATOR (List)
+- MCH-016 | PMTCT STAT DINOMINATOR (Pivot)
+- MCH-017 | PMTCT STAT (List)
+- MCH-018 | PMTCT STAT (Pivot)
+- MCH-019 | PMTCT EID (List)
+- MCH-020 | PMTCT EID (PIVOT)
+- MCH-022 | PMTCT HEI POS (Pivot)
+* -
 
 --------------------------------------------------------------------------------------------------------
 
