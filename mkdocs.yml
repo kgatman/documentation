@@ -46,6 +46,7 @@ nav:
                   - "ereg/eRegister-092-Release-Notes.md"
                   - "User Manual":
                             - "ereg/TB_Program.md"
+                            - "ereg/ART_Program.md"
                   - "Technical Manual":
                             - "ereg/intro.md"
                             - "ereg/workingwithdockerlocally.md"
