@@ -7,7 +7,111 @@
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
  
+### **Release Notes June 2023**
+#### 
+#### HIVTC visitor config
+- Hides the "From(site)" if the client is not a visitor
+#### ANC Autocalculate EDD
+This code calculates EDD in alignment with the new ANC form
+####  TB
+- TB-HIV Activities: Multi-select on Prevention of OIs
+- Initial phase now has outcomes, they are no longer greyed out
+#### HTS Testing Eligibility
+- Adding multiple selection in HTS on concept Testing Eligibility, Last 12 Months
+#### ANC latest configs
+```
+- Allow future dates to be entered for subsequent visit EDD
+- Remove viral load template warning message in ANC program
+```
+```
+- LOR: Obstetric History
+Parity, Alive and Miscarriages are hidden by 
+default and appear again, when Gravida > 1
+```
+```
+- LOR: History of Past Pregnancies
+Hidden by default, and appears only when Gravida > 1
+```
+```
+- LOR: Gynaecological History
+Result of Pap smear: hidden by default and only appears when “Ever Had Pap 
+smear” is “YES”
+STI treated and Date STI Treated are hidden by default, but visible when 
+“History of STI” is “YES”
+Below Miscarriages: “When”, “Gestation Period” and “Curetage” are hidden by 
+default, but visible when miscarriages is "YES"
+```
+```
+- LOR: Surgical History
+“Type of surgery” hidden by default and appears only when “Any Surgery” 
+is selected “YES”
+“Specify” hidden by default. Visible only when “Other” is clicked under 
+“Type of Surgery”
+```
+```
+- ANC Register: Investigations and Immunizations
+Syphills Treatment Completed: Hidden by default, visible when “Reactive”
+ is clicked
+```
+```
+- ANC Register: HIV Testing Services
+Initial Test During this Pregnancy: visible when HIV Status before 1st 
+Visit is not positive, otherwise hidden
+Initial Test During this Pregnancy: HIV Result: Visible only when HIV 
+Test Done? Is “YES”
+Initial Test During this Pregnancy: HIV Result Received: visible only 
+HIV Test Result are Positive or Negative, otherwise hidden
+Subsequent HIV Test Results: hidden by default. Visible when Known HIV 
+Status before 1st visit is not positive and initial test results during 
+this pregnancy is not positive
+Male Partner Involvement: HIV Status hidden by default, visible when 
+“YES” is clicked
+```
+#### Reports
+##### Modified
+###### Art Reports Modified.
+- ART-001 | Current on ART Detailed (List)  - To exclude visotrs
+- ART-002 | Current on ART Detailed (Pivot)  - To exclude visotrs
+- ART-001 | Current on ART Detailed (List) - Corrected to exclude dead patients from the initiated section of the report
+- ART-002 | Current on ART Detailed (Pivot) - Aligned with the list version
+- ART-017 | Registered ART Visits with ART Consultation (List) : Includes Art Clients who had other visits other than Drug pickup and viral load visit
+- ART-018 | Registered ART Visits with ART Consultation (Pivot) : Includes Art Clients who had other visits other than Drug pickup and viral load visit
+- ART-043 | TX_CURR (Pivot) - Corrected to exclude dead patients from the initiated section of the report
+- ART-044 | TX_CURR (List) - Aligned with the list version
+- ART-061 | Pre-ART - Revise the report to pull clients retested positive and not linked to care
+- ART-067 | PEADS Aging Out Analysis (Client Outcomes) - Updated to track  Q4 Sept 2022 txcurr
+- ART-068 | PEADS Aging Out Analysis (Client Appointments) - Updated to track  Q4 Sept 2022 txcurr
+###### HTS Reports Modified.
+- HTS-006 | Self Test Clients(List) : modified to allow the report accomodate all periods
+- HTS-007 | Self Test Clients(Pivot) : A new report reports.json : addition of a new report
+- Reports.json : addition of a new report
+###### MCH Reports Modified.
+- MCH-003 | AnteNatal Care (ANC) (List)   - This report has been optimized
+- MCH-004 | AnteNatal Care (ANC) (Pivot)  - Corrected number of first ANC Visits to be equal to total trimester
+- MCH-011 | Family Planning - List
+- MCH-012 | Family Planning - Pivot
+- MCH-029 | Registered FP Visits with FP Consultation (List)
+###### TB Reports Modified.
+- TB-001 | TB Case Detection (List) : Included "Referred by(CBO/CHW)" and "Died before treatment" indicators
+- TB-002 | TB Notification (List) : Included "Prophylaxis provided" indicator
+- TB-003 | TB Outcomes (List) : Added two treatment outcomes: Not Evaluated and Moved to Second line
+- TB-017 | TB Prevention Therapy (Pivot) : Revised TPT pivot report
+- TB-019 | TB Intakes (List) - Corrected to include intakes captured within a year of the report start date only
+- TB-020 | TB Intakes (Pivot)- Aligned with the list version
 
+
+### **Release Notes May 2023**
+- Under5 Growth Monitoring Multiselect
+#### TB contact Tracing
+- Add option to add more sections for TB contact info in TB follow up
+#### Autofill
+- Autofill ANC and Under5 number once filled.
+#### Reports
+##### Modified
+- ART-045 | TX_CURR MMD (List)
+- ART-046 | TX_CURR MMD (Pivot)
+- ART-080 | Visitors Report (List)
+- ART-081 | Visitors Report (Pivot)
 ### **Release Notes April 2023**
 
 
