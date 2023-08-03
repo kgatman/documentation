@@ -6,7 +6,65 @@
 !!! warning
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
- 
+### **Release Notes July 2023** 
+#### TB
+##### - Changes made in the TB intake and TB followup forms
+
+- CD4 count, Date of CD4 count and HIV test done were added.
+- Prevention of OIs was changed to appear below HIV management instead of above
+- Added other to indication for starting PrEP
+####
+##### - Added VILI test to "Type of screening offered" field in the cervical cancer screening register
+
+##### - Added lab test number to the following TB lab tests
+
+- Genexpert
+- Line Probe Assay (LPA)
+- Culture and DST
+- X-ray and other tests
+- Added lab test number to the following TB lab tests
+
+#### Pharmacy 
+- Added DTG 10 mg, DTG 50mg, Isoniazid/Rifapentine (300/300mg) to pharmacy drugs
+
+#### ANC Config
+The following attributes are now auto filled from previous visits in the ANC Register
+
+- Blood group
+- Last Normal Menstrual Period
+- Estimated Date of Delivery
+- HIV status known before first visit
+- The "From Lesotho" field only appears in the first visit
+- The "TT Previous Doses" field only appears in the first ANC visit
+- TB lab test no. was added to the following TB tests in the follow up form
+- Phenotypic tests
+- Culture and DST
+
+#### Reports
+##### New Reports
+- ART-002A | TxCurr Quarterly Test (List)
+- MCH-001 | HIV Exposed Infants (HEI) - List : Excluded Under 5 information
+- MCH-002 MCH-002 | HIV Exposed Infants (HEI) - Pivot : Excluded Under 5 information
+- MCH-035 | ANC Data Quality Assessment || (Added the following columns to ANC Data Quality Assessment, Iron, Folate, Calcium, MUAC, Rhesus Factor, TD previous Doses, TD current Doses)
+##### Modifications
+
+###### (Modified to align with ART-001/2 | Current on ART Detailed)
+- ART-044 | TX_CURR (List)
+- ART-043 | TX_CURR (Pivot)
+
+- TB-002 | TB Notification (List)
+- TB-003 | TB Outcomes (List)
+
+###### Openmrs Report: 
+- HTS Period Indicator Report | Exclude voided confirmatory results
+- 2020_ART_Current | Remove visitors from ART current
+
+#### Other
+- Added concepts source DISA and LOINC 
+- Added corresponding new refence terms 
+- Created new viral load concepts and added mappings to the new and existing concepts.
+
+
 ### **Release Notes June 2023**
 #### 
 #### HIVTC visitor config
@@ -19,20 +77,14 @@
 #### HTS Testing Eligibility
 - Adding multiple selection in HTS on concept Testing Eligibility, Last 12 Months
 #### ANC latest configs
-```
+
 - Allow future dates to be entered for subsequent visit EDD
 - Remove viral load template warning message in ANC program
-```
-```
 - LOR: Obstetric History
 Parity, Alive and Miscarriages are hidden by 
 default and appear again, when Gravida > 1
-```
-```
 - LOR: History of Past Pregnancies
 Hidden by default, and appears only when Gravida > 1
-```
-```
 - LOR: Gynaecological History
 Result of Pap smear: hidden by default and only appears when “Ever Had Pap 
 smear” is “YES”
@@ -40,25 +92,22 @@ STI treated and Date STI Treated are hidden by default, but visible when
 “History of STI” is “YES”
 Below Miscarriages: “When”, “Gestation Period” and “Curetage” are hidden by 
 default, but visible when miscarriages is "YES"
-```
-```
+
 - LOR: Surgical History
 “Type of surgery” hidden by default and appears only when “Any Surgery” 
 is selected “YES”
 “Specify” hidden by default. Visible only when “Other” is clicked under 
 “Type of Surgery”
-```
-```
+
 - ANC Register: Investigations and Immunizations
 Syphills Treatment Completed: Hidden by default, visible when “Reactive”
  is clicked
-```
-```
+
 - ANC Register: HIV Testing Services
 Initial Test During this Pregnancy: visible when HIV Status before 1st 
 Visit is not positive, otherwise hidden
 Initial Test During this Pregnancy: HIV Result: Visible only when HIV 
-Test Done? Is “YES”
+1Test Done? Is “YES”
 Initial Test During this Pregnancy: HIV Result Received: visible only 
 HIV Test Result are Positive or Negative, otherwise hidden
 Subsequent HIV Test Results: hidden by default. Visible when Known HIV 
@@ -66,7 +115,7 @@ Status before 1st visit is not positive and initial test results during
 this pregnancy is not positive
 Male Partner Involvement: HIV Status hidden by default, visible when 
 “YES” is clicked
-```
+
 #### Reports
 ##### Modified
 ###### Art Reports Modified.
