@@ -6,6 +6,40 @@
 !!! warning
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
+### **Release Notes August 2023**
+#### ANC
+##### ANC Form fixes and modifications
+- Blood pressure is moved to below EDD
+- Covid 19 status has been added to the form
+- High risk pregnancy options were changed to match the current ANC register
+- Complications during pregnancy were changed to match current ANC register
+- Parity and Gravida are now auto-filled from the previous form in the ANC form
+#### MDR-TB in registration
+##### Added MDR-TB-DEMOGRAPHICS and HOUSEHOLD CONTACT
+##### Direction for MDR-TB section
+#### Reports
+##### New Reports
+- TB-002 | TB Case Detection (Pivot)
+- TB-027 | MDR TB Clients - A new MDR report
+- MCH-023 | PMTCT FO (List) : New report
+- MCH-024 | PMTCT FO (Pivot) : New report
+- TB-028 | MDR TB Clients (Pivot) : New report
+- Cervical Cancer Screening (List) : New report to include all clients screened
+##### Modifications
+- ART-019 | Registered ART Clients with Intakes (List) - Modified to exclude visitors
+- ART-020 | Registered ART Clients with Intakes (Pivot) - Modified to exclude visitors
+- ART-021 | ART Client Without Intakes (List) - Updated to exclude visitors
+- TB-001 | TB Case Detection (List) : Modified to include all tb screened clients
+- MCH-017 | PMTCT STAT (List) : Modified to pull all tested ANC first visits
+- MCH-018 | PMTCT STAT (Pivot) : Modified to pull all tested ANC first visits
+- MCH-003 | AnteNatal Care (ANC) - List : Modified to remove duplication of clients by restricting the report to only pick the latest MUAC
+##### CAG
+- Creating Cag Module Base Code : (This is the base code from which cag module development begins to take effect)
+##### Other
+- Renamed DISA parameter codes and added new LOINC code
+- Remove HPV results error in cervical cancer screening form
+- Reports.json : Added Cervical Cancer Screening (List)
+
 ### **Release Notes July 2023** 
 #### TB
 ##### - Changes made in the TB intake and TB followup forms
