@@ -6,6 +6,27 @@
 !!! warning
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
+### **Release Notes September 2023**
+#### Updates
+- Modified the query to remove duplication caused by one child having multiple vaccines on a dose
+Update eMTCT_list.sql
+- Added patient identifier column to the report to make it easy to distinctly identifier patients
+- MDR-TB section shows only when the "On DR TB Treatment" option is selected in the visit details page
+Added TB status global variable
+- Changes were made to enable the MDR-TB section to show only when the "On DR TB Treatment" option is selected in the visit details page
+#### Reports
+##### Modifications
+- ART-001 | Current on ART Detailed (List) - Exclude visitor if true on latest follow up form
+- ART-002 | Current on ART Detailed (Pivot) - Exclude visitor if true on latest follow up form
+- MCH-003 | AnteNatal Care (ANC) - List - The dates were hard coded
+###### Openmrs Report: 
+- weekly_and_monthly_reports | Serialized_Object : Includes new report called eRegister_Monitoring_Report
+- Children ARV Regimen_1stLine_4C, 4D, 4E, 4F, 4G, 4H, 4J, 4K, 4L
+- Children ARV Regimen_1stLine_Adherence, Viral Load
+- Children ARV Regimen_2ndLine_5A, 5B, 5D,5E, 5F, 5G, 5H
+- Children ARV Regimen_2ndLine_Adherence, Viral Load
+- Children ARV Regimen_3rdLine_6A, 6B, 6C, 6D, 6E, 6F
+- Children ARV Regimen_3rdLine_Adherence, Viral Load
 ### **Release Notes August 2023**
 #### ANC
 ##### ANC Form fixes and modifications
