@@ -6,6 +6,56 @@
 !!! warning
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
+### **Release Notes October 2023**
+#### Updates
+- Update cervical_scrn_list.sql | The was duplication in the list where if a client have received both PNC and cervical scrn services would appears twice in the cervical cancer screening list.
+- Removal of the person id from the list and
+Removal of duplication caused by EDD not being confined to the observation date. e.g a patient with multiple pregnancies and hence multiple EDDs is duplicated number EDD times on the lis
+#### MDR-TB Updates
+- Added TB status global variable | Changes were made to enable the MDR-TB section to show only when the "On DR TB Treatment" option is selected in the visit details page
+#### Reports
+##### New Reports
+- Cervical Cancer Screening (Pivot)
+##### Modifications
+*** LAB-01 | Lab_Report (List) *** 
+- Added the Results column in order to include 
+- Added date results were received from Lab
+- Added Lab order number
+- PIR13: Registered ART Clients with Intakes Progress Report - pick clients with ART number or form and exclude visitors
+
+*** Modified LDL results received for the following ***
+- LAB-01 | Lab_Report (List)
+- LAB-01 | Lab_Report (List)
+
+
+#### Openmrs reports
+- eRegister Monitoring Report - Cervical Cancer completeness had the wrong concept
+
+#### New Mappings
+
+- Children ARV Regimen 1st Line 4C Mapping
+- Children ARV Regimen 1st Line 4D Mapping
+- Children ARV Regimen 1st Line 4E Mapping
+- Children ARV Regimen 1st Line 4F Mapping
+- Children ARV Regimen 1st Line 4G Mapping
+- Children ARV Regimen 1st Line 4H Mapping
+- Children ARV Regimen 1st Line 4J Mapping
+- Children ARV Regimen 1st Line 4K Mapping
+- Children ARV Regimen 1st Line 4L Mapping
+
+- Children ARV Regimen 2nd Line 5A Mapping
+- Children ARV Regimen 2nd Line 5B Mapping
+- Children ARV Regimen 2nd Line 5C Mapping
+- Children ARV Regimen 2nd Line 5D Mapping
+- Children ARV Regimen 2nd Line 5E Mapping
+- Children ARV Regimen 2nd Line 5F Mapping
+- Children ARV Regimen 2nd Line 5G Mapping
+- Children ARV Regimen 2nd Line 5H Mapping
+
+### Bahmni DOcker
+- Adding Latest developments made to k8s cluster
+- Adding Latest developments made to k8s cluster
+
 ### **Release Notes September 2023**
 #### Updates
 - Modified the query to remove duplication caused by one child having multiple vaccines on a dose
