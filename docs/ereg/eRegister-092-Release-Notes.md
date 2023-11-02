@@ -8,7 +8,7 @@
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
 ### **Release Notes October 2023**
 #### Updates
-- Update cervical_scrn_list.sql | The was duplication in the list where if a client have received both PNC and cervical scrn services would appears twice in the cervical cancer screening list.
+- Update cervical_scrn_list.sql | There was duplication in the list where if a client has received both PNC and cervical screen services would appear twice in the cervical cancer screening list.
 - Removal of the person id from the list and
 Removal of duplication caused by EDD not being confined to the observation date. e.g a patient with multiple pregnancies and hence multiple EDDs is duplicated number EDD times on the lis
 #### MDR-TB Updates
