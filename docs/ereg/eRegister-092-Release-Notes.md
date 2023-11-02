@@ -6,6 +6,111 @@
 !!! warning
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
+### **Release Notes October 2023**
+#### Updates
+- Update cervical_scrn_list.sql | The was duplication in the list where if a client have received both PNC and cervical scrn services would appears twice in the cervical cancer screening list.
+- Removal of the person id from the list and
+Removal of duplication caused by EDD not being confined to the observation date. e.g a patient with multiple pregnancies and hence multiple EDDs is duplicated number EDD times on the lis
+#### MDR-TB Updates
+- Added TB status global variable | Changes were made to enable the MDR-TB section to show only when the "On DR TB Treatment" option is selected in the visit details page
+#### Reports
+##### New Reports
+- Cervical Cancer Screening (Pivot)
+##### Modifications
+*** LAB-01 | Lab_Report (List) *** 
+- Added the Results column in order to include 
+- Added date results were received from Lab
+- Added Lab order number
+- PIR13: Registered ART Clients with Intakes Progress Report - pick clients with ART number or form and exclude visitors
+
+*** Modified LDL results received for the following ***
+- LAB-01 | Lab_Report (List)
+- LAB-01 | Lab_Report (List)
+
+
+#### Openmrs reports
+- eRegister Monitoring Report - Cervical Cancer completeness had the wrong concept
+
+#### New Mappings
+
+- Children ARV Regimen 1st Line 4C Mapping
+- Children ARV Regimen 1st Line 4D Mapping
+- Children ARV Regimen 1st Line 4E Mapping
+- Children ARV Regimen 1st Line 4F Mapping
+- Children ARV Regimen 1st Line 4G Mapping
+- Children ARV Regimen 1st Line 4H Mapping
+- Children ARV Regimen 1st Line 4J Mapping
+- Children ARV Regimen 1st Line 4K Mapping
+- Children ARV Regimen 1st Line 4L Mapping
+
+- Children ARV Regimen 2nd Line 5A Mapping
+- Children ARV Regimen 2nd Line 5B Mapping
+- Children ARV Regimen 2nd Line 5C Mapping
+- Children ARV Regimen 2nd Line 5D Mapping
+- Children ARV Regimen 2nd Line 5E Mapping
+- Children ARV Regimen 2nd Line 5F Mapping
+- Children ARV Regimen 2nd Line 5G Mapping
+- Children ARV Regimen 2nd Line 5H Mapping
+
+### Bahmni DOcker
+- Adding Latest developments made to k8s cluster
+- Adding Latest developments made to k8s cluster
+
+### **Release Notes September 2023**
+#### Updates
+- Modified the query to remove duplication caused by one child having multiple vaccines on a dose
+Update eMTCT_list.sql
+- Added patient identifier column to the report to make it easy to distinctly identifier patients
+- MDR-TB section shows only when the "On DR TB Treatment" option is selected in the visit details page
+Added TB status global variable
+- Changes were made to enable the MDR-TB section to show only when the "On DR TB Treatment" option is selected in the visit details page
+#### Reports
+##### Modifications
+- ART-001 | Current on ART Detailed (List) - Exclude visitor if true on latest follow up form
+- ART-002 | Current on ART Detailed (Pivot) - Exclude visitor if true on latest follow up form
+- MCH-003 | AnteNatal Care (ANC) - List - The dates were hard coded
+###### Openmrs Report: 
+- weekly_and_monthly_reports | Serialized_Object : Includes new report called eRegister_Monitoring_Report
+- Children ARV Regimen_1stLine_4C, 4D, 4E, 4F, 4G, 4H, 4J, 4K, 4L
+- Children ARV Regimen_1stLine_Adherence, Viral Load
+- Children ARV Regimen_2ndLine_5A, 5B, 5D,5E, 5F, 5G, 5H
+- Children ARV Regimen_2ndLine_Adherence, Viral Load
+- Children ARV Regimen_3rdLine_6A, 6B, 6C, 6D, 6E, 6F
+- Children ARV Regimen_3rdLine_Adherence, Viral Load
+### **Release Notes August 2023**
+#### ANC
+##### ANC Form fixes and modifications
+- Blood pressure is moved to below EDD
+- Covid 19 status has been added to the form
+- High risk pregnancy options were changed to match the current ANC register
+- Complications during pregnancy were changed to match current ANC register
+- Parity and Gravida are now auto-filled from the previous form in the ANC form
+#### MDR-TB in registration
+##### Added MDR-TB-DEMOGRAPHICS and HOUSEHOLD CONTACT
+##### Direction for MDR-TB section
+#### Reports
+##### New Reports
+- TB-002 | TB Case Detection (Pivot)
+- TB-027 | MDR TB Clients - A new MDR report
+- MCH-023 | PMTCT FO (List) : New report
+- MCH-024 | PMTCT FO (Pivot) : New report
+- TB-028 | MDR TB Clients (Pivot) : New report
+- Cervical Cancer Screening (List) : New report to include all clients screened
+##### Modifications
+- ART-019 | Registered ART Clients with Intakes (List) - Modified to exclude visitors
+- ART-020 | Registered ART Clients with Intakes (Pivot) - Modified to exclude visitors
+- ART-021 | ART Client Without Intakes (List) - Updated to exclude visitors
+- TB-001 | TB Case Detection (List) : Modified to include all tb screened clients
+- MCH-017 | PMTCT STAT (List) : Modified to pull all tested ANC first visits
+- MCH-018 | PMTCT STAT (Pivot) : Modified to pull all tested ANC first visits
+- MCH-003 | AnteNatal Care (ANC) - List : Modified to remove duplication of clients by restricting the report to only pick the latest MUAC
+##### CAG
+- Creating Cag Module Base Code : (This is the base code from which cag module development begins to take effect)
+##### Other
+- Renamed DISA parameter codes and added new LOINC code
+- Remove HPV results error in cervical cancer screening form
+- Reports.json : Added Cervical Cancer Screening (List)
+
 ### **Release Notes July 2023** 
 #### TB
 ##### - Changes made in the TB intake and TB followup forms

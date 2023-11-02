@@ -43,7 +43,9 @@ nav:
                   - "informedpush/informedpush.md"
                   - "informedpush/informedpusharv.md"
         - eRegister:
-                  - "ereg/eRegister-092-Release-Notes.md"
+                  - "eRegister 092 Release Notes":
+                            - "ereg/eRegister-092-Release-Notes.md"
+                            - "ereg/LIS.md"
                   - "User Manual":
                             - "ereg/TB_Program.md"
                             - "ereg/ART_Program.md"
