@@ -6,6 +6,36 @@
 !!! warning
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
+### **Release Notes November 2023**
+#### Reports
+##### New Reports
+##### Modifications
+- MCH-003 | AnteNatal Care (ANC) - List
+- MCH-004 | AnteNatal Care (ANC) - Pivot
+Remove EID as an identification for ART Clients
+- ART-019 | Registered ART Clients with Intakes (List)
+- ART-020 | Registered ART Clients with Intakes (Pivot)
+- ART-021 | ART Client Without Intakes (List)
+
+
+- Show Tuberculosis test section when Tuberculosis test type is clicked
+- Show Viral Load test section when Viral Load test type is clicked
+
+- remove emrapi.sqlSearch.cag error
+- This error pops up when a user is on clinical APP index page.
+
+- Lab shipping Report, Adding IPV to under 5, TB New and Relapse
+
+- LAB-003 | Lab Shipping List - New report
+
+- MCH-007| Child Health (Under5) - List - Added IPV to 3rd Dose and remove Rotavirus
+
+- TB-010 | New and Relapse Enrolled on TB - Generated the pivot from the report same as TB-013 | New and Relapse Enrolled on TB (List)
+
+- TB-013 | New and Relapse Enrolled on TB (List) - Select latest Status to avoid duplication
+- openmrs_reporting_release
+- 2020_ART_Current
+- Remove visitors   
 ### **Release Notes October 2023**
 #### Updates
 - Update cervical_scrn_list.sql | There was duplication in the list where if a client has received both PNC and cervical screen services would appear twice in the cervical cancer screening list.
