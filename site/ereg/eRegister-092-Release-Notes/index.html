@@ -2199,10 +2199,39 @@
 <li>Please report issues here: <a href="https://github.com/eRegister/bahmni_docker/issues">https://github.com/eRegister/bahmni_docker/issues</a></li>
 </ul>
 </div>
-<h3 id="release-notes-november-2023"><strong>Release Notes November 2023</strong></h3>
+<h3 id="release-notes-january-2024"><strong>Release Notes January 2024</strong></h3>
+<h4 id="updates">Updates</h4>
+<ul>
+<li>New TB forms</li>
+<li>HIV POC Viral Load Register concepts and form</li>
+</ul>
 <h4 id="reports">Reports</h4>
 <h5 id="new-reports">New Reports</h5>
+<ul>
+<li>PMTCT ART</li>
+</ul>
+<h3 id="release-notes-december-2023"><strong>Release Notes December 2023</strong></h3>
+<h4 id="ui-changes">UI Changes</h4>
+<ul>
+<li>Remove CAG button in consultation</li>
+</ul>
+<h4 id="reports_1">Reports</h4>
+<h5 id="openmrs">Openmrs</h5>
+<ul>
+<li>Revisited childres regiment 1st, 2nd and 3rdline to include clients missed</li>
+</ul>
 <h5 id="modifications">Modifications</h5>
+<ul>
+<li>Art-001 | Current on ART Detailed (List) -- Remove visitors from missed </li>
+<li>Art-002 | Current on ART Detailed (pivot) -- Remove visitors from missed</li>
+<li>MCH-011 | Family Planning - List ( Removed N/A opetion when option is selected.)</li>
+<li>MCH-012 | Family Planning - Pivot ( Removed N/A opetion when option is selected.)</li>
+<li>LAB-003 | Lab Shipping List (Revise  report to only include date specimen collected and lab order number)</li>
+</ul>
+<h3 id="release-notes-november-2023"><strong>Release Notes November 2023</strong></h3>
+<h4 id="reports_2">Reports</h4>
+<h5 id="new-reports_1">New Reports</h5>
+<h5 id="modifications_1">Modifications</h5>
 <ul>
 <li>MCH-003 | AnteNatal Care (ANC) - List</li>
 <li>MCH-004 | AnteNatal Care (ANC) - Pivot
@@ -2244,7 +2273,7 @@ Remove EID as an identification for ART Clients</li>
 <li>Remove visitors   </li>
 </ul>
 <h3 id="release-notes-october-2023"><strong>Release Notes October 2023</strong></h3>
-<h4 id="updates">Updates</h4>
+<h4 id="updates_1">Updates</h4>
 <ul>
 <li>Update cervical_scrn_list.sql | There was duplication in the list where if a client has received both PNC and cervical screen services would appear twice in the cervical cancer screening list.</li>
 <li>Removal of the person id from the list and
@@ -2254,12 +2283,12 @@ Removal of duplication caused by EDD not being confined to the observation date.
 <ul>
 <li>Added TB status global variable | Changes were made to enable the MDR-TB section to show only when the "On DR TB Treatment" option is selected in the visit details page</li>
 </ul>
-<h4 id="reports_1">Reports</h4>
-<h5 id="new-reports_1">New Reports</h5>
+<h4 id="reports_3">Reports</h4>
+<h5 id="new-reports_2">New Reports</h5>
 <ul>
 <li>Cervical Cancer Screening (Pivot)</li>
 </ul>
-<h5 id="modifications_1">Modifications</h5>
+<h5 id="modifications_2">Modifications</h5>
 <p>*** LAB-01 | Lab_Report (List) *** 
 - Added the Results column in order to include 
 - Added date results were received from Lab
@@ -2302,7 +2331,7 @@ Removal of duplication caused by EDD not being confined to the observation date.
 <li>Adding Latest developments made to k8s cluster</li>
 </ul>
 <h3 id="release-notes-september-2023"><strong>Release Notes September 2023</strong></h3>
-<h4 id="updates_1">Updates</h4>
+<h4 id="updates_2">Updates</h4>
 <ul>
 <li>Modified the query to remove duplication caused by one child having multiple vaccines on a dose
 Update eMTCT_list.sql</li>
@@ -2311,8 +2340,8 @@ Update eMTCT_list.sql</li>
 Added TB status global variable</li>
 <li>Changes were made to enable the MDR-TB section to show only when the "On DR TB Treatment" option is selected in the visit details page</li>
 </ul>
-<h4 id="reports_2">Reports</h4>
-<h5 id="modifications_2">Modifications</h5>
+<h4 id="reports_4">Reports</h4>
+<h5 id="modifications_3">Modifications</h5>
 <ul>
 <li>ART-001 | Current on ART Detailed (List) - Exclude visitor if true on latest follow up form</li>
 <li>ART-002 | Current on ART Detailed (Pivot) - Exclude visitor if true on latest follow up form</li>
@@ -2341,8 +2370,8 @@ Added TB status global variable</li>
 <h4 id="mdr-tb-in-registration">MDR-TB in registration</h4>
 <h5 id="added-mdr-tb-demographics-and-household-contact">Added MDR-TB-DEMOGRAPHICS and HOUSEHOLD CONTACT</h5>
 <h5 id="direction-for-mdr-tb-section">Direction for MDR-TB section</h5>
-<h4 id="reports_3">Reports</h4>
-<h5 id="new-reports_2">New Reports</h5>
+<h4 id="reports_5">Reports</h4>
+<h5 id="new-reports_3">New Reports</h5>
 <ul>
 <li>TB-002 | TB Case Detection (Pivot)</li>
 <li>TB-027 | MDR TB Clients - A new MDR report</li>
@@ -2351,7 +2380,7 @@ Added TB status global variable</li>
 <li>TB-028 | MDR TB Clients (Pivot) : New report</li>
 <li>Cervical Cancer Screening (List) : New report to include all clients screened</li>
 </ul>
-<h5 id="modifications_3">Modifications</h5>
+<h5 id="modifications_4">Modifications</h5>
 <ul>
 <li>ART-019 | Registered ART Clients with Intakes (List) - Modified to exclude visitors</li>
 <li>ART-020 | Registered ART Clients with Intakes (Pivot) - Modified to exclude visitors</li>
@@ -2406,15 +2435,15 @@ Added TB status global variable</li>
 <li>Phenotypic tests</li>
 <li>Culture and DST</li>
 </ul>
-<h4 id="reports_4">Reports</h4>
-<h5 id="new-reports_3">New Reports</h5>
+<h4 id="reports_6">Reports</h4>
+<h5 id="new-reports_4">New Reports</h5>
 <ul>
 <li>ART-002A | TxCurr Quarterly Test (List)</li>
 <li>MCH-001 | HIV Exposed Infants (HEI) - List : Excluded Under 5 information</li>
 <li>MCH-002 MCH-002 | HIV Exposed Infants (HEI) - Pivot : Excluded Under 5 information</li>
 <li>MCH-035 | ANC Data Quality Assessment || (Added the following columns to ANC Data Quality Assessment, Iron, Folate, Calcium, MUAC, Rhesus Factor, TD previous Doses, TD current Doses)</li>
 </ul>
-<h5 id="modifications_4">Modifications</h5>
+<h5 id="modifications_5">Modifications</h5>
 <h6 id="modified-to-align-with-art-0012-current-on-art-detailed">(Modified to align with ART-001/2 | Current on ART Detailed)</h6>
 <ul>
 <li>ART-044 | TX_CURR (List)</li>
@@ -2501,7 +2530,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 “YES” is clicked</p>
 </li>
 </ul>
-<h4 id="reports_5">Reports</h4>
+<h4 id="reports_7">Reports</h4>
 <h5 id="modified">Modified</h5>
 <h6 id="art-reports-modified">Art Reports Modified.</h6>
 <ul>
@@ -2572,7 +2601,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 <ul>
 <li>Added feature to auto fill Under5 and ANC Number from first Under5 register consultation in subsequent visits</li>
 </ul>
-<h4 id="reports_6">Reports</h4>
+<h4 id="reports_8">Reports</h4>
 <h5 id="modified_1">Modified</h5>
 <ul>
 <li>ART-003 | Missed Appointments Status Report (List)   Modified to only consider transfers out in the latest follow up form</li>
@@ -2629,7 +2658,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 <li>Multiselect on family counselling services provided enabled</li>
 <li>Entering future dates on IUCD/Implant check-up date enabled</li>
 </ul>
-<h4 id="reports_7">Reports</h4>
+<h4 id="reports_9">Reports</h4>
 <h5 id="modified_2">Modified</h5>
 <ul>
 <li>TB-026 | TB Data Quality Assessment Tool - modified to:</li>
@@ -2704,7 +2733,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 </ul>
 <hr />
 <h3 id="release-notes-march-2023"><strong>Release Notes March 2023</strong></h3>
-<h4 id="reports_8">Reports</h4>
+<h4 id="reports_10">Reports</h4>
 <h5 id="modified_3">Modified</h5>
 <ul>
 <li>ART-022 | Data Quality Assessment Tool - Viral load column to provide explicit values for VL &gt;20</li>
@@ -2722,7 +2751,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 </ul>
 <hr />
 <h3 id="release-notes-february-2023"><strong>Release Notes February 2023</strong></h3>
-<h4 id="reports_9">Reports</h4>
+<h4 id="reports_11">Reports</h4>
 <ul>
 <li>TB-025 | TB Data Quality Assessment Tool - Added prevention of IOs with the new concept</li>
 <li>TB-026 | TB Outcome (List) - new report. The previous report was not a list but a pivot.</li>
@@ -2742,7 +2771,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 </ul>
 <hr />
 <h3 id="release-notes-january-2023"><strong>Release Notes January 2023</strong></h3>
-<h4 id="reports_10">Reports</h4>
+<h4 id="reports_12">Reports</h4>
 <ul>
 <li>Added TB-025 | TB Data Quality Assessment Tool to reports json file</li>
 <li>MCH-014 | PNC SEEN (List) - New Report </li>
@@ -2782,7 +2811,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 <h3 id="release-notes-december-2022"><strong>Release Notes December 2022</strong></h3>
 <ul>
 <li>
-<h5 id="reports_11">Reports</h5>
+<h5 id="reports_13">Reports</h5>
 <ul>
 <li>
 <h6 id="bahmni">Bahmni</h6>
@@ -2794,7 +2823,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 </ul>
 </li>
 <li>
-<h6 id="openmrs">Openmrs</h6>
+<h6 id="openmrs_1">Openmrs</h6>
 <ul>
 <li>A new serialized object for the fix of pitc and citc reports in openmrs (They were not picking some clients and were duplicating others)</li>
 </ul>
@@ -2806,7 +2835,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 <h3 id="release-notes-november-2022"><strong>Release Notes November 2022</strong></h3>
 <ul>
 <li>
-<h5 id="reports_12">Reports</h5>
+<h5 id="reports_14">Reports</h5>
 <ul>
 <li>
 <h6 id="bahmni_1">Bahmni</h6>
@@ -2836,7 +2865,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 <h3 id="release-notes-october-2022"><strong>Release Notes October 2022</strong></h3>
 <ul>
 <li>
-<h5 id="reports_13">Reports</h5>
+<h5 id="reports_15">Reports</h5>
 <ul>
 <li>
 <h6 id="bahmni_2">Bahmni</h6>
@@ -2868,7 +2897,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 <h3 id="release-notes-september-2022"><strong>Release Notes September 2022</strong></h3>
 <ul>
 <li>
-<h5 id="reports_14">Reports</h5>
+<h5 id="reports_16">Reports</h5>
 <ul>
 <li>
 <h6 id="bahmni_3">Bahmni</h6>
@@ -2894,7 +2923,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 </ul>
 </li>
 <li>
-<h6 id="openmrs_1">Openmrs</h6>
+<h6 id="openmrs_2">Openmrs</h6>
 <ul>
 <li><em>PIR-17 Tx_CURR Retention Report Mapping 2022</em> - Maps part of PIR-17 Tx_CURR Retention Report to Txcurr Retention and Attrition Report in DHIS2(TxRTT Section)</li>
 <li><em>PIR-17 Tx_CURR TXML_2022</em> - Maps PIR-17 Tx_CURR TXML Report to Txcurr Retention and Attrition Report in DHIS2(TxML Section)</li>
@@ -2937,7 +2966,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 <h3 id="release-notes-august-2022"><strong>Release Notes August 2022</strong></h3>
 <ul>
 <li>
-<h5 id="reports_15">Reports</h5>
+<h5 id="reports_17">Reports</h5>
 <ul>
 <li>
 <h6 id="bahmni_4">Bahmni</h6>
@@ -2965,7 +2994,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 <h3 id="release-notes-july-2022"><strong>Release Notes July 2022</strong></h3>
 <ul>
 <li>
-<h5 id="reports_16">Reports</h5>
+<h5 id="reports_18">Reports</h5>
 <ul>
 <li>
 <h6 id="bahmni_5">Bahmni</h6>
@@ -2977,7 +3006,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 </ul>
 </li>
 <li>
-<h6 id="openmrs_2">Openmrs</h6>
+<h6 id="openmrs_3">Openmrs</h6>
 <ul>
 <li><em>Created new children regimen reports that categorize children by weight:</em><ul>
 <li>Children ARV Regimen_1stLine_2022</li>
@@ -3024,7 +3053,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
 </ul>
 </li>
 <li>
-<h5 id="reports_17">Reports</h5>
+<h5 id="reports_19">Reports</h5>
 <ul>
 <li>Ported all Bahmni 0.90 reports to Bahmni 0.92</li>
 <li>Developed Informed Push Tool reports</li>
@@ -3069,7 +3098,7 @@ Male Partner Involvement: HIV Status hidden by default, visible when
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 10, 2023</span>
       
     
   </small>

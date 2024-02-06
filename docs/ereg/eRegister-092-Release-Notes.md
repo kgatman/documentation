@@ -6,6 +6,26 @@
 !!! warning
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
+
+### **Release Notes January 2024**
+#### Updates
+- New TB forms
+- HIV POC Viral Load Register concepts and form 
+#### Reports
+##### New Reports
+- PMTCT ART
+### **Release Notes December 2023**
+#### UI Changes
+- Remove CAG button in consultation
+#### Reports
+##### Openmrs
+- Revisited childres regiment 1st, 2nd and 3rdline to include clients missed
+##### Modifications
+- Art-001 | Current on ART Detailed (List) -- Remove visitors from missed 
+- Art-002 | Current on ART Detailed (pivot) -- Remove visitors from missed
+- MCH-011 | Family Planning - List ( Removed N/A opetion when option is selected.)
+- MCH-012 | Family Planning - Pivot ( Removed N/A opetion when option is selected.)
+- LAB-003 | Lab Shipping List (Revise  report to only include date specimen collected and lab order number)
 ### **Release Notes November 2023**
 #### Reports
 ##### New Reports
