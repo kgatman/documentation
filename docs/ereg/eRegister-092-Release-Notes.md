@@ -7,6 +7,60 @@
     * this beta version is going to be deployed at selected pilot facilities. 
     * Please report issues here: [https://github.com/eRegister/bahmni_docker/issues](https://github.com/eRegister/bahmni_docker/issues)
 
+### **Release Notes Feberuary 2024**
+#### New
+##### New POC concept 
+- - -
+ - Add New "Reason for VL Test" with answers: Birth, 7 days, 10-14 weeks, 9 months
+- - -
+#### Updates
+##### ANC
+- Transfer out section of the report was modified to include patients in the report as soon as their supply is depleted and not wait until 28 days later
+- Show or hide anc visit number | When 'First Visit' is selected in the ANC form, hide the visit order number field and only show it when 'Subsequent Visit' is selected
+- Remove anc auto-calculate | Remove code to auto-calculate edd in bahmniapps to write it in bahmni_config where it is simpler
+##### HTS
+- In HIV Retesting register, the 'Tested' is now shown whether the index client has tested before or not
+- Added the option to take secondary self test for HIV positive clients in HIV Testing and Counselling form
+##### Prep
+- Added population group to the prep intake
+##### MDR-TB | TB
+- Conditional show MDR-TB section | MDR-TB section shows only when the "On DR TB Treatment" option is selected in the visit details page
+- Fix TB Follow up Transfer out conditions
+- TB-013 | New and Relapse Enrolled on TB (List) - Added new clients that were excluded
+##### Other
+- Remove Line Probe Array Result Error popup
+- Replaced the Date Results Recieved from lab => Results Sent to the Lab/Caregiver
+- Added POC VL Result (6054) | From site(s)
+
+#### Reports
+##### New Reports
+
+##### Modifications
+- - -
+###### Added new concepts for blood draw and blood results that came with the introduction of lab module
+- ART-010 | Viral Load Results Status, within 3 months (List) 
+- ART-011 | Viral Load Results Status, within 3 months (Pivot)
+- - - 
+###### Revised to only pick clients with visits started durin  g the selected period.
+- ART-017 | Registered ART Visits with ART Consultation (List)
+- ART-018 | Registered ART Visits with ART Consultation (Pivot)
+- - -
+###### Transfer out section of the report was modified to include patients in the report as soon as their supply is depleted and not wait until 28 days later
+ART-051 | TX_ML (List)
+ART-052 | TX_ML (Pivot)
+- - -
+- ART-036 | CXCA_SCRN (List) | Added HIV status column to the Cervical Cancer Screening Report
+- ART-080 | PrEP New (List) : include indication for starting prep and accomodating key pops
+- ART-081 | PrEP New (Pivot) : include indication for starting prep and accomodating key pops
+- ART-022 | Data Quality Assessment tool: removed “Results_received” and “Patient_received_results” colums
+- ART-036 | CXCA_SCRN (List): modified to include patients with a cervical cancer screening register filled instead of counting patients with a “type of screening offered” filled in.
+- Cervical Cancer Screening (List) : updated to show the results | modified to include patients with a cervical cancer screening register filled instead of counting patients with a “type of screening offered” filled in.
+- HTS Self Test Report - Correction of different number of kits distributed and returned between openmrs and Bahmni
+- MCH-(023) : (024) | PMTCT FO (List)  (Pivot) : Updated to accomodate Age at test
+- MCH-(017) : (018) | PMTCT STAT (List) (Pivot): Updated to accomodate Known Positive status
+- TB-(010) (011) |TB Status (List) (Pivot) : Updated to display data
+- TB-017 | TB Prevention Therapy (List) : Updated to use tpt start date
+- Removed Visitors from TxML and TxRTT reports | Visitors have been excluded from the TxML and TxRTT reports
 ### **Release Notes January 2024**
 #### Updates
 - New TB forms
