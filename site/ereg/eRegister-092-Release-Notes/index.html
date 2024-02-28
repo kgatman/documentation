@@ -14,8 +14,15 @@
       
         <link rel="canonical" href="https://github.com/eRegister/docs/ereg/eRegister-092-Release-Notes/">
       
+      
+        <link rel="prev" href="../../informedpush/informedpusharv/">
+      
+      
+        <link rel="next" href="../LIS/">
+      
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -23,18 +30,17 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
-        
-          
-          
-          <meta name="theme-color" content="">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
       
       
+
+
     
+    
+      
     
     
       
@@ -46,10 +52,11 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -60,7 +67,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="#2d3479" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#2d3479" data-md-color-accent="indigo">
   
     
     
@@ -86,6 +93,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -105,9 +113,12 @@
       </div>
     </div>
     
+      
+    
     
     
       <label class="md-header__button md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -116,12 +127,15 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -133,7 +147,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -152,61 +166,69 @@
           
             
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Overview
 
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        Overview
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
         
-  
-  
-
-
   
   
   
     
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dhis2/usermanual/" class="md-tabs__link">
+          
+  
+  DHIS2
 
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../dhis2/usermanual/" class="md-tabs__link">
-        DHIS2
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
+    
   
 
       
         
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../informedpush/informedpush/" class="md-tabs__link">
+          
+  
+  Informed Push
 
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../informedpush/informedpush/" class="md-tabs__link">
-        Informed Push
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -215,64 +237,101 @@
   
     
   
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  eRegister
 
+        </a>
+      </li>
+    
+  
 
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
-        eRegister
-      </a>
-    </li>
+    
   
 
       
         
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lis/configuration/" class="md-tabs__link">
+          
+  
+  Laboratory Information System
 
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../covid/Overview/" class="md-tabs__link">
-        COVID-19
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../odoo/Overview/" class="md-tabs__link">
-        Odoo-Pharmacy
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
         
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../odoo/Overview/" class="md-tabs__link">
+          
+  
+  Odoo-Pharmacy
 
+        </a>
+      </li>
+    
+  
 
+      
+        
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../covid/About-Us/" class="md-tabs__link">
-        About Us
-      </a>
-    </li>
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../covid/Overview/" class="md-tabs__link">
+          
+  
+  COVID-19
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../covid/About-Us/" class="md-tabs__link">
+          
+  
+  About Us
+
+        </a>
+      </li>
+    
   
 
       
@@ -292,6 +351,7 @@
                   <div class="md-sidebar__inner">
                     
 
+
   
 
 
@@ -310,405 +370,595 @@
     
       
       
-      
-
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
+    
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      
-      
-      
-        <label class="md-nav__link" for="__nav_1">
-          Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Overview" data-md-level="1">
-        <label class="md-nav__title" for="__nav_1">
-          <span class="md-nav__icon md-icon"></span>
-          Overview
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
           
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Welcome to SI Project Docs
+        
+  
+  <span class="md-ellipsis">
+    Welcome to SI Project Docs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../contacts/" class="md-nav__link">
-        Contact Information
+        
+  
+  <span class="md-ellipsis">
+    Contact Information
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
+  
+  
+  
+    
+    
+    
+    
+    
       
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    DHIS2
+  </span>
+  
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DHIS2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          DHIS2
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="DHIS2" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          DHIS2
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_1">
-          User Manual
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="User Manual" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          User Manual
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
           
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            User Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../dhis2/usermanual/" class="md-nav__link">
-        User Manual
+        
+  
+  <span class="md-ellipsis">
+    User Manual
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_2">
-          DataSets
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="DataSets" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          DataSets
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
           
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DataSets
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            DataSets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../dhis2/intro/" class="md-nav__link">
-        Intro
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../dhis2/hts/" class="md-nav__link">
-        HTS
+        
+  
+  <span class="md-ellipsis">
+    HTS
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../dhis2/tb/" class="md-nav__link">
-        TB
+        
+  
+  <span class="md-ellipsis">
+    TB
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../dhis2/tb-indicators/" class="md-nav__link">
-        Tb indicators
+        
+  
+  <span class="md-ellipsis">
+    Tb indicators
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../dhis2/tb-validation-rules/" class="md-nav__link">
-        Tb validation rules
+        
+  
+  <span class="md-ellipsis">
+    Tb validation rules
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../dhis2/hiv-care-n-tx/" class="md-nav__link">
-        HIV Care and Treatment
+        
+  
+  <span class="md-ellipsis">
+    HIV Care and Treatment
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_3">
-          Technical Manual
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Technical Manual" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
-          <span class="md-nav__icon md-icon"></span>
-          Technical Manual
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
           
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../dhis2/installation/" class="md-nav__link">
-        DHIS2 Installation
+        
+  
+  <span class="md-ellipsis">
+    DHIS2 Installation
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
+    
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Informed Push
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Informed Push" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Informed Push
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
           
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Informed Push
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Informed Push
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../informedpush/informedpush/" class="md-nav__link">
-        Informed Push
+        
+  
+  <span class="md-ellipsis">
+    Informed Push
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../informedpush/informedpusharv/" class="md-nav__link">
-        Informed Push ARV
+        
+  
+  <span class="md-ellipsis">
+    Informed Push ARV
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    eRegister
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            eRegister
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          eRegister
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="eRegister" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          eRegister
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
           
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    eRegister 092 Release Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            eRegister 092 Release Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
     
@@ -716,774 +966,1188 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        eRegister 092 Release Notes
+        
+  
+  <span class="md-ellipsis">
+    eRegister 092 Release Notes
+  </span>
+  
+
       </a>
       
     </li>
   
 
-            
-          
+              
             
               
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LIS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LIS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4_2">
-          User Manual
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="User Manual" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
-          <span class="md-nav__icon md-icon"></span>
-          User Manual
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
           
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../TB_Program/" class="md-nav__link">
-        TB Program
+        
+  
+  <span class="md-ellipsis">
+    TB Program
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ART_Program/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ART Program
+  </span>
+  
+
+      </a>
     </li>
   
 
+              
             
-          
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
             
               
+                
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4_3">
-          Technical Manual
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Technical Manual" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_3">
-          <span class="md-nav__icon md-icon"></span>
-          Technical Manual
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
           
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical Manual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../intro/" class="md-nav__link">
-        eRegister Installation Manual
+        
+  
+  <span class="md-ellipsis">
+    eRegister Installation Manual
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../workingwithdockerlocally/" class="md-nav__link">
-        Working with Docker Images Locally
+        
+  
+  <span class="md-ellipsis">
+    Working with Docker Images Locally
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../FAQs/" class="md-nav__link">
-        FAQ's
+        
+  
+  <span class="md-ellipsis">
+    FAQ's
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../clientregistry/" class="md-nav__link">
-        Client Register
+        
+  
+  <span class="md-ellipsis">
+    Client Register
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../facilityimplementationchecklist/" class="md-nav__link">
-        Facility Implementation Checklist
+        
+  
+  <span class="md-ellipsis">
+    Facility Implementation Checklist
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../Integration-DHIS2.md" class="md-nav__link">
-        None
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../upgrading-to-092/" class="md-nav__link">
-        Upgrading to Bahmni 0.92
+        
+  
+  <span class="md-ellipsis">
+    Upgrading to Bahmni 0.92
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_8" type="checkbox" id="__nav_4_3_8" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4_3_8">
-          Automated Deployment
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Automated Deployment" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_3_8">
-          <span class="md-nav__icon md-icon"></span>
-          Automated Deployment
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_8" >
+        
           
+          <label class="md-nav__link" for="__nav_4_3_8" id="__nav_4_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Automated Deployment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Automated Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../bahmniconfigs/" class="md-nav__link">
-        Bahmni Configs Pipeline
+        
+  
+  <span class="md-ellipsis">
+    Bahmni Configs Pipeline
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../bahmniapps/" class="md-nav__link">
-        Bahmni Apps Pipeline
+        
+  
+  <span class="md-ellipsis">
+    Bahmni Apps Pipeline
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../bahmniaddons/" class="md-nav__link">
-        Core Addons & Bahmni Addons Pipeline
+        
+  
+  <span class="md-ellipsis">
+    Core Addons & Bahmni Addons Pipeline
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../odooreports/" class="md-nav__link">
-        Odoo Reports Pipeline
+        
+  
+  <span class="md-ellipsis">
+    Odoo Reports Pipeline
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../DeployingMappings/" class="md-nav__link">
-        Mappings and Serialized Object Pipeline
+        
+  
+  <span class="md-ellipsis">
+    Mappings and Serialized Object Pipeline
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../clinicalsearch/" class="md-nav__link">
-        Clinical Search Deployment Guideline
+        
+  
+  <span class="md-ellipsis">
+    Clinical Search Deployment Guideline
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5">
-          COVID-19
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="COVID-19" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          COVID-19
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../covid/Overview/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_2">
-          Data Entry Guidelines
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Data Entry Guidelines" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Data Entry Guidelines
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../covid/Registering-a-Case-or-Suspect/" class="md-nav__link">
-        Registering a Case or Suspect
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../covid/Capturing-Weekly-Aggregate-Data/" class="md-nav__link">
-        Capturing Weekly Aggregate Data
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../covid/Using-Mobile-Devices/" class="md-nav__link">
-        Using Mobile Devices
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_3">
-          Technical
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Technical" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_3">
-          <span class="md-nav__icon md-icon"></span>
-          Technical
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Laboratory Information System
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Laboratory Information System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
-      <a href="../../covid/Alerts/" class="md-nav__link">
-        Alerts
+      <a href="../../lis/configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eRegister/LIS Configuration Manual
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
-            
               
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../covid/Weekly-Report/" class="md-nav__link">
-        Weekly Report
-      </a>
-    </li>
-  
-
             
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../covid/Validation-Rules/" class="md-nav__link">
-        Validation Rules
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../covid/Indicators/" class="md-nav__link">
-        Indicators
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../covid/Program-Indicators/" class="md-nav__link">
-        Program Indicators
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../covid/Program_Rules/" class="md-nav__link">
-        Program Rules
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../covid/How-To-Prepare-Docker-Training-Instance/" class="md-nav__link">
-        How To Prepare Docker Training Instance
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
+    
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6">
-          Odoo-Pharmacy
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Odoo-Pharmacy" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Odoo-Pharmacy
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Odoo-Pharmacy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Odoo-Pharmacy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../odoo/Overview/" class="md-nav__link">
-        Overview
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_2">
-          Pharmacy Module Guideline
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Pharmacy Module Guideline" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_2">
-          <span class="md-nav__icon md-icon"></span>
-          Pharmacy Module Guideline
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
           
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pharmacy Module Guideline
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pharmacy Module Guideline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../odoo/Dispensary/" class="md-nav__link">
-        Dispensary
+        
+  
+  <span class="md-ellipsis">
+    Dispensary
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../odoo/Accounting/" class="md-nav__link">
-        Accounting
+        
+  
+  <span class="md-ellipsis">
+    Accounting
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
-            
               
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
+    
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_3">
-          Technical
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Technical" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_3">
-          <span class="md-nav__icon md-icon"></span>
-          Technical
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    COVID-19
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            COVID-19
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Entry Guidelines
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Entry Guidelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/Registering-a-Case-or-Suspect/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Registering a Case or Suspect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/Capturing-Weekly-Aggregate-Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Capturing Weekly Aggregate Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/Using-Mobile-Devices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Mobile Devices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/Alerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/Weekly-Report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weekly Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/Validation-Rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validation Rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/Indicators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Indicators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/Program-Indicators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Program Indicators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/Program_Rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Program Rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../covid/How-To-Prepare-Docker-Training-Instance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Prepare Docker Training Instance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Technical
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../odoo/Menu-Setup.md" class="md-nav__link">
-        None
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+    
+    
+    
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          About Us
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="About Us" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          About Us
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
           
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About Us
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            About Us
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
   
     <li class="md-nav__item">
       <a href="../../covid/About-Us/" class="md-nav__link">
-        About Us
+        
+  
+  <span class="md-ellipsis">
+    About Us
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1512,15 +2176,22 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
   <h1>eRegister 092 Release Notes</h1>
 
 <h3 id="eregister-release-notes">eRegister Release Notes</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>eRegister is based on =&gt; <a href="https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes">0.92</a></li>
+</ul>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <ul>
@@ -1528,7 +2199,921 @@
 <li>Please report issues here: <a href="https://github.com/eRegister/bahmni_docker/issues">https://github.com/eRegister/bahmni_docker/issues</a></li>
 </ul>
 </div>
-<h2 id="092-release-candidate-rc-1"><a href="https://bahmni.atlassian.net/wiki/spaces/BAH/pages/20185103/Release+Notes">0.92</a> - Release Candidate (RC) #1</h2>
+<h3 id="release-notes-feberuary-2024"><strong>Release Notes Feberuary 2024</strong></h3>
+<h4 id="new">New</h4>
+<h5 id="new-poc-concept">New POC concept</h5>
+<hr />
+<ul>
+<li>Add New "Reason for VL Test" with answers: Birth, 7 days, 10-14 weeks, 9 months</li>
+</ul>
+<hr />
+<h4 id="updates">Updates</h4>
+<h5 id="anc">ANC</h5>
+<ul>
+<li>Transfer out section of the report was modified to include patients in the report as soon as their supply is depleted and not wait until 28 days later</li>
+<li>Show or hide anc visit number | When 'First Visit' is selected in the ANC form, hide the visit order number field and only show it when 'Subsequent Visit' is selected</li>
+<li>Remove anc auto-calculate | Remove code to auto-calculate edd in bahmniapps to write it in bahmni_config where it is simpler</li>
+</ul>
+<h5 id="hts">HTS</h5>
+<ul>
+<li>In HIV Retesting register, the 'Tested' is now shown whether the index client has tested before or not</li>
+<li>Added the option to take secondary self test for HIV positive clients in HIV Testing and Counselling form</li>
+</ul>
+<h5 id="prep">Prep</h5>
+<ul>
+<li>Added population group to the prep intake</li>
+</ul>
+<h5 id="mdr-tb-tb">MDR-TB | TB</h5>
+<ul>
+<li>Conditional show MDR-TB section | MDR-TB section shows only when the "On DR TB Treatment" option is selected in the visit details page</li>
+<li>Fix TB Follow up Transfer out conditions</li>
+<li>TB-013 | New and Relapse Enrolled on TB (List) - Added new clients that were excluded</li>
+</ul>
+<h5 id="other">Other</h5>
+<ul>
+<li>Remove Line Probe Array Result Error popup</li>
+<li>Replaced the Date Results Recieved from lab =&gt; Results Sent to the Lab/Caregiver</li>
+<li>Added POC VL Result (6054) | From site(s)</li>
+</ul>
+<h4 id="reports">Reports</h4>
+<h5 id="new-reports">New Reports</h5>
+<h5 id="modifications">Modifications</h5>
+<hr />
+<h6 id="added-new-concepts-for-blood-draw-and-blood-results-that-came-with-the-introduction-of-lab-module">Added new concepts for blood draw and blood results that came with the introduction of lab module</h6>
+<ul>
+<li>ART-010 | Viral Load Results Status, within 3 months (List) </li>
+<li>ART-011 | Viral Load Results Status, within 3 months (Pivot)</li>
+</ul>
+<hr />
+<h6 id="revised-to-only-pick-clients-with-visits-started-durin-g-the-selected-period">Revised to only pick clients with visits started durin  g the selected period.</h6>
+<ul>
+<li>ART-017 | Registered ART Visits with ART Consultation (List)</li>
+<li>ART-018 | Registered ART Visits with ART Consultation (Pivot)</li>
+</ul>
+<hr />
+<h6 id="transfer-out-section-of-the-report-was-modified-to-include-patients-in-the-report-as-soon-as-their-supply-is-depleted-and-not-wait-until-28-days-later">Transfer out section of the report was modified to include patients in the report as soon as their supply is depleted and not wait until 28 days later</h6>
+<p>ART-051 | TX_ML (List)
+ART-052 | TX_ML (Pivot)</p>
+<hr />
+<ul>
+<li>ART-036 | CXCA_SCRN (List) | Added HIV status column to the Cervical Cancer Screening Report</li>
+<li>ART-080 | PrEP New (List) : include indication for starting prep and accomodating key pops</li>
+<li>ART-081 | PrEP New (Pivot) : include indication for starting prep and accomodating key pops</li>
+<li>ART-022 | Data Quality Assessment tool: removed “Results_received” and “Patient_received_results” colums</li>
+<li>ART-036 | CXCA_SCRN (List): modified to include patients with a cervical cancer screening register filled instead of counting patients with a “type of screening offered” filled in.</li>
+<li>Cervical Cancer Screening (List) : updated to show the results | modified to include patients with a cervical cancer screening register filled instead of counting patients with a “type of screening offered” filled in.</li>
+<li>HTS Self Test Report - Correction of different number of kits distributed and returned between openmrs and Bahmni</li>
+<li>MCH-(023) : (024) | PMTCT FO (List)  (Pivot) : Updated to accomodate Age at test</li>
+<li>MCH-(017) : (018) | PMTCT STAT (List) (Pivot): Updated to accomodate Known Positive status</li>
+<li>TB-(010) (011) |TB Status (List) (Pivot) : Updated to display data</li>
+<li>TB-017 | TB Prevention Therapy (List) : Updated to use tpt start date</li>
+<li>Removed Visitors from TxML and TxRTT reports | Visitors have been excluded from the TxML and TxRTT reports</li>
+</ul>
+<h3 id="release-notes-january-2024"><strong>Release Notes January 2024</strong></h3>
+<h4 id="updates_1">Updates</h4>
+<ul>
+<li>New TB forms</li>
+<li>HIV POC Viral Load Register concepts and form </li>
+</ul>
+<h4 id="reports_1">Reports</h4>
+<h5 id="new-reports_1">New Reports</h5>
+<ul>
+<li>PMTCT ART</li>
+</ul>
+<h3 id="release-notes-december-2023"><strong>Release Notes December 2023</strong></h3>
+<h4 id="ui-changes">UI Changes</h4>
+<ul>
+<li>Remove CAG button in consultation</li>
+</ul>
+<h4 id="reports_2">Reports</h4>
+<h5 id="openmrs">Openmrs</h5>
+<ul>
+<li>Revisited childres regiment 1st, 2nd and 3rdline to include clients missed</li>
+</ul>
+<h5 id="modifications_1">Modifications</h5>
+<ul>
+<li>Art-001 | Current on ART Detailed (List) -- Remove visitors from missed </li>
+<li>Art-002 | Current on ART Detailed (pivot) -- Remove visitors from missed</li>
+<li>MCH-011 | Family Planning - List ( Removed N/A opetion when option is selected.)</li>
+<li>MCH-012 | Family Planning - Pivot ( Removed N/A opetion when option is selected.)</li>
+<li>LAB-003 | Lab Shipping List (Revise  report to only include date specimen collected and lab order number)</li>
+</ul>
+<h3 id="release-notes-november-2023"><strong>Release Notes November 2023</strong></h3>
+<h4 id="reports_3">Reports</h4>
+<h5 id="new-reports_2">New Reports</h5>
+<h5 id="modifications_2">Modifications</h5>
+<ul>
+<li>MCH-003 | AnteNatal Care (ANC) - List</li>
+<li>MCH-004 | AnteNatal Care (ANC) - Pivot
+Remove EID as an identification for ART Clients</li>
+<li>ART-019 | Registered ART Clients with Intakes (List)</li>
+<li>ART-020 | Registered ART Clients with Intakes (Pivot)</li>
+<li>
+<p>ART-021 | ART Client Without Intakes (List)</p>
+</li>
+<li>
+<p>Show Tuberculosis test section when Tuberculosis test type is clicked</p>
+</li>
+<li>
+<p>Show Viral Load test section when Viral Load test type is clicked</p>
+</li>
+<li>
+<p>remove emrapi.sqlSearch.cag error</p>
+</li>
+<li>
+<p>This error pops up when a user is on clinical APP index page.</p>
+</li>
+<li>
+<p>Lab shipping Report, Adding IPV to under 5, TB New and Relapse</p>
+</li>
+<li>
+<p>LAB-003 | Lab Shipping List - New report</p>
+</li>
+<li>
+<p>MCH-007| Child Health (Under5) - List - Added IPV to 3rd Dose and remove Rotavirus</p>
+</li>
+<li>
+<p>TB-010 | New and Relapse Enrolled on TB - Generated the pivot from the report same as TB-013 | New and Relapse Enrolled on TB (List)</p>
+</li>
+<li>
+<p>TB-013 | New and Relapse Enrolled on TB (List) - Select latest Status to avoid duplication</p>
+</li>
+<li>openmrs_reporting_release</li>
+<li>2020_ART_Current</li>
+<li>Remove visitors   </li>
+</ul>
+<h3 id="release-notes-october-2023"><strong>Release Notes October 2023</strong></h3>
+<h4 id="updates_2">Updates</h4>
+<ul>
+<li>Update cervical_scrn_list.sql | There was duplication in the list where if a client has received both PNC and cervical screen services would appear twice in the cervical cancer screening list.</li>
+<li>Removal of the person id from the list and
+Removal of duplication caused by EDD not being confined to the observation date. e.g a patient with multiple pregnancies and hence multiple EDDs is duplicated number EDD times on the lis</li>
+</ul>
+<h4 id="mdr-tb-updates">MDR-TB Updates</h4>
+<ul>
+<li>Added TB status global variable | Changes were made to enable the MDR-TB section to show only when the "On DR TB Treatment" option is selected in the visit details page</li>
+</ul>
+<h4 id="reports_4">Reports</h4>
+<h5 id="new-reports_3">New Reports</h5>
+<ul>
+<li>Cervical Cancer Screening (Pivot)</li>
+</ul>
+<h5 id="modifications_3">Modifications</h5>
+<p>*** LAB-01 | Lab_Report (List) *** 
+- Added the Results column in order to include 
+- Added date results were received from Lab
+- Added Lab order number
+- PIR13: Registered ART Clients with Intakes Progress Report - pick clients with ART number or form and exclude visitors</p>
+<p>*** Modified LDL results received for the following ***
+- LAB-01 | Lab_Report (List)
+- LAB-01 | Lab_Report (List)</p>
+<h4 id="openmrs-reports">Openmrs reports</h4>
+<ul>
+<li>eRegister Monitoring Report - Cervical Cancer completeness had the wrong concept</li>
+</ul>
+<h4 id="new-mappings">New Mappings</h4>
+<ul>
+<li>Children ARV Regimen 1st Line 4C Mapping</li>
+<li>Children ARV Regimen 1st Line 4D Mapping</li>
+<li>Children ARV Regimen 1st Line 4E Mapping</li>
+<li>Children ARV Regimen 1st Line 4F Mapping</li>
+<li>Children ARV Regimen 1st Line 4G Mapping</li>
+<li>Children ARV Regimen 1st Line 4H Mapping</li>
+<li>Children ARV Regimen 1st Line 4J Mapping</li>
+<li>Children ARV Regimen 1st Line 4K Mapping</li>
+<li>
+<p>Children ARV Regimen 1st Line 4L Mapping</p>
+</li>
+<li>
+<p>Children ARV Regimen 2nd Line 5A Mapping</p>
+</li>
+<li>Children ARV Regimen 2nd Line 5B Mapping</li>
+<li>Children ARV Regimen 2nd Line 5C Mapping</li>
+<li>Children ARV Regimen 2nd Line 5D Mapping</li>
+<li>Children ARV Regimen 2nd Line 5E Mapping</li>
+<li>Children ARV Regimen 2nd Line 5F Mapping</li>
+<li>Children ARV Regimen 2nd Line 5G Mapping</li>
+<li>Children ARV Regimen 2nd Line 5H Mapping</li>
+</ul>
+<h3 id="bahmni-docker">Bahmni DOcker</h3>
+<ul>
+<li>Adding Latest developments made to k8s cluster</li>
+<li>Adding Latest developments made to k8s cluster</li>
+</ul>
+<h3 id="release-notes-september-2023"><strong>Release Notes September 2023</strong></h3>
+<h4 id="updates_3">Updates</h4>
+<ul>
+<li>Modified the query to remove duplication caused by one child having multiple vaccines on a dose
+Update eMTCT_list.sql</li>
+<li>Added patient identifier column to the report to make it easy to distinctly identifier patients</li>
+<li>MDR-TB section shows only when the "On DR TB Treatment" option is selected in the visit details page
+Added TB status global variable</li>
+<li>Changes were made to enable the MDR-TB section to show only when the "On DR TB Treatment" option is selected in the visit details page</li>
+</ul>
+<h4 id="reports_5">Reports</h4>
+<h5 id="modifications_4">Modifications</h5>
+<ul>
+<li>ART-001 | Current on ART Detailed (List) - Exclude visitor if true on latest follow up form</li>
+<li>ART-002 | Current on ART Detailed (Pivot) - Exclude visitor if true on latest follow up form</li>
+<li>MCH-003 | AnteNatal Care (ANC) - List - The dates were hard coded</li>
+</ul>
+<h6 id="openmrs-report">Openmrs Report:</h6>
+<ul>
+<li>weekly_and_monthly_reports | Serialized_Object : Includes new report called eRegister_Monitoring_Report</li>
+<li>Children ARV Regimen_1stLine_4C, 4D, 4E, 4F, 4G, 4H, 4J, 4K, 4L</li>
+<li>Children ARV Regimen_1stLine_Adherence, Viral Load</li>
+<li>Children ARV Regimen_2ndLine_5A, 5B, 5D,5E, 5F, 5G, 5H</li>
+<li>Children ARV Regimen_2ndLine_Adherence, Viral Load</li>
+<li>Children ARV Regimen_3rdLine_6A, 6B, 6C, 6D, 6E, 6F</li>
+<li>Children ARV Regimen_3rdLine_Adherence, Viral Load</li>
+</ul>
+<h3 id="release-notes-august-2023"><strong>Release Notes August 2023</strong></h3>
+<h4 id="anc_1">ANC</h4>
+<h5 id="anc-form-fixes-and-modifications">ANC Form fixes and modifications</h5>
+<ul>
+<li>Blood pressure is moved to below EDD</li>
+<li>Covid 19 status has been added to the form</li>
+<li>High risk pregnancy options were changed to match the current ANC register</li>
+<li>Complications during pregnancy were changed to match current ANC register</li>
+<li>Parity and Gravida are now auto-filled from the previous form in the ANC form</li>
+</ul>
+<h4 id="mdr-tb-in-registration">MDR-TB in registration</h4>
+<h5 id="added-mdr-tb-demographics-and-household-contact">Added MDR-TB-DEMOGRAPHICS and HOUSEHOLD CONTACT</h5>
+<h5 id="direction-for-mdr-tb-section">Direction for MDR-TB section</h5>
+<h4 id="reports_6">Reports</h4>
+<h5 id="new-reports_4">New Reports</h5>
+<ul>
+<li>TB-002 | TB Case Detection (Pivot)</li>
+<li>TB-027 | MDR TB Clients - A new MDR report</li>
+<li>MCH-023 | PMTCT FO (List) : New report</li>
+<li>MCH-024 | PMTCT FO (Pivot) : New report</li>
+<li>TB-028 | MDR TB Clients (Pivot) : New report</li>
+<li>Cervical Cancer Screening (List) : New report to include all clients screened</li>
+</ul>
+<h5 id="modifications_5">Modifications</h5>
+<ul>
+<li>ART-019 | Registered ART Clients with Intakes (List) - Modified to exclude visitors</li>
+<li>ART-020 | Registered ART Clients with Intakes (Pivot) - Modified to exclude visitors</li>
+<li>ART-021 | ART Client Without Intakes (List) - Updated to exclude visitors</li>
+<li>TB-001 | TB Case Detection (List) : Modified to include all tb screened clients</li>
+<li>MCH-017 | PMTCT STAT (List) : Modified to pull all tested ANC first visits</li>
+<li>MCH-018 | PMTCT STAT (Pivot) : Modified to pull all tested ANC first visits</li>
+<li>MCH-003 | AnteNatal Care (ANC) - List : Modified to remove duplication of clients by restricting the report to only pick the latest MUAC</li>
+</ul>
+<h5 id="cag">CAG</h5>
+<ul>
+<li>Creating Cag Module Base Code : (This is the base code from which cag module development begins to take effect)</li>
+</ul>
+<h5 id="other_1">Other</h5>
+<ul>
+<li>Renamed DISA parameter codes and added new LOINC code</li>
+<li>Remove HPV results error in cervical cancer screening form</li>
+<li>Reports.json : Added Cervical Cancer Screening (List)</li>
+</ul>
+<h3 id="release-notes-july-2023"><strong>Release Notes July 2023</strong></h3>
+<h4 id="tb">TB</h4>
+<h5 id="-changes-made-in-the-tb-intake-and-tb-followup-forms">- Changes made in the TB intake and TB followup forms</h5>
+<ul>
+<li>CD4 count, Date of CD4 count and HIV test done were added.</li>
+<li>Prevention of OIs was changed to appear below HIV management instead of above</li>
+<li>Added other to indication for starting PrEP</li>
+</ul>
+<h4 id="_1"></h4>
+<h5 id="-added-vili-test-to-type-of-screening-offered-field-in-the-cervical-cancer-screening-register">- Added VILI test to "Type of screening offered" field in the cervical cancer screening register</h5>
+<h5 id="-added-lab-test-number-to-the-following-tb-lab-tests">- Added lab test number to the following TB lab tests</h5>
+<ul>
+<li>Genexpert</li>
+<li>Line Probe Assay (LPA)</li>
+<li>Culture and DST</li>
+<li>X-ray and other tests</li>
+<li>Added lab test number to the following TB lab tests</li>
+</ul>
+<h4 id="pharmacy">Pharmacy</h4>
+<ul>
+<li>Added DTG 10 mg, DTG 50mg, Isoniazid/Rifapentine (300/300mg) to pharmacy drugs</li>
+</ul>
+<h4 id="anc-config">ANC Config</h4>
+<p>The following attributes are now auto filled from previous visits in the ANC Register</p>
+<ul>
+<li>Blood group</li>
+<li>Last Normal Menstrual Period</li>
+<li>Estimated Date of Delivery</li>
+<li>HIV status known before first visit</li>
+<li>The "From Lesotho" field only appears in the first visit</li>
+<li>The "TT Previous Doses" field only appears in the first ANC visit</li>
+<li>TB lab test no. was added to the following TB tests in the follow up form</li>
+<li>Phenotypic tests</li>
+<li>Culture and DST</li>
+</ul>
+<h4 id="reports_7">Reports</h4>
+<h5 id="new-reports_5">New Reports</h5>
+<ul>
+<li>ART-002A | TxCurr Quarterly Test (List)</li>
+<li>MCH-001 | HIV Exposed Infants (HEI) - List : Excluded Under 5 information</li>
+<li>MCH-002 MCH-002 | HIV Exposed Infants (HEI) - Pivot : Excluded Under 5 information</li>
+<li>MCH-035 | ANC Data Quality Assessment || (Added the following columns to ANC Data Quality Assessment, Iron, Folate, Calcium, MUAC, Rhesus Factor, TD previous Doses, TD current Doses)</li>
+</ul>
+<h5 id="modifications_6">Modifications</h5>
+<h6 id="modified-to-align-with-art-0012-current-on-art-detailed">(Modified to align with ART-001/2 | Current on ART Detailed)</h6>
+<ul>
+<li>ART-044 | TX_CURR (List)</li>
+<li>
+<p>ART-043 | TX_CURR (Pivot)</p>
+</li>
+<li>
+<p>TB-002 | TB Notification (List)</p>
+</li>
+<li>TB-003 | TB Outcomes (List)</li>
+</ul>
+<h6 id="openmrs-report_1">Openmrs Report:</h6>
+<ul>
+<li>HTS Period Indicator Report | Exclude voided confirmatory results</li>
+<li>2020_ART_Current | Remove visitors from ART current</li>
+</ul>
+<h4 id="other_2">Other</h4>
+<ul>
+<li>Added concepts source DISA and LOINC </li>
+<li>Added corresponding new refence terms </li>
+<li>Created new viral load concepts and added mappings to the new and existing concepts.</li>
+</ul>
+<h3 id="release-notes-june-2023"><strong>Release Notes June 2023</strong></h3>
+<h4 id="_2"></h4>
+<h4 id="hivtc-visitor-config">HIVTC visitor config</h4>
+<ul>
+<li>Hides the "From(site)" if the client is not a visitor</li>
+</ul>
+<h4 id="anc-autocalculate-edd">ANC Autocalculate EDD</h4>
+<ul>
+<li>The system can calculate EDD in alignment with the new ANC form</li>
+</ul>
+<h4 id="tb_1">TB</h4>
+<ul>
+<li>TB-HIV Activities: Multi-select on Prevention of OIs</li>
+<li>Initial phase now has outcomes, they are no longer greyed out</li>
+</ul>
+<h4 id="hts-testing-eligibility">HTS Testing Eligibility</h4>
+<ul>
+<li>Adding multiple selection in HTS on concept Testing Eligibility, Last 12 Months</li>
+</ul>
+<h4 id="anc-latest-configs">ANC latest configs</h4>
+<ul>
+<li>Allow future dates to be entered for subsequent visit EDD</li>
+<li>Remove viral load template warning message in ANC program</li>
+<li>LOR: Obstetric History
+Parity, Alive and Miscarriages are hidden by 
+default and appear again, when Gravida &gt; 1</li>
+<li>LOR: History of Past Pregnancies
+Hidden by default, and appears only when Gravida &gt; 1</li>
+<li>
+<p>LOR: Gynaecological History
+Result of Pap smear: hidden by default and only appears when “Ever Had Pap 
+smear” is “YES”
+STI treated and Date STI Treated are hidden by default, but visible when 
+“History of STI” is “YES”
+Below Miscarriages: “When”, “Gestation Period” and “Curetage” are hidden by 
+default, but visible when miscarriages is "YES"</p>
+</li>
+<li>
+<p>LOR: Surgical History
+“Type of surgery” hidden by default and appears only when “Any Surgery” 
+is selected “YES”
+“Specify” hidden by default. Visible only when “Other” is clicked under 
+“Type of Surgery”</p>
+</li>
+<li>
+<p>ANC Register: Investigations and Immunizations
+Syphills Treatment Completed: Hidden by default, visible when “Reactive”
+ is clicked</p>
+</li>
+<li>
+<p>ANC Register: HIV Testing Services
+Initial Test During this Pregnancy: visible when HIV Status before 1st 
+Visit is not positive, otherwise hidden
+Initial Test During this Pregnancy: HIV Result: Visible only when HIV 
+1Test Done? Is “YES”
+Initial Test During this Pregnancy: HIV Result Received: visible only 
+HIV Test Result are Positive or Negative, otherwise hidden
+Subsequent HIV Test Results: hidden by default. Visible when Known HIV 
+Status before 1st visit is not positive and initial test results during 
+this pregnancy is not positive
+Male Partner Involvement: HIV Status hidden by default, visible when 
+“YES” is clicked</p>
+</li>
+</ul>
+<h4 id="reports_8">Reports</h4>
+<h5 id="modified">Modified</h5>
+<h6 id="art-reports-modified">Art Reports Modified.</h6>
+<ul>
+<li>ART-001 | Current on ART Detailed (List)  - To exclude visotrs</li>
+<li>ART-002 | Current on ART Detailed (Pivot)  - To exclude visotrs</li>
+<li>ART-001 | Current on ART Detailed (List) - Corrected to exclude dead patients from the initiated section of the report</li>
+<li>ART-002 | Current on ART Detailed (Pivot) - Aligned with the list version</li>
+<li>ART-017 | Registered ART Visits with ART Consultation (List) : Includes Art Clients who had other visits other than Drug pickup and viral load visit</li>
+<li>ART-018 | Registered ART Visits with ART Consultation (Pivot) : Includes Art Clients who had other visits other than Drug pickup and viral load visit</li>
+<li>ART-043 | TX_CURR (Pivot) - Corrected to exclude dead patients from the initiated section of the report</li>
+<li>ART-044 | TX_CURR (List) - Aligned with the list version</li>
+<li>ART-061 | Pre-ART - Revise the report to pull clients retested positive and not linked to care</li>
+<li>ART-067 | PEADS Aging Out Analysis (Client Outcomes) - Updated to track  Q4 Sept 2022 txcurr</li>
+<li>ART-068 | PEADS Aging Out Analysis (Client Appointments) - Updated to track  Q4 Sept 2022 txcurr</li>
+</ul>
+<h6 id="hts-reports-modified">HTS Reports Modified.</h6>
+<ul>
+<li>HTS-006 | Self Test Clients(List) : modified to allow the report accomodate all periods</li>
+<li>HTS-007 | Self Test Clients(Pivot) : A new report reports.json : addition of a new report</li>
+<li>Reports.json : addition of a new report</li>
+</ul>
+<h6 id="mch-reports-modified">MCH Reports Modified.</h6>
+<ul>
+<li>MCH-003 | AnteNatal Care (ANC) (List)   - This report has been optimized</li>
+<li>MCH-004 | AnteNatal Care (ANC) (Pivot)  - Corrected number of first ANC Visits to be equal to total trimester</li>
+<li>MCH-011 | Family Planning - List</li>
+<li>MCH-012 | Family Planning - Pivot</li>
+<li>MCH-029 | Registered FP Visits with FP Consultation (List)</li>
+</ul>
+<h6 id="tb-reports-modified">TB Reports Modified.</h6>
+<ul>
+<li>TB-001 | TB Case Detection (List) : Included "Referred by(CBO/CHW)" and "Died before treatment" indicators</li>
+<li>TB-002 | TB Notification (List) : Included "Prophylaxis provided" indicator</li>
+<li>TB-003 | TB Outcomes (List) : Added two treatment outcomes: Not Evaluated and Moved to Second line</li>
+<li>TB-017 | TB Prevention Therapy (Pivot) : Revised TPT pivot report</li>
+<li>TB-019 | TB Intakes (List) - Corrected to include intakes captured within a year of the report start date only</li>
+<li>TB-020 | TB Intakes (Pivot)- Aligned with the list version</li>
+</ul>
+<h3 id="release-notes-may-2023"><strong>Release Notes May 2023</strong></h3>
+<h4 id="clinical-module">Clinical Module</h4>
+<p>----------------------------------------------------------- <strong>Tuberculosis - Intake</strong> -----------------------------------------------------------</p>
+<h6 id="the-following-were-added">The following were added:</h6>
+<ul>
+<li>Linkage: Added country and facility: for out of the country Transfer In</li>
+<li>History of previous treatment: Added "Other" Option and "Specify"</li>
+<li>Social Behaviour Section</li>
+<li>Laboratory Tests: Added Culture and DST, added Test Lab no and date test was done on each Test type</li>
+<li>Medical History and Other Comorbidites</li>
+<li>Intensive care</li>
+</ul>
+<p>----------------------------------------------------------- <strong>Tuberculosis - Followup</strong> -----------------------------------------------------------</p>
+<h6 id="the-following-were-added_1">The following were added:</h6>
+<ul>
+<li>
+<p>Laboratory Tests:</p>
+<ul>
+<li>Added Culture and DST</li>
+<li>Added Test Lab no. to Phenotypic tests</li>
+<li>Added date test was done on each Test type</li>
+</ul>
+</li>
+<li>
+<p>Contact Tracing</p>
+</li>
+<li>The option to allow users to multiple contact info for traced TB contacts</li>
+</ul>
+<p>----------------------------------------------------------------------- <strong>Under5</strong> -----------------------------------------------------------------------</p>
+<ul>
+<li>Added feature to auto fill Under5 and ANC Number from first Under5 register consultation in subsequent visits</li>
+</ul>
+<h4 id="reports_9">Reports</h4>
+<h5 id="modified_1">Modified</h5>
+<ul>
+<li>ART-003 | Missed Appointments Status Report (List)   Modified to only consider transfers out in the latest follow up form</li>
+<li>ART-045 | TX_CURR MMD (List) MMD missed removed</li>
+<li>ART-046 | TX_CURR MMD (Pivot) MMD missed removed</li>
+<li>TB-020 | TB Intakes (Pivot)- Aligned with the list version</li>
+<li>TB-019 | TB Intakes (List) - Corrected to include intakes captured within a year of the report start date only</li>
+<li>ART-001 | Current on ART Detailed (List) - Corrected to exclude dead patients from the initiated section of the report</li>
+<li>ART-002 | Current on ART Detailed (Pivot) - Aligned with the list version</li>
+<li>ART-043 | TX_CURR (Pivot) - Aligned with the list version</li>
+<li>ART-044 | TX_CURR (List) - Corrected to exclude dead patients from the initiated section of the report</li>
+</ul>
+<h5 id="newly-added">Newly added</h5>
+<ul>
+<li>ART-080 | Visitors Report (List)</li>
+<li>ART-081 | Visitors Report (Pivot) </li>
+</ul>
+<h3 id="release-notes-april-2023"><strong>Release Notes April 2023</strong></h3>
+<h4 id="clinical-module_1">Clinical Module</h4>
+<p>---------------------------------------------------- <strong>HIV Treatment and Care - Follow Up</strong> -------------------------------------------</p>
+<ul>
+<li>HIV Treatment and Care module<ul>
+<li>new "visitor" field to easily identify visiting clients</li>
+</ul>
+</li>
+</ul>
+<p>---------------------------------------------------- <strong><a href="https://docs.google.com/document/d/1WLKphDTfFoqSMjhsRg9r1hUQGu2AIOG1/edit?usp=sharing&amp;ouid=108376078359942224064&amp;rtpof=true&amp;sd=true">ANC Register</a></strong> ----------------------------------------------------</p>
+<p><img alt="ANC Register - 1st visit" src="../../pics/ANC_register_1st.png" /></p>
+<p><img alt="ANC Register - 2nd visit" src="../../pics/ANC_register_2nd.png" /></p>
+<ul>
+<li>ANC Program revised to mimic the newly released ANC Register<ul>
+<li>Revised the whole ANC Register<ul>
+<li>Calcium</li>
+<li>Nutritional Assesment</li>
+<li>Sign of GBV</li>
+<li>Covid19</li>
+<li>Rhesus Factor</li>
+<li>Tetanus Diththeria (TD) Doses</li>
+</ul>
+</li>
+<li>Added new broader section "HIV Testing Servies"</li>
+<li>Clinical WHO Staging</li>
+<li>Referrals</li>
+</ul>
+</li>
+</ul>
+<p>------------------------------------------------------------------------- <strong>HIV Testing and Counseling</strong> ----------------------------------------------------------------</p>
+<ul>
+<li>The 'kit collected for' field is now compulsory when secondary distribution mode is selected</li>
+</ul>
+<p>--------------------------------------------------------------------------- <strong>Family Planning Register</strong> ------------------------------------------------------------------</p>
+<ul>
+<li>Follow up date added</li>
+<li>Multiselect on family counselling services provided enabled</li>
+<li>Entering future dates on IUCD/Implant check-up date enabled</li>
+</ul>
+<h4 id="reports_10">Reports</h4>
+<h5 id="modified_2">Modified</h5>
+<ul>
+<li>TB-026 | TB Data Quality Assessment Tool - modified to:</li>
+<li>Include TB regimen</li>
+<li>Treatment outcome regardless of the report</li>
+<li>
+<p>Type of test performed</p>
+</li>
+<li>
+<p>ART-077 | Weekly PPR (List) : corrected to show weekly defaulters and NCLIs that came after 91 days</p>
+</li>
+<li>
+<p>ART-078 | Weekly PPR (Pivot): corrected to show weekly defaulters and NCLIs that came after 91 days</p>
+</li>
+<li>
+<p>MCH-007 | Child Health (Under5) - List - Added all the multi selected immunization</p>
+</li>
+<li>
+<p>ART-022 | Data Quality Assessment Tool - Viral load column to provide explicit values for VL &gt;20</p>
+</li>
+<li>
+<p>HTS Final Status Report - solved duplication caused by editing the form.</p>
+</li>
+<li>
+<p>TB-022 | Registered TB Visits with TB Consultation (List) - Modified to be more accurate</p>
+</li>
+<li>
+<p>TB-023 | Registered TB Visits with TB Consultation (Pivot) - Modified to be more accurate</p>
+</li>
+<li>
+<p>HTS-002 | HTS Final HIV Status PITC (Pivot) : Revised to exclude clients with Tested in ANC Form</p>
+</li>
+<li>
+<p>HTS-004 | HTS Final HIV Status CITC (Pivot) : Revised to exclude clients with Tested in ANC Form</p>
+</li>
+<li>
+<p>TB-026 | TB Data Quality Assessment Tool - Select client initiated during period and date transferred in for SA clients</p>
+</li>
+<li>
+<p>Revised Rapid HTS reports to eliminate duplication of Clients who had ANC Form consultaions (OpenMRS reports)</p>
+</li>
+</ul>
+<h5 id="newly-added_1">Newly added</h5>
+<ul>
+<li>Tb_Notification reports( Block 1,Block 2,Block 3,Block 4) (OpenMRS reports)</li>
+<li>
+<p>TB Outcome reports (Block 1 and Block 2) (OpenMRS reports)</p>
+</li>
+<li>
+<p>MCH-001 | HIV Exposed Infants (HEI) - List</p>
+</li>
+<li>MCH-002 | HIV Exposed Infants (HEI) - Pivot</li>
+<li>MCH-003 | AnteNatal Care (ANC) - List</li>
+<li>MCH-004 | AnteNatal Care (ANC) - Pivot</li>
+<li>MCH-005 | Post Natal Care (PNC) - List</li>
+<li>MCH-006 | Post Natal Care (PNC) - Pivot</li>
+<li>MCH-007 | Child Health (Under5) - List</li>
+<li>MCH-009 | Labour and Delivery - List</li>
+<li>MCH-010 | Labour and Delivery - Pivot</li>
+<li>MCH-011 | Family Planning - List</li>
+<li>MCH-012 | Family Planning - Pivot</li>
+<li>MCH-013 | Nutrition - List</li>
+<li>MCH-014 | Nutrition - Pivot</li>
+<li>MCH-015 | PMTCT STAT DINOMINATOR (List)</li>
+<li>MCH-016 | PMTCT STAT DINOMINATOR (Pivot)</li>
+<li>MCH-017 | PMTCT STAT (List)</li>
+<li>MCH-018 | PMTCT STAT (Pivot)</li>
+<li>MCH-019 | PMTCT EID (List)</li>
+<li>MCH-020 | PMTCT EID (PIVOT)</li>
+<li>MCH-022 | PMTCT HEI POS (Pivot)</li>
+<li>-</li>
+</ul>
+<hr />
+<h3 id="release-notes-march-2023"><strong>Release Notes March 2023</strong></h3>
+<h4 id="reports_11">Reports</h4>
+<h5 id="modified_3">Modified</h5>
+<ul>
+<li>ART-022 | Data Quality Assessment Tool - Viral load column to provide explicit values for VL &gt;20</li>
+<li>TB-018 | TB Intakes (List) - Changed the variable #enddate# to #endDate#</li>
+<li>MCH-014 | PNC SEEN (List) - Added First_PNC_Attendance, Place_of_Delivery, FP_Counselling, FP_Method, Syphilis_Screening, Cancer_Screening, Cancer_Assessment_Method,HIV_Testing_Result, Breastfeeding, MUAC_less_than_23cm</li>
+<li>MCH-017 | Child Health Attendance - Under5 (List) - Added Months, Base_Dose, 1st_Dose, 2nd_Dose, 3rd_Dose, Fully_Immunized, Measles_1st_Dose, Measles_2nd_Dose, Dt_1st_Dose</li>
+<li>HTS-001 | HTS Final HIV Status (List) - solved duplication caused by editing the form.</li>
+<li>ART-003 | Missed Appointments Status Report (List) - location re-added</li>
+<li>ART-003 | Missed Appointments Status Report (List) - Order clients by their appointment status, appointment date</li>
+</ul>
+<h4 id="clinical-module_2">Clinical Module</h4>
+<ul>
+<li>Self test distribution mode is now compulsory  </li>
+<li>Added version date on bahmni login page  </li>
+</ul>
+<hr />
+<h3 id="release-notes-february-2023"><strong>Release Notes February 2023</strong></h3>
+<h4 id="reports_12">Reports</h4>
+<ul>
+<li>TB-025 | TB Data Quality Assessment Tool - Added prevention of IOs with the new concept</li>
+<li>TB-026 | TB Outcome (List) - new report. The previous report was not a list but a pivot.</li>
+<li>TB-001 | TB Outcomes (Pivot) - has been renamed to pivot not list</li>
+<li>ART-031 | TX_NEW (List) : include died in the same period</li>
+<li>ART-032 | TX_NEW (PIVOT) : include died in the same period</li>
+<li>ART-078 | PrEP NEW (List) - new report</li>
+</ul>
+<h4 id="clinical-module_3">Clinical Module</h4>
+<ul>
+<li>HIV Management Made Multi-Select On TB intake Form</li>
+<li>Labour and Delivery register: allow add more and conditions</li>
+<li>Txnew pivot modification and add prep new tb outcomes list to json file</li>
+<li>Adding the Cancer Screening Report to the reports.json file</li>
+<li>Fixed Prep Follow Up Form concept spelling</li>
+<li>Swapped OIs and HIV Management on the TB Intake form</li>
+</ul>
+<hr />
+<h3 id="release-notes-january-2023"><strong>Release Notes January 2023</strong></h3>
+<h4 id="reports_13">Reports</h4>
+<ul>
+<li>Added TB-025 | TB Data Quality Assessment Tool to reports json file</li>
+<li>MCH-014 | PNC SEEN (List) - New Report </li>
+<li>MCH-015 | FP SEEN ( List) - New Report </li>
+<li>MCH-016 | Under5 SEEN (List) - New Report</li>
+<li>MCH-017 | HIV Exposed Infant SEEN (List) - New Report</li>
+<li>Added the following patientAttributes :<ul>
+<li>Occupation</li>
+<li>Marital Status</li>
+<li>Extra Address Information</li>
+<li>Treatment Supporter/Next of Kin</li>
+</ul>
+</li>
+<li>Added File Number as one of the extraPatientIdentifiers</li>
+<li>TB-025 | TB Data Quality Assessment Tool - Correcting wrong concept_id used for TB treatment outcomes</li>
+<li>
+<p>TB-025 | TB Data Quality Assessment Tool</p>
+<ul>
+<li>Remove the last column (labelled HIV)</li>
+<li>Include History of Previous Treatment, just after Site</li>
+<li>On the Clients_on_ART column, the tool should pull results as New on ART or Already on ART not active.</li>
+<li>For Site, results should be Pulmonary (with correct diagnosis) or Extra Pulmonary</li>
+</ul>
+</li>
+<li>
+<p>ART-001 | Current on ART Detailed (List)</p>
+</li>
+<li>ART-002 | Current on ART Detailed (Pivot)</li>
+<li>ART-043 | TX_CURR (List)</li>
+<li>ART-042 | TX_CURR (Pivot)</li>
+</ul>
+<h4 id="clinical-module_4">Clinical Module</h4>
+<ul>
+<li>Correct transferred out clients were picked under missed.</li>
+</ul>
+<hr />
+<h3 id="release-notes-december-2022"><strong>Release Notes December 2022</strong></h3>
+<ul>
+<li>
+<h5 id="reports_14">Reports</h5>
+<ul>
+<li>
+<h6 id="bahmni">Bahmni</h6>
+<ul>
+<li><em>TB-025 | TB Data Quality Assessment Tool</em> - new report </li>
+<li><em>PHARM-004 | Registered Clients Prescribed and Dispensed (List)</em> - New report</li>
+<li><em>PHARM-005 | Registered Clients Prescribed and Dispensed (Pivot)</em> - New report</li>
+<li><em>PHARM-001 | Pharmacy ARV Regimen</em> - Displays details and status of Regimens</li>
+</ul>
+</li>
+<li>
+<h6 id="openmrs_1">Openmrs</h6>
+<ul>
+<li>A new serialized object for the fix of pitc and citc reports in openmrs (They were not picking some clients and were duplicating others)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="release-notes-november-2022"><strong>Release Notes November 2022</strong></h3>
+<ul>
+<li>
+<h5 id="reports_15">Reports</h5>
+<ul>
+<li>
+<h6 id="bahmni_1">Bahmni</h6>
+<ul>
+<li><em>ART-001 | Current on ART Detailed (List)</em> - Newly added ECID Identifier results in Zeros under MMD - Solved</li>
+<li><em>ART-001 | Current on ART Detailed (List)</em> - Clients who transferred out and came back under clients_missed_28days</li>
+<li><em>MCH-005 | Ante Natal Care (ANC) (List)</em> - Added Iron, Folate, Blood_Group</li>
+<li><em>TB-018 | TB Intakes (List)</em> - Corrected the report to pull patients correctly</li>
+<li><em>HTS-001 | HTS Final HIV Status (List)</em> - Eliminated some duplicates for clients who came more than twice a month</li>
+<li><em>HTS-002 | HTS Final HIV Status PITC (Pivot)</em> - Eliminated some duplicates for clients who came more than twice a month</li>
+<li><em>TB-007 | New and Relapse Enrolled on TB</em> - Exclude clients that are not new or relapse</li>
+<li><em>HTS-001 | HTS Final HIV Status (List)</em> - Added service points, and also considers start &amp; endDates</li>
+<li><em>HTS-009 | HTS Data Quality Assessment Tool</em> - Considers start and end dates</li>
+<li><em>PHARM-003 | Dispensing Summary Report</em> -Provide labeling of medicines dispensed</li>
+<li><em>ART-036 | CXCA_SCRN (List)</em> - Added a New Report for Cervical Cancer Screening</li>
+<li><em>MCH-004 | Ante Natal Care (ANC) (Pivot)</em> - Added Muac and Suspected with TB Column</li>
+<li><em>PHARM-002 | Dispensing Orders report</em> - Clients dispensed, Age, Sex, Regimen, Quantity Dispensed, Batch</li>
+<li><em>PHARM-001 | Pharmacy ARV Regimen</em> - Displays details and status of Regimens</li>
+<li><em>PHARM-004 | Registered Clients Prescribed and Dispensed (List)</em> - New report</li>
+<li><em>PHARM-005 | Registered Clients Prescribed and Dispensed (Pivot)</em> - New report</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="release-notes-october-2022"><strong>Release Notes October 2022</strong></h3>
+<ul>
+<li>
+<h5 id="reports_16">Reports</h5>
+<ul>
+<li>
+<h6 id="bahmni_2">Bahmni</h6>
+<ul>
+<li><em>ART-026 | Ante Natal Care (ANC)</em> - The report now relies on the start and end dates picked by the user, instead it picked the month and year of the end Date</li>
+<li><em>ART-026 | Ante Natal Care (ANC)</em> - The gap between 2nd and 3rd trimester (25 weeks) is now included</li>
+<li><em>ART-026 | Ante Natal Care (ANC)</em> - Total ANC follow up visits 2nd, 3rd and 4th now picks subsequent visits</li>
+<li>Added a category for MCH Reports</li>
+<li><em>TB-024 | TB Case Detection (list)</em> - Adjusted the report number from 23 to 24 because the report above is also 23</li>
+<li><em>MCH-005 | Ante Natal Care (ANC) (List)</em> - New Report</li>
+<li><em>TB-014 | TB Prevention Therapy (List)</em> - consider start and end dates not month(), year()</li>
+<li><em>TB-015 | TB Prevention Therapy (Pivot)</em> - consider start and end dates not month(), year()</li>
+<li><em>MCH-005 | Ante Natal Care (ANC) (List)</em> - Corrected the Syphilis_Screening_Results column to distinguish Reactive and Non Reactive results</li>
+<li><em>MCH-005 | Ante Natal Care (ANC) (List)</em> - Added Haemoglobin, HIV_Status_Known_Before_Visit, Final_HIV_Status, Subsequent_HIV_Test_Results, MUAC, Tuberculosis</li>
+<li><em>ART-087 | Weekly PPR (List)</em> - Shows missed clients,NLICs, defaulters and initiations within a specific week</li>
+<li><em>ART-088 | Weekly PPR (Pivot)</em> - Shows missed clients,NLICs, defaulters and initiations within a specific week</li>
+<li><em>ART-019 | Registered ART Clients with Intakes (List)</em> - picks ART clients, using either the follow-up form or the ART Number</li>
+<li><em>ART-020 | Registered ART Clients with Intakes (Pivot)</em> - picks ART clients, using either the follow-up form or the ART Number</li>
+<li><em>ART-021 | ART Client Without Intakes (List)</em> - Identifies all clients who have art follow up but no intakes, regardless of whether they have art number or not</li>
+<li><em>ART-021 | ART Client Without Intakes (List)</em> - Identifies all clients who have ART number but no intakes, regardless of whether they have ART follow-up form or not.</li>
+<li><em>ART-021 | ART Client Without Intakes (List)</em> - Addition of the column status; aimed at classifying as to whether the clients is 'active', 'missed', 'defaulted', 'LTFU' or does not have ART follow up form</li>
+<li><em>ART-021 | ART Client Without Intakes (List)</em> - Arranged the report in order of their status, starting with the active clients and ending with those without ART follow up form</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="release-notes-september-2022"><strong>Release Notes September 2022</strong></h3>
+<ul>
+<li>
+<h5 id="reports_17">Reports</h5>
+<ul>
+<li>
+<h6 id="bahmni_3">Bahmni</h6>
+<ul>
+<li><em>TB_Intake report(list)</em> - correction to pull correction patients</li>
+<li><em>ART-001 | Current on ART Detailed (List)</em> - the report to report clients seen and missed by the end of the reporting period as missed</li>
+<li><em>ART-002 | Current on ART Detailed (Pivot)</em> - the report to report clients seen and missed by the end of the reporting period as missed</li>
+<li><em>ART-053 | TX_CURR (Pivot)</em> - the report to report clients seen and missed by the end of the reporting period as missed</li>
+<li><em>ART-054 | TX_CURR (List)</em> - the report to report clients seen and missed by the end of the reporting period as missed</li>
+<li><em>ART-077 | PEADS Aging Out Analysis (Client Outcomes)</em> - changed to track the latest cohort which is Q2 2021</li>
+<li><em>ART-078 | PEADS Aging Out Analysis (Client Appointments)</em> - changed to track the latest cohort which is Q2 2021</li>
+<li><em>ART-059 | TX_RTT (List)</em> - Disaggregations changed from IIT&gt; 3months to IIT3-5months and IIT6+months</li>
+<li><em>ART-060 | TX_RTT (Pivot)</em> - Disaggregations changed from IIT&gt; 3months to IIT3-5months and IIT6+months</li>
+<li><em>ART-061 | TX_ML (List)</em> - Disaggregations changed from IIT&gt; 3months to IIT3-5months and IIT6+months</li>
+<li><em>ART-062 | TX_ML (Pivot)</em> - Disaggregations changed from IIT&gt; 3months to IIT3-5months and IIT6+months</li>
+<li><em>PIR-17 Tx_CURR TXML</em> - Modified to use new disaggregation IIT3-5months, IIT6+months instead of IIT&gt;3months</li>
+<li><em>PIR-17 Tx_CURR Retention Report</em> - Modified to use new disaggregation IIT3-5months, IIT6+months instead of IIT&gt;3months</li>
+<li><em>TB-010 | New and Relapse Enrolled on TB (List)</em> - Added TB history, Key populations, HIV Status, Active and Defaulted Clients</li>
+<li><em>TB-011 | DSD TB_ART</em> - Added TB history, Key populations, HIV Status, Active and Defaulted Clients</li>
+<li><em>ART-003 | Missed Appointments Status Report (List)</em> - Arranged clients with appointment missed</li>
+<li><em>TB-022 | TB Drug Resistant (list)</em> - New Report</li>
+<li><em>TB-003 | TB Notification (List)</em> - New Report </li>
+</ul>
+</li>
+<li>
+<h6 id="openmrs_2">Openmrs</h6>
+<ul>
+<li><em>PIR-17 Tx_CURR Retention Report Mapping 2022</em> - Maps part of PIR-17 Tx_CURR Retention Report to Txcurr Retention and Attrition Report in DHIS2(TxRTT Section)</li>
+<li><em>PIR-17 Tx_CURR TXML_2022</em> - Maps PIR-17 Tx_CURR TXML Report to Txcurr Retention and Attrition Report in DHIS2(TxML Section)</li>
+<li><em>2020_ADULT ARV REGIMEN Mapping</em> - now maps to Adult Regimen 1f (a)TDF 3TC /EFV (400mg) other months which was previously blank</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5 id="clinical-module_5">Clinical Module</h5>
+<ul>
+<li>New Prep Follow-Up Form</li>
+<li>New Prep Intake Form</li>
+<li>Made Under 5 Base Doses Multi-select</li>
+<li>Added a Reports name filter in Bahmni-Reports </li>
+<li>Added 'Weeks of current gestation by LMP method' to Obstetric History on ANC Program Form.</li>
+<li>Auto Calculate Gestational Age from LNMP on The ANC Program Form</li>
+<li>Visits for other services e.g., FP, Cervical Cancer Screening, Enhanced Adherence Counseling and Under5</li>
+</ul>
+</li>
+</ul>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p><strong>Do the following to deploy the new visits on your server:</strong></p>
+<ul>
+<li>Pull or Clone the new bahmni_docker</li>
+<li>
+<p>Restore the following files in to the database (emr):</p>
+<p><code>/bahmni_docker/misc/vist_types.sql</code></p>
+<p><code>/bahmni_docker/misc/new_vists_global_properties.sql</code></p>
+</li>
+<li>
+<p>Pull the new bahmni_configs</p>
+</li>
+<li>Rebuild the search index</li>
+</ul>
+<hr />
+<h3 id="release-notes-august-2022"><strong>Release Notes August 2022</strong></h3>
+<ul>
+<li>
+<h5 id="reports_18">Reports</h5>
+<ul>
+<li>
+<h6 id="bahmni_4">Bahmni</h6>
+<ul>
+<li><em>ART-022 | Data Quality Assessment tool</em> - was displaying a blank page</li>
+<li><em>ART-021 | ART Client Without Intakes (List)</em> - Added more columns(ArtNumber,age,gender,location)</li>
+<li><em>HTS-006 | Self Test Clients(List)</em> - Allow patient tested more than once in a month to appear more than once.</li>
+<li><em>TB-020  and  TB-021</em> - TB registration vs TB Consultation naming corrections</li>
+<li>TxCurr report - include clients who do not have patient identifiers and use ECID identifiers in the report</li>
+<li>Missed_defaulted_ltfu report - include service point in the report</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5 id="clinical-module_6">Clinical Module</h5>
+<ul>
+<li>WHO staging made to disappear when T-staging is selected</li>
+<li>Hid HIVST Results for primary when Secondary is Selected</li>
+<li>SD Bioline is not available in most health centres at the moment so it should not be compulsory for indeterminate results</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="release-notes-july-2022"><strong>Release Notes July 2022</strong></h3>
+<ul>
+<li>
+<h5 id="reports_19">Reports</h5>
+<ul>
+<li>
+<h6 id="bahmni_5">Bahmni</h6>
+<ul>
+<li>Reporting age groups have been modified to include the new age groups being 50-54, 55-59,60-64,65+.</li>
+<li><em>ART-022 | Data Quality Assessment tool</em> -  DQA Report had a bug after modification to include defaulted and lost to follow-up clients [Bug Fixed].</li>
+<li><em>ART-001 | Current on ART Detailed (List)</em> - Modified to include clients who do not have patient identifiers and use ECID identifiers in the report.</li>
+<li><em>ART-003 | Missed Appointments Status Report (List)</em> -  Added service point column in the report</li>
+</ul>
+</li>
+<li>
+<h6 id="openmrs_3">Openmrs</h6>
+<ul>
+<li><em>Created new children regimen reports that categorize children by weight:</em><ul>
+<li>Children ARV Regimen_1stLine_2022</li>
+<li>Children ARV Regimen_2ndLine_2022</li>
+<li>Children ARV Regimen_3rdLine_2022</li>
+</ul>
+</li>
+<li><em>2020_TB_Screening</em> - TB Screening previous report did not include all clients seen during period</li>
+<li><em>2020_TB_Screening</em> - Only clients that were seen physically at the facility. PreART clients. Clients that were physically seen and screened</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5 id="registration-module">Registration Module</h5>
+<ul>
+<li>Patient name now appears above maiden name in The Registration Module</li>
+</ul>
+</li>
+<li>
+<h5 id="clinical-module_7">Clinical Module</h5>
+<ul>
+<li>Fixed EDD Auto-Calculation</li>
+<li>Hid PITC Results on CACX Form if The test has not been offered</li>
+<li>The LPA susceptibility result is no longer compulsory because the result is not always available</li>
+<li>Allow future Dates for Cervical Cancer Screening Follow up Date</li>
+<li>Place of Delivery is Not Mandatory on ANC Form (While it remains Mandatory on the PNC Form)</li>
+</ul>
+</li>
+<li>
+<h5 id="appointments-module">Appointments Module</h5>
+<ul>
+<li>Fixed Column Headings of The Appointment Module List View</li>
+</ul>
+</li>
+</ul>
+<h2 id="-release-candidate-rc-1">- Release Candidate (RC) #1</h2>
 <ul>
 <li>
 <h5 id="pharmacy-module">Pharmacy Module</h5>
@@ -1538,7 +3123,7 @@
 </ul>
 </li>
 <li>
-<h5 id="reports">Reports</h5>
+<h5 id="reports_20">Reports</h5>
 <ul>
 <li>Ported all Bahmni 0.90 reports to Bahmni 0.92</li>
 <li>Developed Informed Push Tool reports</li>
@@ -1551,7 +3136,7 @@
 </ul>
 </li>
 <li>
-<h5 id="registration-module">Registration Module</h5>
+<h5 id="registration-module_1">Registration Module</h5>
 <ul>
 <li>National Search ported from 0.90 and improved</li>
 <li>Rename gender to sex</li>
@@ -1561,7 +3146,7 @@
 </ul>
 </li>
 <li>
-<h5 id="clinical-module">Clinical Module</h5>
+<h5 id="clinical-module_8">Clinical Module</h5>
 <ul>
 <li>Refactoring Bahmni App to align with 0.90</li>
 <li>Improving the flow of order automation from observation to medication tab</li>
@@ -1583,57 +3168,26 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 6, 2024</span>
       
     
   </small>
 </div>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../../informedpush/informedpusharv/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Informed Push ARV" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Informed Push ARV
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../TB_Program/" class="md-footer__link md-footer__link--next" aria-label="Next: TB Program" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              TB Program
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1655,11 +3209,13 @@
   
     
     
+    
+    
       
       
     
     <a href="https://github.com/eRegister/docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -1672,10 +3228,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
     
   </body>

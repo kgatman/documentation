@@ -151,3 +151,8 @@ when the service has been registered successfully you should see created sym lin
 ```
 * 7 * * mon systemctl restart gitpull.service >> /var/log/gitpull.log2>&1
 ```
+#### Configuring version.json
+
+Navigate to bahmniapps folder with: `cd /var/www/bahmniapps/home`
+
+And then do `sudo ln -s /development/bahmni_config092/version.json version.json`
