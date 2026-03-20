@@ -17,6 +17,7 @@ Below is a checklist of things that should be done and how to do them during rol
 4. Configure static IP address
     
     * ...CONTENT LOADING....
+    * ....more content loading......
 
 5. Changing the login name of eRegister
 

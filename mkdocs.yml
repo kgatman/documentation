@@ -32,6 +32,9 @@ nav:
                             - "dhis2/usermanual.md"
                   - "DataSets":
                             - "dhis2/intro.md"
+                            - "Integrated Facility Reporting Form":
+                                      - "dhis2/family-planning.md"
+                                      - "dhis2/nutrition.md"
                             - "dhis2/hts.md"
                             - "dhis2/tb.md"
                             - "dhis2/tb-indicators.md"
@@ -43,9 +46,16 @@ nav:
                   - "informedpush/informedpush.md"
                   - "informedpush/informedpusharv.md"
         - eRegister:
-                  - "ereg/eRegister-092-Release-Notes.md"
+                  - "eRegister 092 Release Notes":
+                            - "ereg/eRegister-092-Release-Notes.md"
+                            - "ereg/LIS.md"
+                            - "ereg/FHIR_Modules_Error.md"
+                  - "Reports":
+                            - "reports/reports.md"
+                            - "reports/dhisreporting.md"
                   - "User Manual":
                             - "ereg/TB_Program.md"
+                            - "ereg/ART_Program.md"
                   - "Technical Manual":
                             - "ereg/intro.md"
                             - "ereg/workingwithdockerlocally.md"
@@ -61,6 +71,13 @@ nav:
                                       - "ereg/odooreports.md"
                                       - "ereg/DeployingMappings.md"
                                       - "ereg/clinicalsearch.md"
+        - Laboratory Information System:
+                  - "lis/configuration.md"
+        - Odoo-Pharmacy:
+                  - "odoo/Overview.md"
+                  - "Pharmacy Module Guideline":
+                            - "odoo/Dispensary.md"
+                            - "odoo/Accounting.md"
         - COVID-19:
                   - "covid/Overview.md"
                   - "Data Entry Guidelines":
@@ -75,11 +92,6 @@ nav:
                             - "covid/Program-Indicators.md"
                             - "covid/Program_Rules.md"
                             - "covid/How-To-Prepare-Docker-Training-Instance.md"
-        - Odoo-Pharmacy:
-                  - "odoo/Overview.md"
-                  - "Pharmacy Module Guideline":
-                            - "odoo/Dispensary.md"
-                            - "odoo/Accounting.md"
                   - "Technical":
                             - "odoo/Menu-Setup.md"
         - About Us:
@@ -93,7 +105,7 @@ markdown_extensions:
                   toc_depth: "1-1"
 plugins:
         - search
-        - git-revision-date-localized
+        # - git-revision-date-localized
 
 extra:
         social:
